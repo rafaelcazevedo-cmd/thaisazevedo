@@ -1,0 +1,26 @@
+---
+import WhatsAppButton from './WhatsAppButton.astro';
+
+interface Props {
+  heading?: string;
+  text?: string;
+  message?: string;
+}
+const {
+  heading = 'Vamos conversar sobre o seu filho?',
+  text = 'Tire suas dúvidas e descubra como o acompanhamento neuropsicopedagógico pode ajudar. O primeiro contato é sem compromisso.',
+  message,
+} = Astro.props;
+---
+
+<section class="py-14 sm:py-16">
+  <div class="container-page">
+    <div class="overflow-hidden rounded-3xl bg-brand-700 px-6 py-12 text-center text-white sm:px-12">
+      <h2 class="mx-auto max-w-2xl font-display text-3xl font-semibold sm:text-4xl">{heading}</h2>
+      <p class="mx-auto mt-4 max-w-xl text-brand-50/90">{text}</p>
+      <div class="mt-8 flex justify-center">
+        <WhatsAppButton variant="light" size="lg" label="Agendar pelo WhatsApp" message={message} />
+      </div>
+    </div>
+  </div>
+</section>

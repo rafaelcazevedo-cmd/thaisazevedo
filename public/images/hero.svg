@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800" role="img" aria-label="Ilustração de um livro, um coração e uma planta crescendo — acolhimento e aprendizagem">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#e7f0e6"/>
+      <stop offset="1" stop-color="#b9d2bd"/>
+    </linearGradient>
+    <linearGradient id="page" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfbf4"/>
+      <stop offset="1" stop-color="#f1ead8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="800" fill="url(#bg)"/>
+
+  <!-- soft decorative shapes -->
+  <circle cx="118" cy="150" r="92" fill="#fdfbf4" opacity="0.45"/>
+  <circle cx="546" cy="232" r="138" fill="#82af89" opacity="0.45"/>
+  <circle cx="540" cy="700" r="116" fill="#e7bb60" opacity="0.40"/>
+
+  <!-- sun -->
+  <g transform="translate(508 156)" stroke="#d89b3a" stroke-width="6" stroke-linecap="round">
+    <circle r="27" fill="#e7bb60" stroke="none"/>
+    <line x1="0" y1="-46" x2="0" y2="-60"/>
+    <line x1="33" y1="-33" x2="43" y2="-43"/>
+    <line x1="46" y1="0" x2="60" y2="0"/>
+    <line x1="33" y1="33" x2="43" y2="43"/>
+  </g>
+
+  <!-- golden heart -->
+  <path transform="translate(320 248)" d="M0 40 C-30 0 -78 18 -78 56 C-78 96 -20 120 0 140 C20 120 78 96 78 56 C78 18 30 0 0 40 Z" fill="#d89b3a" opacity="0.92"/>
+
+  <!-- open book -->
+  <g transform="translate(320 486)">
+    <path d="M-206 62 Q-103 20 0 52 Q103 20 206 62 L206 156 Q103 114 0 144 Q-103 114 -206 156 Z" fill="#244734"/>
+    <path d="M-196 42 Q-98 5 0 33 L0 126 Q-98 96 -196 134 Z" fill="url(#page)"/>
+    <path d="M196 42 Q98 5 0 33 L0 126 Q98 96 196 134 Z" fill="url(#page)"/>
+    <g stroke="#82af89" stroke-width="5" stroke-linecap="round">
+      <line x1="-156" y1="54" x2="-30" y2="42"/>
+      <line x1="-156" y1="78" x2="-30" y2="66"/>
+      <line x1="-156" y1="102" x2="-30" y2="90"/>
+      <line x1="30" y1="42" x2="156" y2="54"/>
+      <line x1="30" y1="66" x2="156" y2="78"/>
+      <line x1="30" y1="90" x2="156" y2="102"/>
+    </g>
+  </g>
+
+  <!-- sprout growing from the book (learning / growth) -->
+  <g transform="translate(320 470)" stroke="#2c5a40" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M0 24 C0 0 0 -22 0 -44"/>
+    <path d="M0 -16 C-22 -22 -38 -10 -42 8 C-20 12 -4 4 0 -16 Z" fill="#3a7150" stroke="none"/>
+    <path d="M0 -34 C20 -42 38 -32 42 -14 C20 -8 4 -18 0 -34 Z" fill="#568e63" stroke="none"/>
+  </g>
+
+  <!-- little dots -->
+  <g fill="#244734">
+    <circle cx="150" cy="548" r="8"/>
+    <circle cx="120" cy="654" r="6"/>
+    <circle cx="214" cy="706" r="7"/>
+  </g>
+</svg>

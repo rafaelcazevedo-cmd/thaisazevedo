@@ -1,0 +1,75 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import CTASection from '@/components/CTASection.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { site } from '@/config/site';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const updated = d.updatedDate ?? d.pubDate;
+
+const fmt = (dt: Date) => dt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: d.title,
+  description: d.description,
+  datePublished: d.pubDate.toISOString(),
+  dateModified: updated.toISOString(),
+  inLanguage: 'pt-BR',
+  author: { '@id': `${Astro.site!.origin}/#thais` },
+  publisher: { '@id': `${Astro.site!.origin}/#practice` },
+  mainEntityOfPage: new URL(`/blog/${entry.id}`, Astro.site).href,
+  keywords: d.tags.join(', '),
+};
+---
+
+<BaseLayout
+  title={d.title}
+  description={d.description}
+  path={`/blog/${entry.id}`}
+  type="article"
+  publishedTime={d.pubDate.toISOString()}
+  modifiedTime={updated.toISOString()}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Início', href: '/' },
+      { label: 'Artigos', href: '/blog' },
+      { label: d.title, href: `/blog/${entry.id}` },
+    ]}
+  />
+
+  <article class="container-page max-w-3xl py-10">
+    <header>
+      <h1 class="font-display text-4xl font-semibold leading-tight text-brand-800">{d.title}</h1>
+      <div class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+        <span>Por {site.professionalName}</span>
+        <span aria-hidden="true">•</span>
+        <span>Publicado em {fmt(d.pubDate)}</span>
+        {d.updatedDate && (
+          <>
+            <span aria-hidden="true">•</span>
+            <span>Última atualização: {fmt(d.updatedDate)}</span>
+          </>
+        )}
+      </div>
+    </header>
+
+    <div class="prose mt-8 max-w-none">
+      <Content />
+    </div>
+  </article>
+
+  <CTASection />
+  <JsonLd schema={articleSchema} />
+</BaseLayout>

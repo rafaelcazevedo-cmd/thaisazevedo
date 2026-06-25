@@ -1,0 +1,233 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Section from '@/components/Section.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import ConditionCard from '@/components/ConditionCard.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTASection from '@/components/CTASection.astro';
+import WhatsAppButton from '@/components/WhatsAppButton.astro';
+import PhotoCarousel from '@/components/PhotoCarousel.astro';
+import { site } from '@/config/site';
+import { faqs } from '@/data/faqs';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
+
+// Hero carousel photos (portrait shots — fit the 4:5 frame cleanly).
+const heroPhotos = [
+  { src: '/images/atendimento-1.jpg', alt: 'Thais Azevedo em um momento de acolhimento com uma criança' },
+  { src: '/images/atendimento-2.jpg', alt: 'Thais Azevedo com uma criança que usa fones de cancelamento de ruído' },
+  { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
+  { src: '/images/thais-livro.jpg', alt: 'Thais Azevedo no lançamento do livro Os Desafios do Professor' },
+];
+
+const steps = [
+  { n: '1', title: 'Primeiro contato', text: 'Você fala comigo pelo WhatsApp, conta o que está acontecendo e tiramos as dúvidas juntos, sem compromisso.' },
+  { n: '2', title: 'Avaliação (cerca de 10 sessões)', text: 'Investigamos como a criança aprende dentro de cinco habilidades: linguagem, matemática, atenção, memória e funções executivas.' },
+  { n: '3', title: 'Intervenção (cerca de 10 sessões)', text: 'Com um plano individualizado, trabalhamos as habilidades em que a criança apresentou dificuldade — com acolhimento e vínculo.' },
+];
+
+const title = `Neuropsicopedagoga em ${site.city} | ${site.brand}`;
+const description = `${site.profession} em ${site.city}: avaliação e intervenção neuropsicopedagógica para crianças e adolescentes com dificuldade de aprendizagem, dislexia, TDAH e discalculia. Agende pelo WhatsApp.`;
+---
+
+<BaseLayout title={title} description={description} path="/">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <!-- atmospheric blobs -->
+    <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+      <div class="drift absolute -left-24 top-10 h-72 w-72 rounded-full bg-brand-300/30 blur-3xl"></div>
+      <div class="drift absolute right-0 top-40 h-80 w-80 rounded-full bg-accent-300/40 blur-3xl" style="animation-delay:-6s"></div>
+    </div>
+
+    <div class="container-page grid items-center gap-10 py-16 sm:py-24 lg:grid-cols-2">
+      <div>
+        <p class="reveal reveal-1 mb-4 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-paper/70 px-4 py-1.5 text-sm font-semibold text-brand-700 backdrop-blur">
+          <span class="h-2 w-2 rounded-full bg-accent-500"></span>
+          Em {site.city} · consultório e atendimento domiciliar
+        </p>
+        <h1 class="reveal reveal-2 font-display text-5xl font-semibold leading-[1.05] text-brand-800 sm:text-6xl">
+          Um trabalho individualizado, com muito <span class="ink-underline">acolhimento e vínculo</span>
+        </h1>
+        <p class="reveal reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-ink/90">
+          Sou <strong>{site.professionalName}</strong>, {site.profession.toLowerCase()} em {site.city}.
+          Faço <strong>avaliação e intervenção neuropsicopedagógica</strong> para crianças e adolescentes —
+          incluindo crianças neurodivergentes (autismo, TDAH), com dislexia, discalculia e outras dificuldades de
+          aprendizagem. Cada criança no seu tempo — e <strong>não é preciso ter diagnóstico</strong> para começar.
+        </p>
+        <div class="reveal reveal-4 mt-8 flex flex-col gap-3 sm:flex-row">
+          <WhatsAppButton size="lg" label="Agendar uma conversa" />
+          <a
+            href="/servicos"
+            class="inline-flex items-center justify-center rounded-full border-2 border-brand-300 px-7 py-4 text-lg font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+          >
+            Conhecer os serviços
+          </a>
+        </div>
+      </div>
+
+      <div class="reveal reveal-3 relative">
+        <PhotoCarousel slides={heroPhotos} />
+      </div>
+    </div>
+  </section>
+
+  <!-- O que é neuropsicopedagogia? (spotlight feature) -->
+  <section class="py-12 sm:py-16">
+    <div class="container-page">
+      <div class="grid items-center gap-8 rounded-3xl border border-brand-200 bg-gradient-to-br from-brand-100 via-brand-50 to-accent-300/40 p-8 sm:gap-12 sm:p-12 lg:grid-cols-[0.85fr_1.15fr]">
+        <div class="order-2 mx-auto w-full max-w-[260px] lg:order-1">
+          <div class="aspect-[4/5] overflow-hidden rounded-2xl border border-brand-200 shadow-md">
+            <img
+              src="/images/hero.svg"
+              alt="Ilustração de um livro, um coração e uma planta crescendo, representando acolhimento e aprendizagem"
+              width="640"
+              height="800"
+              loading="lazy"
+              class="h-full w-full object-cover"
+            />
+          </div>
+        </div>
+        <div class="order-1 lg:order-2">
+          <h2 class="font-display text-3xl font-semibold text-brand-800 sm:text-4xl">O que é neuropsicopedagogia?</h2>
+          <p class="mt-5 font-display text-2xl leading-snug text-brand-700">
+            A <strong class="font-semibold">neuropsicopedagogia</strong> é como uma{' '}
+            <span class="ink-underline">mistura de professora particular com psicóloga</span>.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-ink/90">
+            Avalia e intervém nas dificuldades de aprendizagem, sempre levando em conta as emoções e o modo único
+            de cada criança aprender. Um trabalho individualizado, com muito acolhimento — e{' '}
+            <strong>não é preciso ter diagnóstico para começar</strong>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Momentos que importam (gallery, moved above Serviços) -->
+  <Section id="momentos" eyebrow="Na prática" title="Momentos que importam">
+    <div class="grid gap-5 sm:grid-cols-3">
+      <div
+        data-reveal
+        class="flex aspect-[4/3] flex-col justify-center rounded-2xl bg-brand-700 p-6 text-white shadow-sm"
+      >
+        <p class="font-display text-2xl font-semibold leading-tight">Cada criança aprende</p>
+        <p class="mt-1 text-brand-50/90">de um jeito único 🌱</p>
+      </div>
+      <figure
+        data-reveal
+        class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-100 shadow-sm"
+      >
+        <img
+          src="/images/voluntariado.jpg"
+          alt="Thais Azevedo com crianças em trabalho voluntário"
+          width="1100"
+          height="825"
+          loading="lazy"
+          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/75 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
+          Trabalho voluntário com crianças
+        </figcaption>
+      </figure>
+      <figure
+        data-reveal
+        class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-100 shadow-sm"
+      >
+        <img
+          src="/images/thais-ama.jpg"
+          alt="Thais Azevedo na AMA — Associação de Amigos do Autista"
+          width="1000"
+          height="750"
+          loading="lazy"
+          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+        />
+        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/75 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
+          Vivências com o público autista na AMA
+        </figcaption>
+      </figure>
+    </div>
+  </Section>
+
+  <!-- Services -->
+  <Section eyebrow="Como posso ajudar" title="Serviços">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {services.map((s) => (
+        <ServiceCard title={s.data.title} summary={s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
+      ))}
+    </div>
+  </Section>
+
+  <!-- How it works -->
+  <Section eyebrow="Passo a passo" title="Como funciona" class="bg-white">
+    <div class="grid gap-6 md:grid-cols-3">
+      {steps.map((step) => (
+        <div class="rounded-2xl border border-brand-100 bg-cream p-6">
+          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-brand-600 font-display text-lg font-semibold text-white">{step.n}</span>
+          <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">{step.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-muted">{step.text}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+
+  <!-- Conditions -->
+  <Section eyebrow="Dificuldades atendidas" title="Quando procurar ajuda">
+    <p class="mb-8 max-w-2xl text-muted">
+      Atendo crianças e adolescentes com diferentes dificuldades de aprendizagem e perfis neurodivergentes.
+      Conheça os principais sinais:
+    </p>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {conditions.map((c) => (
+        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
+      ))}
+    </div>
+  </Section>
+
+  <!-- About teaser -->
+  <Section class="bg-white">
+    <div class="grid items-center gap-10 lg:grid-cols-2">
+      <div class="order-2 lg:order-1">
+        <div class="aspect-square max-w-sm overflow-hidden rounded-3xl border border-brand-100 bg-brand-100">
+          <img src="/images/thais.jpg" alt={`Foto de ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}`} width="900" height="883" class="h-full w-full object-cover" />
+        </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <p class="eyebrow mb-1.5">Sobre mim</p>
+        <h2 class="font-display text-3xl font-semibold text-brand-800 sm:text-4xl">Um olhar atento para cada criança</h2>
+        <p class="mt-4 text-ink/90">
+          Acredito que toda criança pode aprender quando recebe o apoio certo. Meu trabalho une ciência e
+          acolhimento para entender as dificuldades de cada uma e construir, junto com a família e a escola, um
+          caminho possível. {site.credentials}
+        </p>
+        <a href="/sobre" class="mt-6 inline-flex items-center gap-1 font-semibold text-brand-600 hover:text-brand-700">
+          Conhecer minha história
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+      </div>
+    </div>
+  </Section>
+
+  <!-- FAQ excerpt -->
+  <Section eyebrow="Dúvidas frequentes" title="Perguntas que pais costumam fazer" narrow>
+    <FAQ items={faqs.slice(0, 5)} />
+    <p class="mt-6 text-center text-muted">
+      <a href="/perguntas-frequentes" class="font-semibold text-brand-600 hover:text-brand-700">Ver todas as perguntas →</a>
+    </p>
+  </Section>
+
+  <!-- Location -->
+  <Section eyebrow="Onde atendo" title="Consultório e atendimento domiciliar" class="bg-white" narrow>
+    <p class="text-ink/90">
+      Os atendimentos particulares acontecem em <strong>{site.city}</strong>: no <strong>consultório</strong>, em
+      ambiente acolhedor e preparado para crianças, ou na <strong>residência do paciente</strong> (atendimento
+      domiciliar) — o que for melhor para a sua família.
+    </p>
+    <div class="mt-6">
+      <WhatsAppButton label="Tirar dúvidas e agendar" />
+    </div>
+  </Section>
+
+  <CTASection />
+</BaseLayout>

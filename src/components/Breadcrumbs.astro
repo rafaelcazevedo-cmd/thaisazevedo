@@ -1,0 +1,45 @@
+---
+/** Breadcrumb trail + BreadcrumbList JSON-LD. Pass items in order (root → current). */
+import JsonLd from './JsonLd.astro';
+
+interface Crumb {
+  label: string;
+  href: string;
+}
+interface Props {
+  items: Crumb[];
+}
+const { items } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((c, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: c.label,
+    item: new URL(c.href, Astro.site).href,
+  })),
+};
+---
+
+<nav aria-label="Trilha de navegação" class="container-page pt-6">
+  <ol class="flex flex-wrap items-center gap-1.5 text-sm text-muted">
+    {
+      items.map((c, i) => (
+        <li class="flex items-center gap-1.5">
+          {i < items.length - 1 ? (
+            <>
+              <a href={c.href} class="hover:text-brand-600">{c.label}</a>
+              <span aria-hidden="true">/</span>
+            </>
+          ) : (
+            <span aria-current="page" class="font-medium text-brand-700">{c.label}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<JsonLd schema={schema} />

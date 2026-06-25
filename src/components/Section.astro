@@ -1,0 +1,28 @@
+---
+interface Props {
+  id?: string;
+  eyebrow?: string;
+  title?: string;
+  /** Extra classes on the <section>. */
+  class?: string;
+  /** Constrain inner width. */
+  narrow?: boolean;
+}
+const { id, eyebrow, title, class: className = '', narrow = false } = Astro.props;
+---
+
+<section id={id} class={`py-14 sm:py-16 ${className}`}>
+  <div class={narrow ? 'container-page max-w-3xl' : 'container-page'}>
+    {
+      (eyebrow || title) && (
+        <header class="mb-8 max-w-2xl" data-reveal>
+          {eyebrow && <p class="eyebrow mb-1.5">{eyebrow}</p>}
+          {title && (
+            <h2 class="font-display text-3xl font-semibold text-brand-800 sm:text-4xl">{title}</h2>
+          )}
+        </header>
+      )
+    }
+    <slot />
+  </div>
+</section>

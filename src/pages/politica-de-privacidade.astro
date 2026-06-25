@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Section from '@/components/Section.astro';
+import { site } from '@/config/site';
+
+const title = 'Política de privacidade';
+const description = 'Política de privacidade e tratamento de dados pessoais (LGPD) do site.';
+---
+
+<BaseLayout title={title} description={description} path="/politica-de-privacidade" noindex={true}>
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Política de privacidade', href: '/politica-de-privacidade' }]} />
+
+  <Section narrow>
+    <h1 class="font-display text-4xl font-semibold text-brand-800">Política de privacidade</h1>
+    <div class="prose mt-8 max-w-none">
+      <p>
+        Esta política descreve como os dados pessoais são tratados neste site, em conformidade com a{' '}
+        <strong>Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)</strong>.
+      </p>
+
+      <h2>Quais dados coletamos</h2>
+      <p>
+        Este site é informativo e <strong>não possui formulários de cadastro</strong>. O contato é feito
+        diretamente pelo WhatsApp. Ao iniciar uma conversa, você compartilha voluntariamente as informações que
+        decidir enviar (como nome e a descrição do seu caso), utilizadas exclusivamente para responder e
+        eventualmente agendar o atendimento.
+      </p>
+
+      <h2>Como usamos os dados</h2>
+      <p>
+        As informações enviadas por você são usadas apenas para comunicação com {site.professionalName} e para a
+        prestação do serviço. <strong>Não vendemos nem compartilhamos</strong> seus dados com terceiros para fins
+        de marketing.
+      </p>
+
+      <h2>Cookies e medição</h2>
+      <p>
+        Este site não utiliza cookies de rastreamento por padrão. Caso ferramentas de medição de audiência sejam
+        adicionadas no futuro, esta política será atualizada e o consentimento será solicitado quando exigido.
+      </p>
+
+      <h2>Seus direitos</h2>
+      <p>
+        Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelos canais de
+        contato informados neste site.
+      </p>
+
+      <h2>Contato</h2>
+      <p>
+        Dúvidas sobre privacidade podem ser enviadas para <a href={`mailto:${site.email}`}>{site.email}</a>.
+      </p>
+
+      <p class="text-sm text-muted">
+        <em>Modelo inicial — recomenda-se revisão por profissional jurídico antes da publicação definitiva.</em>
+      </p>
+    </div>
+  </Section>
+</BaseLayout>

@@ -1,0 +1,84 @@
+---
+/**
+ * Site-wide JSON-LD graph rendered on every page: WebSite + MedicalBusiness + Person.
+ * Uses @id linking so search/answer engines resolve one coherent entity.
+ * MedicalBusiness is the recommended LocalBusiness subtype for health practices and
+ * carries the local signals (address, geo, hours, areaServed) that drive the local pack
+ * and AI local recommendations.
+ */
+import JsonLd from './JsonLd.astro';
+import { site, sameAs, whatsappUrl } from '@/config/site';
+
+const base = Astro.site!.origin;
+const id = (hash: string) => `${base}/#${hash}`;
+// Omit any field still holding a {{PLACEHOLDER}} token so we never publish it in schema.
+const real = (v: string) => (v.includes('{{') ? undefined : v);
+
+const personId = id('thais');
+const practiceId = id('practice');
+const websiteId = id('website');
+
+const graph: Record<string, unknown>[] = [
+  {
+    '@type': 'WebSite',
+    '@id': websiteId,
+    url: base + '/',
+    name: site.brand,
+    inLanguage: 'pt-BR',
+    publisher: { '@id': practiceId },
+  },
+  {
+    '@type': 'Person',
+    '@id': personId,
+    name: site.professionalName,
+    jobTitle: site.profession,
+    description: site.credentials,
+    worksFor: { '@id': practiceId },
+    knowsAbout: [
+      'Neuropsicopedagogia',
+      'Dificuldades de aprendizagem',
+      'Avaliação neuropsicopedagógica',
+      'Dislexia',
+      'TDAH',
+      'Discalculia',
+      'Autismo (TEA)',
+      'Funções executivas',
+    ],
+    sameAs,
+  },
+  {
+    '@type': 'MedicalBusiness',
+    '@id': practiceId,
+    name: site.brand,
+    legalName: site.legalName,
+    description: site.tagline,
+    url: base + '/',
+    telephone: '+' + site.whatsapp,
+    email: site.email,
+    priceRange: site.priceRange,
+    image: base + '/og-default.png',
+    founder: { '@id': personId },
+    employee: { '@id': personId },
+    // Only locality/region until the exact street address is confirmed (street/CEP omitted while placeholder).
+    address: {
+      '@type': 'PostalAddress',
+      ...(real(site.address.street) && {
+        streetAddress: `${site.address.street}, ${site.address.neighborhood}`,
+      }),
+      addressLocality: site.address.city,
+      addressRegion: site.address.state,
+      ...(real(site.address.postalCode) && { postalCode: site.address.postalCode }),
+      addressCountry: site.address.country,
+    },
+    areaServed: { '@type': 'City', name: 'São Paulo' },
+    sameAs,
+    potentialAction: {
+      '@type': 'CommunicateAction',
+      name: 'Agendar pelo WhatsApp',
+      target: whatsappUrl(),
+    },
+  },
+];
+---
+
+<JsonLd schema={{ '@context': 'https://schema.org', '@graph': graph }} />

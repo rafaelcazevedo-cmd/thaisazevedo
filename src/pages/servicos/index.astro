@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Section from '@/components/Section.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import CTASection from '@/components/CTASection.astro';
+import { site } from '@/config/site';
+
+const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
+
+const title = `Serviços de neuropsicopedagogia em ${site.city}`;
+const description = `Avaliação e intervenção neuropsicopedagógica, suporte escolar e preparação para provas em ${site.city}. Conheça os serviços para crianças com dificuldade de aprendizagem.`;
+---
+
+<BaseLayout title={title} description={description} path="/servicos">
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Serviços', href: '/servicos' }]} />
+
+  <Section eyebrow="Como posso ajudar" title="Serviços de neuropsicopedagogia">
+    <p class="mb-10 max-w-2xl text-lg text-muted">
+      Atendimento presencial em {site.city} para crianças e adolescentes. Do entendimento da dificuldade à
+      intervenção, cada etapa é individualizada e feita em parceria com a família e a escola.
+    </p>
+    <div class="grid gap-6 sm:grid-cols-2">
+      {services.map((s) => (
+        <ServiceCard title={s.data.title} summary={s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
+      ))}
+    </div>
+  </Section>
+
+  <CTASection />
+</BaseLayout>

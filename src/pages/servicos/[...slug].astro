@@ -1,0 +1,56 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import QuickAnswer from '@/components/QuickAnswer.astro';
+import CTASection from '@/components/CTASection.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { site } from '@/config/site';
+
+export async function getStaticPaths() {
+  const services = await getCollection('services');
+  return services.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: d.title,
+  description: d.description,
+  serviceType: d.title,
+  areaServed: { '@type': 'City', name: site.city },
+  provider: { '@id': `${Astro.site!.origin}/#practice` },
+  url: new URL(`/servicos/${entry.id}`, Astro.site).href,
+};
+---
+
+<BaseLayout title={d.seoTitle ?? d.title} description={d.description} path={`/servicos/${entry.id}`}>
+  <Breadcrumbs
+    items={[
+      { label: 'Início', href: '/' },
+      { label: 'Serviços', href: '/servicos' },
+      { label: d.title, href: `/servicos/${entry.id}` },
+    ]}
+  />
+
+  <article class="container-page max-w-3xl py-10">
+    <h1 class="font-display text-4xl font-semibold text-brand-800">{d.title}</h1>
+    <div class="mt-6">
+      <QuickAnswer><p>{d.summary}</p></QuickAnswer>
+    </div>
+    <div class="prose mt-8 max-w-none">
+      <Content />
+    </div>
+  </article>
+
+  <CTASection
+    heading="Quer saber se este é o caminho para o seu filho?"
+    message={`Olá, Thais! Tenho interesse no serviço de ${d.title.toLowerCase()}. Pode me explicar como funciona?`}
+  />
+
+  <JsonLd schema={serviceSchema} />
+</BaseLayout>

@@ -1,0 +1,16 @@
+---
+/**
+ * Emits a JSON-LD <script>. Pass any schema.org object (or array) as `schema`.
+ * Centralizes structured-data output so every page stays consistent.
+ */
+interface Props {
+  schema: Record<string, unknown> | Record<string, unknown>[];
+}
+const { schema } = Astro.props;
+---
+
+<script
+  type="application/ld+json"
+  set:html={JSON.stringify(schema)}
+  is:inline
+/>

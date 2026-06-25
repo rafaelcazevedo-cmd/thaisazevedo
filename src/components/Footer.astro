@@ -1,0 +1,52 @@
+---
+import Logo from './Logo.astro';
+import { site } from '@/config/site';
+import { mainNav } from '@/config/nav';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-brand-100 bg-brand-800 text-brand-50">
+  <div class="container-page grid gap-10 py-14 md:grid-cols-3">
+    <div>
+      <Logo variant="light" />
+      <p class="mt-4 max-w-xs text-sm text-brand-100/90">
+        {site.tagline} em {site.city}.
+      </p>
+    </div>
+
+    <nav aria-label="Rodapé">
+      <h2 class="font-display text-base font-semibold text-white">Navegação</h2>
+      <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+        {
+          mainNav.map((item) => (
+            <li>
+              <a href={item.href} class="text-brand-100/90 hover:text-white">
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div>
+      <h2 class="font-display text-base font-semibold text-white">Atendimento</h2>
+      <address class="mt-4 space-y-2 text-sm not-italic text-brand-100/90">
+        <p>📍 {site.city} · consultório e atendimento domiciliar</p>
+        <p>
+          💬 <a href={`https://wa.me/${site.whatsapp}`} class="hover:text-white">WhatsApp {site.whatsappDisplay}</a>
+        </p>
+        <p>✉️ <a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a></p>
+        {site.hours.map((h) => <p>🕗 {h.days}: {h.time}</p>)}
+      </address>
+    </div>
+  </div>
+
+  <div class="border-t border-white/10">
+    <div class="container-page flex flex-col items-center justify-between gap-3 py-6 text-xs text-brand-100/70 sm:flex-row">
+      <p>© {year} {site.professionalName}. Todos os direitos reservados.</p>
+      <a href="/politica-de-privacidade" class="hover:text-white">Política de privacidade</a>
+    </div>
+  </div>
+</footer>

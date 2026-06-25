@@ -1,0 +1,92 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Section from '@/components/Section.astro';
+import WhatsAppButton from '@/components/WhatsAppButton.astro';
+import { site } from '@/config/site';
+
+const title = `Contato — ${site.profession} em ${site.city}`;
+const description = `Fale com ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}. Agende uma conversa pelo WhatsApp e tire suas dúvidas sem compromisso.`;
+---
+
+<BaseLayout title={title} description={description} path="/contato">
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Contato', href: '/contato' }]} />
+
+  <Section eyebrow="Vamos conversar" title="Entre em contato">
+    <div class="grid gap-10 lg:grid-cols-2">
+      <div>
+        <p class="text-lg text-ink/90">
+          A forma mais rápida de falar comigo é pelo <strong>WhatsApp</strong>. Conte o que está acontecendo com
+          seu filho e tire suas dúvidas — o primeiro contato é sem compromisso.
+        </p>
+        <div class="mt-6">
+          <WhatsAppButton size="lg" label="Conversar no WhatsApp" />
+        </div>
+
+        <dl class="mt-10 space-y-5">
+          <div class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">📍</span>
+            <div>
+              <dt class="font-semibold text-brand-800">Atendimento</dt>
+              <dd class="text-muted">
+                Consultório em {site.city} e atendimento domiciliar. O endereço do consultório é combinado no
+                agendamento.
+              </dd>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">💬</span>
+            <div>
+              <dt class="font-semibold text-brand-800">WhatsApp</dt>
+              <dd><a href={`https://wa.me/${site.whatsapp}`} class="text-brand-600 hover:text-brand-700">{site.whatsappDisplay}</a></dd>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">✉️</span>
+            <div>
+              <dt class="font-semibold text-brand-800">E-mail</dt>
+              <dd><a href={`mailto:${site.email}`} class="text-brand-600 hover:text-brand-700">{site.email}</a></dd>
+            </div>
+          </div>
+          <div class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">🕗</span>
+            <div>
+              <dt class="font-semibold text-brand-800">Horários</dt>
+              <dd class="text-muted">
+                {site.hours.map((h) => <span class="block">{h.days}: {h.time}</span>)}
+              </dd>
+            </div>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Formats of care -->
+      <div class="rounded-3xl border border-brand-100 bg-brand-50/60 p-7">
+        <h2 class="font-display text-2xl font-semibold text-brand-800">Como são os atendimentos</h2>
+        <ul class="mt-5 space-y-5">
+          <li class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">🏠</span>
+            <div>
+              <p class="font-semibold text-brand-800">No consultório</p>
+              <p class="text-sm text-muted">Em {site.city}, em ambiente acolhedor e preparado para crianças e adolescentes.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">🚗</span>
+            <div>
+              <p class="font-semibold text-brand-800">Em casa (domiciliar)</p>
+              <p class="text-sm text-muted">Atendimento na residência do paciente, no ambiente em que a criança se sente segura.</p>
+            </div>
+          </li>
+          <li class="flex gap-3">
+            <span aria-hidden="true" class="text-xl">💛</span>
+            <div>
+              <p class="font-semibold text-brand-800">Sem necessidade de diagnóstico</p>
+              <p class="text-sm text-muted">Qualquer criança com alguma dificuldade pedagógica pode começar.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>

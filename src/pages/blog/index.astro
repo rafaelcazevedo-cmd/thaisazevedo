@@ -1,0 +1,37 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Section from '@/components/Section.astro';
+import CTASection from '@/components/CTASection.astro';
+
+const posts = (await getCollection('blog'))
+  .filter((p) => !p.data.draft)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const fmt = (d: Date) => d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+
+const title = 'Artigos sobre aprendizagem e neuropsicopedagogia';
+const description = 'Conteúdos para pais e educadores sobre dificuldades de aprendizagem, dislexia, TDAH, avaliação neuropsicopedagógica e como apoiar as crianças.';
+---
+
+<BaseLayout title={title} description={description} path="/blog">
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Artigos', href: '/blog' }]} />
+
+  <Section eyebrow="Conteúdo para pais e educadores" title="Artigos">
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      {posts.map((post) => (
+        <a href={`/blog/${post.id}`} class="group flex h-full flex-col rounded-2xl border border-brand-100 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/5">
+          <time datetime={post.data.pubDate.toISOString()} class="text-xs font-semibold uppercase tracking-wide text-accent-600">
+            {fmt(post.data.pubDate)}
+          </time>
+          <h2 class="mt-2 font-display text-xl font-semibold text-brand-800 group-hover:text-brand-700">{post.data.title}</h2>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{post.data.description}</p>
+          <span class="mt-4 text-sm font-semibold text-brand-600">Ler artigo →</span>
+        </a>
+      ))}
+    </div>
+  </Section>
+
+  <CTASection />
+</BaseLayout>

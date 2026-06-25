@@ -1,0 +1,46 @@
+# Thais Azevedo — Neuropsicopedagoga em São Paulo
+
+> Neuropsicopedagoga (neuropsychopedagogue) com atendimento particular em São Paulo, SP —
+> em consultório e domiciliar (na residência do paciente). Realiza avaliação e intervenção
+> neuropsicopedagógica para crianças e adolescentes com dificuldades de aprendizagem e para
+> crianças neurodivergentes (autismo/TEA, TDAH). Contato pelo WhatsApp.
+
+## O que é
+A neuropsicopedagogia é como uma mistura de professora particular com psicóloga: avalia e intervém
+nas dificuldades de aprendizagem, levando em conta as emoções e o modo único de cada criança aprender,
+com muito acolhimento e vínculo. Não é preciso ter diagnóstico para começar.
+
+## Formação (Thais Azevedo da Rocha)
+Pós-graduada em "Dificuldades na Aprendizagem" e em "Neuropsicopedagogia Clínica". Pedagoga desde 2015,
+com experiência como professora em escolas internacionais e tradicionais e com público neurodivergente
+(vivências na AMA — Associação Amigos do Autista — e no Instituto Priorit).
+
+## Serviços
+- Avaliação neuropsicopedagógica (cerca de 10 sessões, 5 habilidades): /servicos/avaliacao-neuropsicopedagogica
+- Intervenção neuropsicopedagógica (cerca de 10 sessões): /servicos/intervencao-neuropsicopedagogica
+- Suporte neuropsicopedagógico (apoio escolar pontual): /servicos/suporte-neuropsicopedagogico
+- Suporte para provas específicas: /servicos/suporte-para-provas
+
+## Habilidades trabalhadas
+Linguagem (leitura e escrita), matemática, atenção, memória e funções executivas.
+
+## Perfis e dificuldades atendidas
+- Dislexia: /condicoes/dislexia
+- Autismo (TEA): /condicoes/tea-autismo
+- TDAH (déficit de atenção): /condicoes/tdah
+- Discalculia: /condicoes/discalculia
+- Dificuldade de aprendizagem: /condicoes/dificuldade-de-aprendizagem
+
+## Páginas principais
+- Início: /
+- Sobre: /sobre
+- Dúvidas frequentes: /perguntas-frequentes
+- Artigos: /blog
+- Contato (WhatsApp): /contato
+
+## Atendimento
+- Local: São Paulo, SP — consultório e atendimento domiciliar
+- Público: crianças e adolescentes (incluindo neurodivergentes)
+- Não é necessário ter diagnóstico para iniciar
+- WhatsApp: (11) 98647-5451
+- E-mail: thaisazevedo@hotmail.com

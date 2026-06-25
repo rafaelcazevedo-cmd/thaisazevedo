@@ -1,0 +1,19 @@
+# build output
+dist/
+.astro/
+*.zip
+
+# dependencies
+node_modules/
+
+# source materials from Thais (originals kept locally; optimized copies live in public/images)
+Documentos Thais/
+
+# local editor/agent config (machine-specific)
+.claude/
+
+# logs / env
+*.log
+.env
+.env.*
+.DS_Store

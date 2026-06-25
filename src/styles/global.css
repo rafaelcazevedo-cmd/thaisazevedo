@@ -1,0 +1,238 @@
+@import 'tailwindcss';
+
+/*
+ * ─────────────────────────────────────────────────────────────────────────
+ *  "Jardim de aprendizagem" — botanical / editorial aesthetic
+ *  Dominant deep forest green · sharp honey-ochre accent · warm paper cream.
+ *  Display: Fraunces (optical serif, evokes books & reading).
+ *  Body: Hanken Grotesk (warm humanist grotesque).
+ * ─────────────────────────────────────────────────────────────────────────
+ */
+@theme {
+  /* Forest-green scale (dominant) */
+  --color-brand-50: #eef4ef;
+  --color-brand-100: #d8e7da;
+  --color-brand-200: #b1cfb5;
+  --color-brand-300: #82af89;
+  --color-brand-400: #568e63;
+  --color-brand-500: #3a7150;
+  --color-brand-600: #2c5a40;
+  --color-brand-700: #244734;
+  --color-brand-800: #1c3729;
+  --color-brand-900: #142a20;
+
+  /* Honey / ochre accent (sharp warm pop) */
+  --color-accent-300: #f1d59c;
+  --color-accent-400: #e7bb60;
+  --color-accent-500: #d89b3a;
+  --color-accent-600: #b67d27;
+  --color-accent-700: #8a5c1b;
+
+  /* Warm paper neutrals */
+  --color-cream: #f7f2e7;
+  --color-paper: #fdfbf4;
+  --color-ink: #21271e;
+  --color-muted: #5c6657;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #128c7e;
+
+  --font-sans: 'Hanken Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, 'Times New Roman', serif;
+}
+
+/* ── Base ──────────────────────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  /* Atmospheric depth: a warm honey glow + a soft green wash, fixed to the viewport. */
+  background-image:
+    radial-gradient(70rem 36rem at 82% -8%, color-mix(in oklab, var(--color-accent-300) 55%, transparent), transparent 60%),
+    radial-gradient(60rem 40rem at -12% 6%, color-mix(in oklab, var(--color-brand-200) 60%, transparent), transparent 58%),
+    radial-gradient(50rem 50rem at 50% 120%, color-mix(in oklab, var(--color-brand-300) 30%, transparent), transparent 60%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Fine paper grain over the gradient, beneath all content. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-accent-300);
+  color: var(--color-brand-900);
+}
+
+/* ── Type treatments ───────────────────────────────────────────────────── */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 30, 'WONK' 0;
+  letter-spacing: -0.018em;
+}
+
+/* Editorial eyebrow label in Fraunces italic. */
+.eyebrow {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+  color: var(--color-accent-700);
+}
+
+/* ── Utilities ─────────────────────────────────────────────────────────── */
+.container-page {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Honey underline flourish for emphasized words. */
+.ink-underline {
+  background-image: linear-gradient(transparent 62%, color-mix(in oklab, var(--color-accent-400) 70%, transparent) 0);
+  background-repeat: no-repeat;
+  padding-inline: 0.05em;
+}
+
+/* ── Motion: orchestrated page-load reveal + scroll reveal ─────────────── */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(0, -14px) rotate(2deg); }
+}
+
+.reveal { opacity: 0; animation: rise 0.8s cubic-bezier(0.22, 0.65, 0.3, 1) forwards; }
+.reveal-1 { animation-delay: 0.05s; }
+.reveal-2 { animation-delay: 0.18s; }
+.reveal-3 { animation-delay: 0.31s; }
+.reveal-4 { animation-delay: 0.44s; }
+.reveal-5 { animation-delay: 0.57s; }
+.floaty { animation: floaty 6s ease-in-out infinite; }
+.drift { animation: drift 14s ease-in-out infinite; }
+
+/* JS-gated scroll reveal (content stays visible if JS is off). */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.22, 0.65, 0.3, 1);
+}
+.js [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal, .js [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* ── Prose: rendered Markdown (articles, services, conditions) ──────────── */
+.prose {
+  color: var(--color-ink);
+  line-height: 1.78;
+  font-size: 1.075rem;
+}
+.prose > * + * { margin-top: 1.15em; }
+.prose h2 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-variation-settings: 'SOFT' 30;
+  font-size: 1.7rem;
+  line-height: 1.22;
+  letter-spacing: -0.015em;
+  margin-top: 2.2em;
+  margin-bottom: 0.2em;
+  color: var(--color-brand-800);
+}
+.prose h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-top: 1.6em;
+  margin-bottom: 0.1em;
+  color: var(--color-brand-800);
+}
+.prose a {
+  color: var(--color-brand-600);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent-400);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+}
+.prose a:hover { color: var(--color-brand-800); }
+.prose strong { color: var(--color-brand-800); font-weight: 600; }
+.prose ul { list-style: none; padding-left: 0; }
+.prose ul > li { position: relative; padding-left: 1.6em; }
+.prose ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0.15em;
+  top: 0.62em;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 9999px;
+  background: var(--color-accent-500);
+}
+.prose ol { list-style: decimal; padding-left: 1.4em; }
+.prose ol li::marker { color: var(--color-accent-600); font-weight: 700; }
+.prose blockquote {
+  border-left: 3px solid var(--color-accent-400);
+  padding: 0.2em 0 0.2em 1.1rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--color-brand-700);
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.98rem;
+}
+.prose th, .prose td {
+  border: 1px solid var(--color-brand-100);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+.prose th { background: var(--color-brand-50); color: var(--color-brand-800); font-weight: 600; }
+.prose :where(h2, h3) + p { margin-top: 0.6em; }
+.prose img { width: 100%; border-radius: 1rem; border: 1px solid var(--color-brand-100); margin-block: 1.6rem; }
+.prose figure { margin-block: 1.6rem; }
+.prose figcaption { margin-top: 0.5rem; font-size: 0.9rem; color: var(--color-muted); text-align: center; }

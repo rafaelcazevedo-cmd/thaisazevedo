@@ -1,0 +1,153 @@
+---
+/**
+ * Crossfade photo carousel: autoplay + dots + arrows.
+ * Accessible, reduced-motion aware, and no-JS safe (first slide shows by default).
+ */
+interface Slide {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+interface Props {
+  slides: Slide[];
+  interval?: number;
+  class?: string;
+}
+const { slides, interval = 4500, class: className = '' } = Astro.props;
+---
+
+<div class={`relative ${className}`} data-carousel data-interval={interval}>
+  <div class="relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-brand-200 bg-brand-100 shadow-2xl shadow-brand-900/15">
+    {
+      slides.map((s, i) => (
+        <figure
+          class:list={['carousel-slide absolute inset-0', i === 0 && 'is-active']}
+          data-slide={i}
+          aria-hidden={i === 0 ? 'false' : 'true'}
+        >
+          <img
+            src={s.src}
+            alt={s.alt}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            class="h-full w-full object-cover"
+          />
+          {s.caption && (
+            <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/70 to-transparent px-5 pb-4 pt-12 text-sm font-medium text-white">
+              {s.caption}
+            </figcaption>
+          )}
+        </figure>
+      ))
+    }
+
+    <button type="button" data-prev class="carousel-arrow left-3" aria-label="Foto anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" /></svg>
+    </button>
+    <button type="button" data-next class="carousel-arrow right-3" aria-label="Próxima foto">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+    </button>
+
+    <div class="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+      {
+        slides.map((_, i) => (
+          <button
+            type="button"
+            data-dot={i}
+            class:list={['carousel-dot', i === 0 && 'is-active']}
+            aria-label={`Ir para a foto ${i + 1}`}
+          />
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .carousel-slide {
+    opacity: 0;
+    transition: opacity 0.9s ease;
+  }
+  .carousel-slide.is-active {
+    opacity: 1;
+  }
+  .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 0.85);
+    color: var(--color-brand-800);
+    box-shadow: 0 4px 14px rgb(0 0 0 / 0.18);
+    opacity: 0;
+    transition: opacity 0.25s ease, background 0.2s ease;
+  }
+  [data-carousel]:hover .carousel-arrow,
+  .carousel-arrow:focus-visible {
+    opacity: 1;
+  }
+  .carousel-arrow:hover {
+    background: #fff;
+  }
+  .carousel-dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 9999px;
+    background: rgb(255 255 255 / 0.6);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+    transition: width 0.3s ease, background 0.3s ease;
+  }
+  .carousel-dot.is-active {
+    width: 1.5rem;
+    background: #fff;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .carousel-slide {
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  function initCarousel(root: HTMLElement) {
+    const slides = Array.from(root.querySelectorAll<HTMLElement>('.carousel-slide'));
+    const dots = Array.from(root.querySelectorAll<HTMLElement>('[data-dot]'));
+    if (slides.length < 2) return;
+    const interval = Number(root.dataset.interval) || 4500;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let idx = 0;
+    let timer: number | undefined;
+
+    function show(n: number) {
+      idx = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => {
+        s.classList.toggle('is-active', i === idx);
+        s.setAttribute('aria-hidden', i === idx ? 'false' : 'true');
+      });
+      dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+    }
+    function start() {
+      if (reduce) return;
+      stop();
+      timer = window.setInterval(() => show(idx + 1), interval);
+    }
+    function stop() {
+      if (timer) window.clearInterval(timer);
+    }
+
+    root.querySelector('[data-next]')?.addEventListener('click', () => { show(idx + 1); start(); });
+    root.querySelector('[data-prev]')?.addEventListener('click', () => { show(idx - 1); start(); });
+    dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    show(0);
+    start();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-carousel]').forEach(initCarousel);
+</script>

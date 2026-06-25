@@ -1,0 +1,26 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Section from '@/components/Section.astro';
+import FAQ from '@/components/FAQ.astro';
+import CTASection from '@/components/CTASection.astro';
+import { faqs } from '@/data/faqs';
+import { site } from '@/config/site';
+
+const title = 'Dúvidas frequentes sobre neuropsicopedagogia';
+const description = `Respostas às perguntas mais comuns sobre neuropsicopedagogia, avaliação, intervenção e dificuldades de aprendizagem — atendimento em ${site.city}.`;
+---
+
+<BaseLayout title={title} description={description} path="/perguntas-frequentes">
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Dúvidas frequentes', href: '/perguntas-frequentes' }]} />
+
+  <Section eyebrow="Tire suas dúvidas" title="Perguntas frequentes" narrow>
+    <p class="mb-8 text-lg text-muted">
+      Reuni aqui as perguntas que mais ouço de pais e responsáveis. Se a sua dúvida não estiver na lista, fale
+      comigo pelo WhatsApp — terei prazer em ajudar.
+    </p>
+    <FAQ items={faqs} />
+  </Section>
+
+  <CTASection heading="Ainda tem dúvidas?" text="Me chame no WhatsApp e conte o seu caso. Respondo pessoalmente, sem compromisso." />
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+/**
+ * GEO "quick answer" block. Placed high on the page so the first ~150 tokens give
+ * answer engines a clean, quotable definition. Keep the text direct and factual.
+ */
+interface Props {
+  label?: string;
+}
+const { label = 'Resumo rápido' } = Astro.props;
+---
+
+<aside class="rounded-2xl border border-brand-200 bg-brand-50/70 p-5 sm:p-6">
+  <p class="mb-1.5 text-xs font-bold uppercase tracking-wide text-brand-600">{label}</p>
+  <div class="text-lg leading-relaxed text-ink">
+    <slot />
+  </div>
+</aside>
