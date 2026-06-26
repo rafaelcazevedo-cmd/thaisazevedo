@@ -38,3 +38,6 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          # Hostinger's FTP control socket can stall mid-transfer; give it more
+          # headroom so a transient idle doesn't fail the whole deploy (default 30s).
+          timeout: 120000
