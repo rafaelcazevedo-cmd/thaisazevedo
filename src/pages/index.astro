@@ -94,26 +94,6 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </section>
 
-  <!-- Reconhece algum desses momentos? (acolhimento + dificuldades atendidas) -->
-  <Section eyebrow="Você não está sozinho" title="Reconhece algum desses momentos?">
-    <div class="mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {moments.map((m) => (
-        <div class="group flex items-center gap-3.5 rounded-2xl border border-brand-100 bg-paper p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-400 hover:shadow-md">
-          <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-accent-400 ring-4 ring-accent-300/40" aria-hidden="true"></span>
-          <p class="font-display text-lg leading-snug text-brand-800">{m}</p>
-        </div>
-      ))}
-    </div>
-    <h2 class="mb-8 max-w-3xl font-display text-3xl font-semibold text-brand-800 sm:text-4xl">
-      Por trás desses momentos, costuma haver uma dificuldade que pode ser compreendida e trabalhada.
-    </h2>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {homeConditions.map((c) => (
-        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
-      ))}
-    </div>
-  </Section>
-
   <!-- O que é neuropsicopedagogia? (spotlight feature) -->
   <section class="py-12 sm:py-16">
     <div class="container-page">
@@ -145,6 +125,26 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
       </div>
     </div>
   </section>
+
+  <!-- Reconhece algum desses momentos? (acolhimento + dificuldades atendidas) -->
+  <Section eyebrow="Você não está sozinho" title="Reconhece algum desses momentos?">
+    <div class="mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {moments.map((m) => (
+        <div class="group flex items-center gap-3.5 rounded-2xl border border-brand-100 bg-paper p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-400 hover:shadow-md">
+          <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-accent-400 ring-4 ring-accent-300/40" aria-hidden="true"></span>
+          <p class="font-display text-lg leading-snug text-brand-800">{m}</p>
+        </div>
+      ))}
+    </div>
+    <h2 class="mb-8 max-w-3xl font-display text-3xl font-semibold text-brand-800 sm:text-4xl">
+      Por trás desses momentos, costuma haver uma dificuldade que pode ser compreendida e trabalhada.
+    </h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {homeConditions.map((c) => (
+        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
+      ))}
+    </div>
+  </Section>
 
   <!-- Services -->
   <Section eyebrow="Como posso ajudar" title="Serviços">
