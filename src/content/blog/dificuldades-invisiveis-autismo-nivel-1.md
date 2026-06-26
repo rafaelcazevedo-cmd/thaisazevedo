@@ -1,10 +1,10 @@
 ---
-title: "Dificuldades invisíveis: o autismo nível 1 em adultos"
-description: O que são as "dificuldades invisíveis" do autismo nível 1 em adultos — rigidez cognitiva, pensamento literal e filtro social — em reflexões de Thais Azevedo a partir da AMA.
+title: "Dificuldades invisíveis: o Autismo nível 1 em adultos"
+description: O que são as "dificuldades invisíveis" do Autismo nível 1 em adultos — rigidez cognitiva, pensamento literal e filtro social — em reflexões de Thais Azevedo a partir da AMA.
 pubDate: 2026-06-05
 updatedDate: 2026-06-25
 tags:
-  - autismo
+  - Autismo
   - neurodiversidade
 ---
 

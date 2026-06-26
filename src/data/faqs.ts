@@ -44,12 +44,12 @@ export const faqs: Faq[] = [
   {
     question: 'A neuropsicopedagogia atende crianças autistas ou com TDAH?',
     answer:
-      'Sim. A neuropsicopedagogia é uma excelente terapia para crianças neurodivergentes — incluindo autistas, crianças com TDAH e com síndrome de Down — além de crianças com dislexia, discalculia e outras dificuldades de aprendizagem. O trabalho respeita o ritmo e o modo único de aprender de cada uma.',
+      'Sim. A neuropsicopedagogia é uma excelente terapia para crianças neurodivergentes — incluindo autistas, crianças com TDAH e com Síndrome de Down — além de crianças com Dislexia, Discalculia e outras dificuldades de aprendizagem. O trabalho respeita o ritmo e o modo único de aprender de cada uma.',
   },
   {
-    question: 'A neuropsicopedagoga dá o diagnóstico de dislexia ou TDAH?',
+    question: 'A neuropsicopedagoga dá o diagnóstico de Dislexia ou TDAH?',
     answer:
-      'O diagnóstico fechado de transtornos como dislexia e TDAH é feito por equipe multidisciplinar (que pode incluir médico, psicólogo e fonoaudiólogo). A neuropsicopedagoga identifica sinais, contribui com a avaliação da aprendizagem e, quando necessário, encaminha para os profissionais adequados, atuando em conjunto com eles.',
+      'O diagnóstico fechado de transtornos como Dislexia e TDAH é feito por equipe multidisciplinar (que pode incluir médico, psicólogo e fonoaudiólogo). A neuropsicopedagoga identifica sinais, contribui com a avaliação da aprendizagem e, quando necessário, encaminha para os profissionais adequados, atuando em conjunto com eles.',
   },
   {
     question: 'Quanto tempo dura o acompanhamento?',

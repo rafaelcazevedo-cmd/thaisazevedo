@@ -30,7 +30,7 @@ Vale procurar uma avaliação quando:
 
 - A dificuldade é **persistente** e já dura alguns meses;
 - A criança **sofre** com os estudos ou perde a autoestima;
-- Há **suspeita de dislexia, TDAH, discalculia** ou outra dificuldade;
+- Há **suspeita de Dislexia, TDAH, Discalculia** ou outra dificuldade;
 - O **reforço escolar não foi suficiente** para resolver o problema.
 
 ## E depois da avaliação?

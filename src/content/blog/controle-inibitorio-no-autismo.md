@@ -1,10 +1,10 @@
 ---
-title: "Controle inibitório: o desafio de esperar no autismo"
+title: "Controle inibitório: o desafio de esperar no Autismo"
 description: O que é controle inibitório, por que esperar é tão difícil para crianças autistas e como esse trabalho acontece na prática — reflexões de Thais Azevedo a partir da AMA.
 pubDate: 2026-05-20
 updatedDate: 2026-06-25
 tags:
-  - autismo
+  - Autismo
   - funções executivas
   - controle inibitório
 ---

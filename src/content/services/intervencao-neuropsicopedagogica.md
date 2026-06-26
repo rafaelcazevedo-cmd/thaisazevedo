@@ -25,7 +25,7 @@ A **intervenção neuropsicopedagógica** é o acompanhamento que, a partir do q
 
 ## Uma terapia para diferentes perfis
 
-A neuropsicopedagogia é uma excelente terapia tanto para crianças com questões de aprendizagem — como **dislexia** e **discalculia** — quanto para pacientes **neurodivergentes**, incluindo **autistas**, crianças com **TDAH** e com **síndrome de Down**. O trabalho respeita o ritmo e o modo único de cada um.
+A neuropsicopedagogia é uma excelente terapia tanto para crianças com questões de aprendizagem — como **Dislexia** e **Discalculia** — quanto para pacientes **neurodivergentes**, incluindo **autistas**, crianças com **TDAH** e com **Síndrome de Down**. O trabalho respeita o ritmo e o modo único de cada um.
 
 ## Uma parceria com a família
 

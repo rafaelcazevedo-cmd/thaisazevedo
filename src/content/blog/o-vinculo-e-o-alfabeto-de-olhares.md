@@ -1,10 +1,10 @@
 ---
-title: "O vínculo e o alfabeto de olhares: a comunicação no autismo nível 3"
+title: "O vínculo e o alfabeto de olhares: a comunicação no Autismo nível 3"
 description: Reflexões sobre comunicação, vínculo e o "alfabeto de olhares" de crianças autistas não verbais (nível 3), a partir das vivências de Thais Azevedo na AMA.
 pubDate: 2026-05-08
 updatedDate: 2026-06-25
 tags:
-  - autismo
+  - Autismo
   - vínculo
   - comunicação
 ---

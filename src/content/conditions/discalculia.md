@@ -1,13 +1,13 @@
 ---
 title: Discalculia
 seoTitle: "Discalculia: sinais e apoio neuropsicopedagógico"
-description: O que é discalculia, sinais da dificuldade com matemática na infância e como a neuropsicopedagogia em São Paulo ajuda a criança a aprender com confiança.
-summary: A discalculia é um transtorno específico de aprendizagem que afeta a compreensão de números e o cálculo, mesmo em crianças com inteligência preservada e ensino adequado.
+description: O que é Discalculia, sinais da dificuldade com matemática na infância e como a neuropsicopedagogia em São Paulo ajuda a criança a aprender com confiança.
+summary: A Discalculia é um transtorno específico de aprendizagem que afeta a compreensão de números e o cálculo, mesmo em crianças com inteligência preservada e ensino adequado.
 order: 8
 keywords:
-  - discalculia
+  - Discalculia
   - dificuldade com matemática
-  - discalculia sinais
+  - Discalculia sinais
 signs:
   - Dificuldade para reconhecer números e relacioná-los a quantidades
   - Confunde sinais e procedimentos das operações matemáticas
@@ -16,11 +16,11 @@ signs:
   - Ansiedade e bloqueio diante de atividades de matemática
 ---
 
-A **discalculia** é um transtorno específico de aprendizagem que afeta a **compreensão de números e o cálculo**. A criança tem dificuldade para entender quantidades, relações numéricas e procedimentos matemáticos, mesmo com inteligência preservada e ensino adequado.
+A **Discalculia** é um transtorno específico de aprendizagem que afeta a **compreensão de números e o cálculo**. A criança tem dificuldade para entender quantidades, relações numéricas e procedimentos matemáticos, mesmo com inteligência preservada e ensino adequado.
 
 ## Mais do que "não gostar de matemática"
 
-A discalculia não é falta de esforço nem desinteresse. Trata-se de uma forma diferente de processar a informação numérica, que torna desafiador o que para outras crianças parece automático — como saber que 7 é maior que 4 ou resolver uma conta simples.
+A Discalculia não é falta de esforço nem desinteresse. Trata-se de uma forma diferente de processar a informação numérica, que torna desafiador o que para outras crianças parece automático — como saber que 7 é maior que 4 ou resolver uma conta simples.
 
 ## Como a neuropsicopedagogia ajuda
 
