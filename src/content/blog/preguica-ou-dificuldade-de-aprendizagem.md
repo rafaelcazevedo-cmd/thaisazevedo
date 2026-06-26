@@ -8,7 +8,7 @@ tags:
   - pais
 ---
 
-"É inteligente, mas não se esforça." Talvez seja a frase mais comum, e mais injusta, dita sobre uma criança que vai mal na escola. Na maioria das vezes, **o que parece preguiça é uma dificuldade que a criança ainda não consegue explicar** — e que, com o apoio certo, pode ser compreendida e trabalhada.
+"É inteligente, mas não se esforça." Talvez seja a frase mais comum, e mais injusta, dita sobre uma criança que vai mal na escola. Na maioria das vezes, **o que parece preguiça é uma dificuldade que a criança ainda não consegue explicar**, e que, com o apoio certo, pode ser compreendida e trabalhada.
 
 ## Por que "preguiça" quase nunca é a explicação
 
@@ -30,7 +30,7 @@ Um ponto isolado não diz nada. O que merece atenção é a **persistência** (d
 
 ## Dificuldade de aprendizagem não é só "não saber ler"
 
-A mesma cena — "não rende na escola" — pode ter origens bem diferentes:
+A mesma cena, "não rende na escola", pode ter origens bem diferentes:
 
 - **Atenção e organização**: a criança até entende, mas se perde no meio do caminho. [Saiba mais](/condicoes/atencao-e-organizacao).
 - **Leitura e escrita**: troca letras e lê com muito esforço; veja como [diferenciar Dislexia de preguiça](/blog/dislexia-ou-preguica-como-diferenciar).

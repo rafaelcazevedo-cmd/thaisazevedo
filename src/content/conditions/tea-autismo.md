@@ -22,7 +22,7 @@ O **Autismo (TEA, Transtorno do Espectro Autista)** é uma condição do neurode
 
 A neuropsicopedagogia é uma **excelente terapia para pacientes neurodivergentes**, incluindo crianças autistas. O trabalho é individualizado e respeita o ritmo de cada criança, fortalecendo as habilidades de aprendizagem, atenção, linguagem, memória e funções executivas, sempre com **acolhimento e vínculo**.
 
-Tenho experiência com o público autista por meio de vivências e imersões na **AMA (Associação Amigos do Autista)** e no **Instituto Priorit**, voltados ao atendimento multidisciplinar de crianças e jovens autistas e com TDAH.
+Tenho experiência com o público autista por meio de vivências e imersões na **AMA (Associação de Amigos do Autista)** e no **Instituto Priorit**, voltados ao atendimento multidisciplinar de crianças e jovens autistas e com TDAH.
 
 ![Thais Azevedo ao lado de uma criança que usa fones de cancelamento de ruído, respeitando suas necessidades sensoriais](/images/atendimento-2.jpg)
 

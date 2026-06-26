@@ -8,7 +8,7 @@ tags:
   - neurodiversidade
 ---
 
-*Reflexões a partir das minhas vivências na AMA (Associação Amigos do Autista). As falas abaixo são reais, mas os participantes não são identificados, para preservar sua privacidade. (Nas falas iniciais, "T" sou eu.)*
+*Reflexões a partir das minhas vivências na AMA (Associação de Amigos do Autista). As falas abaixo são reais, mas os participantes não são identificados, para preservar sua privacidade. (Nas falas iniciais, "T" sou eu.)*
 
 J: "Eu tenho 37 anos."
 

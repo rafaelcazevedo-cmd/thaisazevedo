@@ -3,8 +3,9 @@
  * Site-wide JSON-LD graph rendered on every page: WebSite + MedicalBusiness + Person.
  * Uses @id linking so search/answer engines resolve one coherent entity.
  * MedicalBusiness is the recommended LocalBusiness subtype for health practices and
- * carries the local signals (address, geo, hours, areaServed) that drive the local pack
- * and AI local recommendations.
+ * carries the local signals (address, areaServed) that drive the local pack and AI local
+ * recommendations. Geo coordinates and opening hours are emitted only once confirmed
+ * (site.geoConfirmed / site.hoursConfirmed) so placeholders never reach production.
  */
 import JsonLd from './JsonLd.astro';
 import { site, sameAs, whatsappUrl } from '@/config/site';
@@ -33,7 +34,21 @@ const graph: Record<string, unknown>[] = [
     name: site.professionalName,
     jobTitle: site.profession,
     description: site.credentials,
+    image: base + '/images/thais.jpg',
     worksFor: { '@id': practiceId },
+    alumniOf: { '@type': 'CollegeOrUniversity', name: 'ESPM' },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Pós-graduação',
+        name: 'Dificuldades na Aprendizagem',
+      },
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'Pós-graduação',
+        name: 'Neuropsicopedagogia Clínica',
+      },
+    ],
     knowsAbout: [
       'Neuropsicopedagogia',
       'Dificuldades de aprendizagem',
@@ -71,6 +86,17 @@ const graph: Record<string, unknown>[] = [
       addressCountry: site.address.country,
     },
     areaServed: { '@type': 'City', name: 'São Paulo' },
+    ...(site.geoConfirmed && {
+      geo: { '@type': 'GeoCoordinates', latitude: site.geo.lat, longitude: site.geo.lng },
+    }),
+    ...(site.hoursConfirmed && {
+      openingHoursSpecification: site.openingHoursSpec.map((h) => ({
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: h.days,
+        opens: h.opens,
+        closes: h.closes,
+      })),
+    }),
     sameAs,
     potentialAction: {
       '@type': 'CommunicateAction',

@@ -2,6 +2,8 @@
 /**
  * Crossfade photo carousel: autoplay + dots + arrows.
  * Accessible, reduced-motion aware, and no-JS safe (first slide shows by default).
+ * Touch-friendly: arrows are visible on coarse pointers, dots have 44px hit areas,
+ * and any touch interaction pauses autoplay (WCAG 2.2.2).
  */
 interface Slide {
   src: string;
@@ -13,7 +15,7 @@ interface Props {
   interval?: number;
   class?: string;
 }
-const { slides, interval = 4500, class: className = '' } = Astro.props;
+const { slides, interval = 6000, class: className = '' } = Astro.props;
 ---
 
 <div class={`relative ${className}`} data-carousel data-interval={interval}>
@@ -29,6 +31,9 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
             src={s.src}
             alt={s.alt}
             loading={i === 0 ? 'eager' : 'lazy'}
+            fetchpriority={i === 0 ? 'high' : undefined}
+            width="640"
+            height="800"
             class="h-full w-full object-cover"
           />
           {s.caption && (
@@ -47,7 +52,7 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
     </button>
 
-    <div class="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+    <div class="absolute inset-x-0 bottom-1 flex justify-center">
       {
         slides.map((_, i) => (
           <button
@@ -55,7 +60,9 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
             data-dot={i}
             class:list={['carousel-dot', i === 0 && 'is-active']}
             aria-label={`Ir para a foto ${i + 1}`}
-          />
+          >
+            <span class="carousel-dot-pill" aria-hidden="true" />
+          </button>
         ))
       }
     </div>
@@ -77,8 +84,8 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2.75rem;
+    width: 2.75rem;
     border-radius: 9999px;
     background: rgb(255 255 255 / 0.85);
     color: var(--color-brand-800);
@@ -90,18 +97,36 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
   .carousel-arrow:focus-visible {
     opacity: 1;
   }
+  /* Touch devices can't hover, so keep the arrows visible there. */
+  @media (pointer: coarse) {
+    .carousel-arrow {
+      opacity: 1;
+    }
+  }
   .carousel-arrow:hover {
     background: #fff;
   }
+  /* 44px hit target with a small visible pill inside. */
   .carousel-dot {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.75rem;
+    width: 2.75rem;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+  .carousel-dot-pill {
     height: 0.5rem;
     width: 0.5rem;
     border-radius: 9999px;
-    background: rgb(255 255 255 / 0.6);
-    box-shadow: 0 1px 3px rgb(0 0 0 / 0.3);
+    background: rgb(255 255 255 / 0.65);
+    box-shadow: 0 1px 3px rgb(0 0 0 / 0.35);
     transition: width 0.3s ease, background 0.3s ease;
   }
-  .carousel-dot.is-active {
+  .carousel-dot.is-active .carousel-dot-pill {
     width: 1.5rem;
     background: #fff;
   }
@@ -117,10 +142,11 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
     const slides = Array.from(root.querySelectorAll<HTMLElement>('.carousel-slide'));
     const dots = Array.from(root.querySelectorAll<HTMLElement>('[data-dot]'));
     if (slides.length < 2) return;
-    const interval = Number(root.dataset.interval) || 4500;
+    const interval = Number(root.dataset.interval) || 6000;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let idx = 0;
     let timer: number | undefined;
+    let paused = false;
 
     function show(n: number) {
       idx = (n + slides.length) % slides.length;
@@ -131,7 +157,7 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
       dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
     }
     function start() {
-      if (reduce) return;
+      if (reduce || paused) return;
       stop();
       timer = window.setInterval(() => show(idx + 1), interval);
     }
@@ -144,6 +170,17 @@ const { slides, interval = 4500, class: className = '' } = Astro.props;
     dots.forEach((d, i) => d.addEventListener('click', () => { show(i); start(); }));
     root.addEventListener('mouseenter', stop);
     root.addEventListener('mouseleave', start);
+    root.addEventListener('focusin', stop);
+    root.addEventListener('focusout', start);
+    // Touch users have no hover; the first touch halts autoplay so it never moves under them.
+    let touchX: number | null = null;
+    root.addEventListener('touchstart', (e) => { paused = true; stop(); touchX = e.touches[0].clientX; }, { passive: true });
+    root.addEventListener('touchend', (e) => {
+      if (touchX === null) return;
+      const dx = e.changedTouches[0].clientX - touchX;
+      touchX = null;
+      if (Math.abs(dx) > 40) show(dx < 0 ? idx + 1 : idx - 1);
+    }, { passive: true });
 
     show(0);
     start();

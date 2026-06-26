@@ -89,10 +89,23 @@ const isActive = (href: string) =>
     const btn = document.getElementById('menu-toggle');
     const menu = document.getElementById('mobile-menu');
     if (!btn || !menu) return;
+    function setOpen(open) {
+      btn.setAttribute('aria-expanded', String(open));
+      menu.hidden = !open;
+    }
     btn.addEventListener('click', function () {
-      const open = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!open));
-      menu.hidden = open;
+      setOpen(btn.getAttribute('aria-expanded') !== 'true');
+    });
+    // Escape closes the menu and returns focus to the toggle.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') {
+        setOpen(false);
+        btn.focus();
+      }
+    });
+    // Tapping a destination closes the menu.
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) setOpen(false);
     });
   })();
 </script>

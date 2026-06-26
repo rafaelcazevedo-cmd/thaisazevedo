@@ -39,7 +39,7 @@ Esses papéis se **complementam**. É comum a neuropsicopedagoga trabalhar em pa
 
 ## Não preciso de diagnóstico para começar
 
-Esse é um dos maiores mitos. **O acompanhamento pode começar a partir da queixa** — uma dificuldade na escola, uma queda de rendimento, uma criança que perdeu a confiança. O foco é o indivíduo, e não um rótulo.
+Esse é um dos maiores mitos. **O acompanhamento pode começar a partir da queixa**: uma dificuldade na escola, uma queda de rendimento, uma criança que perdeu a confiança. O foco é o indivíduo, e não um rótulo.
 
 ## Como é o primeiro passo
 

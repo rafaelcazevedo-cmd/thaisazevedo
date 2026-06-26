@@ -1,0 +1,29 @@
+---
+/**
+ * Standardized "read more" affordance for cards: one color (brand-600, AA-passing),
+ * one animated arrow, one hover shift. The label varies (it carries meaning).
+ * Render inside a Card (relies on the group-hover from the parent <a>).
+ */
+interface Props {
+  label: string;
+  /** Margin utility controlling vertical placement (e.g. 'mt-auto pt-4' to pin to the bottom). */
+  marginClass?: string;
+}
+const { label, marginClass = 'mt-4' } = Astro.props;
+---
+
+<span
+  class={`${marginClass} inline-flex items-center gap-1 text-sm font-semibold text-brand-600 group-hover:text-brand-700`}
+>
+  {label}
+  <svg
+    class="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+  </svg>
+</span>

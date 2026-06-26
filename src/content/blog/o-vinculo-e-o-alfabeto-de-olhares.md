@@ -9,7 +9,7 @@ tags:
   - comunicação
 ---
 
-*Reflexões a partir das minhas vivências na AMA (Associação Amigos do Autista). Os nomes das crianças foram trocados por nomes fictícios para preservar sua privacidade.*
+*Reflexões a partir das minhas vivências na AMA (Associação de Amigos do Autista). Os nomes das crianças foram trocados por nomes fictícios para preservar sua privacidade.*
 
 "O olhar é um reforçador de comportamento. Do mesmo jeito que eles se expressam muito pelo olhar, eles absorvem muito do nosso olhar, mais do que os verbais. São bem sensíveis ao olhar", disse uma das terapeutas da Sala 1. "Você vai ver, se eu encarar ele, ele vai continuar no parque, se recusando a subir para a sala, mesmo que eu continue chamando. Se eu der o comando, ele se recusar a subir e eu repetir o comando, mas não olhar diretamente nos olhos dele, ele entende que eu não estou reforçando esse comportamento e sobe junto com a gente."
 

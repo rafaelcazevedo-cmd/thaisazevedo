@@ -3,6 +3,7 @@ title: Suporte neuropsicopedagógico
 seoTitle: Suporte neuropsicopedagógico e apoio escolar
 description: Suporte neuropsicopedagógico em São Paulo para crianças com dificuldade em alguma matéria, na alfabetização, na leitura, na escrita, na matemática ou na organização da rotina.
 summary: O suporte neuropsicopedagógico é um acompanhamento mais pontual para ajudar a criança em alguma matéria ou dificuldade específica, da alfabetização à organização da rotina e da lição de casa.
+tagline: Apoio pontual em uma matéria ou dificuldade específica.
 icon: brain
 order: 3
 keywords:

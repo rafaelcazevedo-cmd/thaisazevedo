@@ -4,8 +4,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import QuickAnswer from '@/components/QuickAnswer.astro';
 import CTASection from '@/components/CTASection.astro';
+import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import JsonLd from '@/components/JsonLd.astro';
-import { site } from '@/config/site';
+import { site, whatsappUrl } from '@/config/site';
 
 export async function getStaticPaths() {
   const services = await getCollection('services');
@@ -16,15 +17,25 @@ const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
 
+const serviceUrl = new URL(`/servicos/${entry.id}`, Astro.site).href;
+const serviceMessage = `Olá, Thais! Tenho interesse no serviço de ${d.title.toLowerCase()}. Pode me explicar como funciona?`;
+
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
+  '@id': `${serviceUrl}#service`,
   name: d.title,
   description: d.description,
   serviceType: d.title,
+  inLanguage: 'pt-BR',
   areaServed: { '@type': 'City', name: site.city },
   provider: { '@id': `${Astro.site!.origin}/#practice` },
-  url: new URL(`/servicos/${entry.id}`, Astro.site).href,
+  url: serviceUrl,
+  potentialAction: {
+    '@type': 'CommunicateAction',
+    name: 'Agendar pelo WhatsApp',
+    target: whatsappUrl(serviceMessage),
+  },
 };
 ---
 
@@ -38,9 +49,12 @@ const serviceSchema = {
   />
 
   <article class="container-page max-w-3xl py-10">
-    <h1 class="font-display text-4xl font-semibold text-brand-800">{d.title}</h1>
+    <h1 class="font-display text-4xl font-semibold leading-[1.1] text-brand-800 break-words hyphens-auto sm:text-5xl">{d.title}</h1>
     <div class="mt-6">
       <QuickAnswer><p>{d.summary}</p></QuickAnswer>
+    </div>
+    <div class="mt-5">
+      <WhatsAppButton message={serviceMessage} label="Conversar sobre este serviço" />
     </div>
     <div class="prose mt-8 max-w-none">
       <Content />
@@ -49,7 +63,7 @@ const serviceSchema = {
 
   <CTASection
     heading="Quer saber se este é o caminho para a sua criança?"
-    message={`Olá, Thais! Tenho interesse no serviço de ${d.title.toLowerCase()}. Pode me explicar como funciona?`}
+    message={serviceMessage}
   />
 
   <JsonLd schema={serviceSchema} />

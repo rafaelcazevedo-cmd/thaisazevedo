@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Section from '@/components/Section.astro';
 import CTASection from '@/components/CTASection.astro';
+import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import { site } from '@/config/site';
 
 const values = [
@@ -20,12 +21,12 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
 
   <Section>
     <div class="grid items-start gap-10 lg:grid-cols-[1fr_1.4fr]">
-      <div class="aspect-[4/5] overflow-hidden rounded-3xl border border-brand-100 bg-brand-100">
+      <div class="mx-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-3xl border border-brand-100 bg-brand-100 lg:max-w-none">
         <img src="/images/thais.jpg" alt={`Foto de ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}`} width="900" height="883" class="h-full w-full object-cover" />
       </div>
       <div>
         <p class="eyebrow mb-1.5">Sobre mim</p>
-        <h1 class="font-display text-4xl font-semibold text-brand-800">{site.professionalName}</h1>
+        <h1 class="font-display text-4xl font-semibold text-brand-800 break-words sm:text-5xl">{site.professionalName}</h1>
         <p class="mt-1 text-lg text-brand-600">{site.profession} em {site.city}</p>
 
         <div class="prose mt-6 max-w-none">
@@ -45,7 +46,7 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
           <p>
             Sou <strong>pós-graduada em “Dificuldades na Aprendizagem” e em “Neuropsicopedagogia Clínica”</strong>.
             Tenho experiência com crianças e jovens neurodivergentes, incluindo vivências e imersões na{' '}
-            <strong>AMA (Associação Amigos do Autista)</strong> e no <strong>Instituto Priorit</strong>, voltados
+            <strong>AMA (Associação de Amigos do Autista)</strong> e no <strong>Instituto Priorit</strong>, voltados
             ao atendimento multidisciplinar de pessoas autistas e com TDAH.
           </p>
           <p>
@@ -53,11 +54,18 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
             Kardec, no Instituto Rolling Stone (ensino de música para crianças), no Lar das Crianças da CIP e no
             Instituto Restaurar.
           </p>
-          <p class="rounded-xl border border-brand-100 bg-brand-50 p-4 text-base text-brand-800">
-            <strong>Atendimento:</strong> particular, em <strong>consultório</strong> e na{' '}
-            <strong>residência dos pacientes</strong> (domiciliar), em {site.city}.<br />
-            <strong>Formação:</strong> {site.credentials}.
+          <p class="rounded-xl border border-brand-100 bg-brand-50 p-4 text-base text-ink/90">
+            <strong class="text-brand-800">Atendimento:</strong> particular, em <strong class="text-brand-800">consultório</strong> e na{' '}
+            <strong class="text-brand-800">residência dos pacientes</strong> (domiciliar), em {site.city}.<br />
+            <strong class="text-brand-800">Formação:</strong> {site.credentials}.
           </p>
+        </div>
+
+        <div class="mt-6">
+          <WhatsAppButton
+            message="Olá, Thais! Conheci o seu trabalho pelo site e gostaria de conversar sobre a minha criança."
+            label="Conversar pelo WhatsApp"
+          />
         </div>
       </div>
     </div>
@@ -75,7 +83,7 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
           class="w-full rounded-2xl border border-brand-100 object-cover shadow-sm"
         />
         <figcaption class="mt-3 text-sm text-muted">
-          No lançamento do livro <em>"Os Desafios do Professor: entre as 4 paredes de uma sala de aula"</em>, do
+          No lançamento do livro <em>“Os Desafios do Professor: entre as 4 paredes de uma sala de aula”</em>, do
           qual sou coautora.
         </figcaption>
       </figure>

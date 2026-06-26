@@ -4,8 +4,11 @@ import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Section from '@/components/Section.astro';
 import { site } from '@/config/site';
 
+// NOTE (internal, not rendered): this is a good-faith LGPD policy for an informational
+// site with no forms. Have it reviewed by a lawyer before relying on it for compliance.
 const title = 'Política de privacidade';
 const description = 'Política de privacidade e tratamento de dados pessoais (LGPD) do site.';
+const lastUpdated = '26 de junho de 2026';
 ---
 
 <BaseLayout title={title} description={description} path="/politica-de-privacidade" noindex={true}>
@@ -13,10 +16,18 @@ const description = 'Política de privacidade e tratamento de dados pessoais (LG
 
   <Section narrow>
     <h1 class="font-display text-4xl font-semibold text-brand-800">Política de privacidade</h1>
+    <p class="mt-2 text-sm text-muted">Última atualização: {lastUpdated}.</p>
     <div class="prose mt-8 max-w-none">
       <p>
         Esta política descreve como os dados pessoais são tratados neste site, em conformidade com a{' '}
         <strong>Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018)</strong>.
+      </p>
+
+      <h2>Quem é o responsável (controlador)</h2>
+      <p>
+        O tratamento dos dados é feito por <strong>{site.legalName}</strong> ({site.professionalName}),{' '}
+        {site.profession.toLowerCase()} em {site.city}. Para qualquer assunto relacionado à privacidade ou aos seus
+        dados, o contato é <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
 
       <h2>Quais dados coletamos</h2>
@@ -27,11 +38,28 @@ const description = 'Política de privacidade e tratamento de dados pessoais (LG
         eventualmente agendar o atendimento.
       </p>
 
-      <h2>Como usamos os dados</h2>
+      <h2>Base legal e finalidade</h2>
       <p>
-        As informações enviadas por você são usadas apenas para comunicação com {site.professionalName} e para a
-        prestação do serviço. <strong>Não vendemos nem compartilhamos</strong> seus dados com terceiros para fins
-        de marketing.
+        Os dados que você envia são tratados com base no seu <strong>consentimento</strong> e para os
+        <strong> procedimentos preliminares relacionados a um contrato</strong> de prestação de serviço (art. 7º da
+        LGPD). A finalidade é única: comunicação com {site.professionalName} e a eventual prestação do atendimento
+        neuropsicopedagógico. <strong>Não vendemos nem compartilhamos</strong> seus dados com terceiros para fins de
+        marketing.
+      </p>
+
+      <h2>Dados de crianças e adolescentes</h2>
+      <p>
+        O atendimento é voltado a crianças e adolescentes, mas <strong>o contato é sempre iniciado por um
+        responsável legal</strong>. O tratamento de dados de menores é feito em seu melhor interesse (art. 14 da
+        LGPD), limitado ao necessário para o atendimento e sem qualquer compartilhamento com terceiros para outros
+        fins. Informações sensíveis sobre a criança devem ser enviadas apenas pelo responsável e somente quando
+        necessárias.
+      </p>
+
+      <h2>Por quanto tempo guardamos</h2>
+      <p>
+        As mensagens e informações são mantidas apenas pelo tempo necessário para o atendimento e para cumprir
+        obrigações legais. Você pode solicitar a exclusão a qualquer momento pelos canais abaixo.
       </p>
 
       <h2>Cookies e medição</h2>
@@ -42,17 +70,15 @@ const description = 'Política de privacidade e tratamento de dados pessoais (LG
 
       <h2>Seus direitos</h2>
       <p>
-        Você pode solicitar acesso, correção ou exclusão dos seus dados a qualquer momento pelos canais de
-        contato informados neste site.
+        Você pode, a qualquer momento, solicitar <strong>acesso, correção, exclusão, anonimização ou portabilidade</strong>
+        dos seus dados, bem como revogar o consentimento, pelos canais de contato informados neste site. Caso
+        entenda que seus direitos não foram atendidos, você pode apresentar uma reclamação à{' '}
+        <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>.
       </p>
 
       <h2>Contato</h2>
       <p>
         Dúvidas sobre privacidade podem ser enviadas para <a href={`mailto:${site.email}`}>{site.email}</a>.
-      </p>
-
-      <p class="text-sm text-muted">
-        <em>Modelo inicial, recomenda-se revisão por profissional jurídico antes da publicação definitiva.</em>
       </p>
     </div>
   </Section>

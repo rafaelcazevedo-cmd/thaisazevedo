@@ -1,20 +1,41 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import WhatsAppButton from '@/components/WhatsAppButton.astro';
+
+const links = [
+  { label: 'Serviços', href: '/servicos' },
+  { label: 'Dificuldades atendidas', href: '/condicoes' },
+  { label: 'Dúvidas frequentes', href: '/perguntas-frequentes' },
+  { label: 'Artigos', href: '/blog' },
+  { label: 'Contato', href: '/contato' },
+];
 ---
 
 <BaseLayout title="Página não encontrada" description="A página que você procura não foi encontrada." noindex={true}>
   <section class="container-page flex min-h-[50vh] flex-col items-center justify-center py-20 text-center">
-    <p class="font-display text-6xl font-semibold text-brand-300">404</p>
+    <p class="font-display text-6xl font-semibold text-brand-400" aria-hidden="true">404</p>
     <h1 class="mt-4 font-display text-3xl font-semibold text-brand-800">Página não encontrada</h1>
     <p class="mt-3 max-w-md text-muted">
-      O conteúdo que você procura pode ter sido movido. Volte para a página inicial ou fale comigo no WhatsApp.
+      O conteúdo que você procura pode ter sido movido. Veja por onde continuar:
     </p>
-    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
-      <a href="/" class="inline-flex items-center justify-center rounded-full border-2 border-brand-200 px-6 py-3 font-semibold text-brand-700 hover:bg-brand-50">
+    <div class="mt-8">
+      <a
+        href="/"
+        class="inline-flex items-center justify-center rounded-full bg-brand-600 px-6 py-3 font-semibold text-white shadow-lg shadow-brand-900/10 transition-colors hover:bg-brand-700"
+      >
         Ir para o início
       </a>
-      <WhatsAppButton />
     </div>
+    <nav aria-label="Páginas úteis" class="mt-10">
+      <p class="text-sm font-semibold text-brand-700">Talvez você procure</p>
+      <ul class="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
+        {links.map((l) => (
+          <li>
+            <a href={l.href} class="font-medium text-brand-600 underline decoration-accent-400 underline-offset-2 hover:text-brand-700">
+              {l.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   </section>
 </BaseLayout>
