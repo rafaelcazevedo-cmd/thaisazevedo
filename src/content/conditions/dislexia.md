@@ -16,7 +16,7 @@ signs:
   - Boa compreensão oral, mas desempenho abaixo do esperado na escrita
 ---
 
-A **Dislexia** é um transtorno específico de aprendizagem, de origem **neurobiológica**, que afeta a **precisão e a fluência da leitura e da escrita**. Ela acontece mesmo em crianças com inteligência preservada, ensino adequado e sem deficiências sensoriais — por isso costuma surpreender pais e professores.
+A **Dislexia** é um transtorno específico de aprendizagem, de origem **neurobiológica**, que afeta a **precisão e a fluência da leitura e da escrita**. Ela acontece mesmo em crianças com inteligência preservada, ensino adequado e sem deficiências sensoriais, por isso costuma surpreender pais e professores.
 
 ## A Dislexia não é preguiça nem falta de inteligência
 

@@ -1,4 +1,4 @@
-# Site da Thais — Neuropsicopedagoga (São Paulo)
+# Site da Thais, Neuropsicopedagoga (São Paulo)
 
 Site multipágina, estático e otimizado para **SEO** (Google/Bing) e **GEO** (recomendação por
 assistentes de IA como ChatGPT, Perplexity e Gemini). Construído em **Astro + Tailwind CSS**.
@@ -33,19 +33,19 @@ Já preenchido a partir do material da Thais: **nome**, **formação**, **WhatsA
 | --- | --- |
 | Nome, formação, WhatsApp, e-mail | ✅ preenchidos em `src/config/site.ts` |
 | Foto profissional | ✅ `public/images/thais.jpg`. Para trocar: `node scripts/optimize-photo.mjs <foto> public/images/thais.jpg 900` |
-| Endereço do consultório + CEP | ⬜ opcional — `src/config/site.ts` → `address` (o site já funciona sem; o endereço é "combinado no agendamento"). Ao preencher, o JSON-LD passa a incluí-lo automaticamente. |
-| Horários exatos | ⬜ opcional — hoje exibido como "com hora marcada" (`src/config/site.ts` → `hours`) |
+| Endereço do consultório + CEP | ⬜ opcional, `src/config/site.ts` → `address` (o site já funciona sem; o endereço é "combinado no agendamento"). Ao preencher, o JSON-LD passa a incluí-lo automaticamente. |
+| Horários exatos | ⬜ opcional, hoje exibido como "com hora marcada" (`src/config/site.ts` → `hours`) |
 | Instagram / Doctoralia / Google | ⬜ `src/config/site.ts` → `social` (importante para SEO/GEO) |
 | Logo (opcional) | ⬜ `src/components/Logo.astro` |
 | Valores | ⬜ mantidos como "sob consulta"; ajuste se quiser exibir preços |
-| Depoimentos | ⬜ **não incluídos** — adicionar só com consentimento real dos responsáveis |
-| Fotos de crianças (do PDF) | ⛔ **não publicadas** — exigem consentimento documentado dos responsáveis |
+| Depoimentos | ⬜ **não incluídos**, adicionar só com consentimento real dos responsáveis |
+| Fotos de crianças (do PDF) | ⛔ **não publicadas**, exigem consentimento documentado dos responsáveis |
 
 Depois de definir o **domínio final**, atualize `site:` em
 [`astro.config.mjs`](astro.config.mjs) e a linha `Sitemap:` em [`public/robots.txt`](public/robots.txt).
 Isso corrige automaticamente URLs canônicas, sitemap, Open Graph e o JSON-LD.
 
-> ⚠️ Nada de inventar credenciais, números ou depoimentos — publique apenas informações confirmadas pela Thais.
+> ⚠️ Nada de inventar credenciais, números ou depoimentos, publique apenas informações confirmadas pela Thais.
 
 ---
 
@@ -53,7 +53,7 @@ Isso corrige automaticamente URLs canônicas, sitemap, Open Graph e o JSON-LD.
 
 - **Serviços:** `src/content/services/*.md`
 - **Dificuldades atendidas:** `src/content/conditions/*.md`
-- **Artigos (blog):** `src/content/blog/*.md` — mantenha o campo `updatedDate` atualizado (sinal de
+- **Artigos (blog):** `src/content/blog/*.md`, mantenha o campo `updatedDate` atualizado (sinal de
   frescor importante para GEO) e publique 1–2 artigos novos por mês.
 - **Perguntas frequentes:** `src/data/faqs.ts` (gera também o schema `FAQPage`).
 
@@ -65,7 +65,7 @@ Isso corrige automaticamente URLs canônicas, sitemap, Open Graph e o JSON-LD.
 - `<title>`, meta description, canônica, Open Graph e Twitter Card por página.
 - **JSON-LD**: `MedicalBusiness` + `Person` + `WebSite` (global), `Service`, `FAQPage`,
   `BlogPosting` (com `dateModified`) e `BreadcrumbList`.
-- Blocos de **resposta rápida** (definição clara no topo) e **FAQ** alinhada a perguntas reais — o que
+- Blocos de **resposta rápida** (definição clara no topo) e **FAQ** alinhada a perguntas reais, o que
   os motores de IA mais citam.
 - `sitemap-index.xml` automático, `robots.txt` liberando crawlers de IA (GPTBot, ClaudeBot,
   PerplexityBot, Google-Extended, Bingbot) e `llms.txt`.
@@ -76,7 +76,7 @@ Isso corrige automaticamente URLs canônicas, sitemap, Open Graph e o JSON-LD.
 ## 5. Publicar
 
 Domínio: **www.thaisazevedo.org** (já definido em `astro.config.mjs` → `site`).
-O site é estático — basta subir a pasta `dist/` para qualquer hospedagem.
+O site é estático, basta subir a pasta `dist/` para qualquer hospedagem.
 
 - **Build command:** `npm run build`
 - **Output directory / pasta a publicar:** `dist`
@@ -95,7 +95,7 @@ O site é estático — basta subir a pasta `dist/` para qualquer hospedagem.
    canonical `https://www.thaisazevedo.org`.
 
 > A cada atualização do site, rode `npm run build` de novo e reenvie o conteúdo de `dist/`.
-> (Para deploys automáticos via Git, considere depois Cloudflare Pages ou Netlify — gratuitos.)
+> (Para deploys automáticos via Git, considere depois Cloudflare Pages ou Netlify, gratuitos.)
 
 ---
 
@@ -103,7 +103,7 @@ O site é estático — basta subir a pasta `dist/` para qualquer hospedagem.
 
 1. **Google Search Console** → adicionar o site e enviar `sitemap-index.xml`.
 2. **Bing Webmaster Tools** → adicionar o site e enviar o sitemap. *(ChatGPT, Perplexity e Copilot
-   buscam no índice do Bing — sem isso, a IA não cita o site.)*
+   buscam no índice do Bing, sem isso, a IA não cita o site.)*
 3. **Google Business Profile (Google Meu Negócio)** → criar perfil com o **mesmo** nome, endereço e
    telefone (NAP) do site, categoria "Psicopedagogo"/"Neuropsicopedagogo", fotos e horários.
 4. **Doctoralia** → criar perfil profissional (forte sinal de autoridade e citação).

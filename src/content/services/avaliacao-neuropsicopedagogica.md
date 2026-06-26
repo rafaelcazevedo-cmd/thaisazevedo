@@ -19,11 +19,11 @@ A **avaliação neuropsicopedagógica** é um processo estruturado, de cerca de 
 
 A avaliação observa o desempenho da criança em cinco grandes áreas:
 
-- **Habilidades de linguagem** — leitura, escrita e compreensão;
-- **Habilidades matemáticas** — número, cálculo e resolução de problemas;
-- **Atenção** — manter o foco e resistir às distrações;
-- **Memória** — guardar e recuperar o que se aprende;
-- **Funções executivas** — planejamento, organização, controle inibitório, flexibilidade e automonitoramento.
+- **Habilidades de linguagem**: leitura, escrita e compreensão;
+- **Habilidades matemáticas**: número, cálculo e resolução de problemas;
+- **Atenção**: manter o foco e resistir às distrações;
+- **Memória**: guardar e recuperar o que se aprende;
+- **Funções executivas**: planejamento, organização, controle inibitório, flexibilidade e automonitoramento.
 
 ## Como funciona o processo
 

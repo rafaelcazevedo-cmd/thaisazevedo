@@ -15,9 +15,9 @@ O **suporte para provas específicas** são **sessões pontuais** voltadas à pr
 
 ## Como o suporte funciona
 
-- **Organização do estudo** — dividir o conteúdo e montar um plano viável até a data da prova;
-- **Revisão ativa** — estratégias para realmente fixar o que foi estudado, não apenas reler;
-- **Técnicas de memória e atenção** — para estudar com mais eficiência e menos cansaço;
-- **Controle da ansiedade** — chegar mais tranquila e confiante no dia da avaliação.
+- **Organização do estudo**: dividir o conteúdo e montar um plano viável até a data da prova;
+- **Revisão ativa**: estratégias para realmente fixar o que foi estudado, não apenas reler;
+- **Técnicas de memória e atenção**: para estudar com mais eficiência e menos cansaço;
+- **Controle da ansiedade**: chegar mais tranquila e confiante no dia da avaliação.
 
 É um apoio prático e focado, ideal para momentos de maior demanda escolar. Combine pelo WhatsApp quantas sessões fazem sentido para o objetivo da criança.

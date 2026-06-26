@@ -2,7 +2,7 @@
 title: Dificuldades de aprendizagem
 seoTitle: "Dificuldade de aprendizagem: sinais e quando procurar ajuda"
 description: O que é dificuldade de aprendizagem, como identificar os sinais na infância e quando procurar uma neuropsicopedagoga em São Paulo.
-summary: A dificuldade de aprendizagem é um obstáculo que impede a criança de aprender no ritmo esperado e pode ter causas variadas — emocionais, pedagógicas ou ligadas a transtornos específicos como Dislexia e TDAH.
+summary: A dificuldade de aprendizagem é um obstáculo que impede a criança de aprender no ritmo esperado e pode ter causas variadas, emocionais, pedagógicas ou ligadas a transtornos específicos como Dislexia e TDAH.
 order: 1
 keywords:
   - dificuldade de aprendizagem
@@ -16,7 +16,7 @@ signs:
   - Queda na autoestima e frustração com os estudos
 ---
 
-A **dificuldade de aprendizagem** é qualquer obstáculo que impede a criança de aprender no **ritmo esperado para a sua idade e série**. Ela pode ter causas variadas — emocionais, pedagógicas, sociais — ou estar ligada a **transtornos específicos**, como Dislexia, Discalculia e TDAH.
+A **dificuldade de aprendizagem** é qualquer obstáculo que impede a criança de aprender no **ritmo esperado para a sua idade e série**. Ela pode ter causas variadas, emocionais, pedagógicas, sociais, ou estar ligada a **transtornos específicos**, como Dislexia, Discalculia e TDAH.
 
 ## Nem toda dificuldade é um transtorno
 

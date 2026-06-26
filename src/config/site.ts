@@ -37,7 +37,7 @@ export const site = {
     postalCode: '{{CEP}}',
     country: 'BR',
   },
-  /** Consultório coordinates — fill from Google Maps (right-click → coordinates). */
+  /** Consultório coordinates, fill from Google Maps (right-click → coordinates). */
   geo: { lat: -23.55052, lng: -46.633308 }, // PLACEHOLDER: São Paulo centro
 
   // ── Contact (WhatsApp is the primary conversion channel) ─────────────────
@@ -46,7 +46,7 @@ export const site = {
   /** Pretty display version. */
   whatsappDisplay: '(11) 98647-5451',
   email: 'thaisazevedo@hotmail.com',
-  /** Displayed availability. Exact hours not provided — kept flexible by appointment. */
+  /** Displayed availability. Exact hours not provided, kept flexible by appointment. */
   hours: [
     { days: 'Atendimentos', time: 'com hora marcada' },
     { days: 'Agende', time: 'pelo WhatsApp' },

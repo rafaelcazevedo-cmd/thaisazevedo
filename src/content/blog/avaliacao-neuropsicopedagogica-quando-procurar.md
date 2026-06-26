@@ -37,4 +37,4 @@ Vale procurar uma avaliação quando:
 
 O resultado da avaliação orienta os próximos passos: pode indicar uma **intervenção neuropsicopedagógica**, orientações para a família e a escola, ou encaminhamentos para outros profissionais. O objetivo é claro: dar à criança o apoio certo, no momento certo.
 
-Tem dúvidas sobre o caso do seu filho? Fale com a Thais pelo WhatsApp — o primeiro contato é sem compromisso.
+Tem dúvidas sobre o caso do seu filho? Fale com a Thais pelo WhatsApp, o primeiro contato é sem compromisso.

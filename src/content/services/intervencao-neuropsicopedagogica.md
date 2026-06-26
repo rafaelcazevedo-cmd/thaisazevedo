@@ -17,15 +17,15 @@ A **intervenção neuropsicopedagógica** é o acompanhamento que, a partir do q
 
 ## Áreas trabalhadas nas sessões
 
-- **Atenção** — sustentar o foco, resistir a distrações e concluir tarefas;
-- **Alfabetização e produção escrita** — consciência fonológica, escrita e ortografia;
-- **Práticas de leitura** — fluência, compreensão e prazer pela leitura;
-- **Habilidades matemáticas** — senso numérico, cálculo e resolução de problemas;
-- **Funções executivas** — planejamento, organização, memória de curto prazo, controle inibitório, flexibilidade cognitiva, tomada de decisão e automonitoramento.
+- **Atenção**: sustentar o foco, resistir a distrações e concluir tarefas;
+- **Alfabetização e produção escrita**: consciência fonológica, escrita e ortografia;
+- **Práticas de leitura**: fluência, compreensão e prazer pela leitura;
+- **Habilidades matemáticas**: senso numérico, cálculo e resolução de problemas;
+- **Funções executivas**: planejamento, organização, memória de curto prazo, controle inibitório, flexibilidade cognitiva, tomada de decisão e automonitoramento.
 
 ## Uma terapia para diferentes perfis
 
-A neuropsicopedagogia é uma excelente terapia tanto para crianças com questões de aprendizagem — como **Dislexia** e **Discalculia** — quanto para pacientes **neurodivergentes**, incluindo **autistas**, crianças com **TDAH** e com **Síndrome de Down**. O trabalho respeita o ritmo e o modo único de cada um.
+A neuropsicopedagogia é uma excelente terapia tanto para crianças com questões de aprendizagem, como **Dislexia** e **Discalculia**, quanto para pacientes **neurodivergentes**, incluindo **autistas**, crianças com **TDAH** e com **Síndrome de Down**. O trabalho respeita o ritmo e o modo único de cada um.
 
 ## Uma parceria com a família
 

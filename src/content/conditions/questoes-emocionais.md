@@ -1,8 +1,8 @@
 ---
 title: Questões emocionais
 seoTitle: "Questões emocionais e aprendizagem na infância"
-description: Como as questões emocionais — autoestima, frustração, medo de errar e desmotivação — afetam a aprendizagem, e como a neuropsicopedagogia em São Paulo pode ajudar.
-summary: As questões emocionais — como baixa autoestima, medo de errar, frustração e desmotivação — afetam diretamente a aprendizagem. Uma criança que não está bem emocionalmente dificilmente aprende bem.
+description: Como as questões emocionais, autoestima, frustração, medo de errar e desmotivação, afetam a aprendizagem, e como a neuropsicopedagogia em São Paulo pode ajudar.
+summary: As questões emocionais, como baixa autoestima, medo de errar, frustração e desmotivação, afetam diretamente a aprendizagem. Uma criança que não está bem emocionalmente dificilmente aprende bem.
 order: 3
 keywords:
   - questões emocionais
@@ -16,7 +16,7 @@ signs:
   - Mudanças de comportamento relacionadas à vida escolar
 ---
 
-As **questões emocionais** afetam diretamente a aprendizagem. Uma criança que está insegura, ansiosa ou desmotivada dificilmente consegue aprender bem — porque **corpo, inteligência e emoções não se separam**. Quando o emocional não vai bem, o aprender trava.
+As **questões emocionais** afetam diretamente a aprendizagem. Uma criança que está insegura, ansiosa ou desmotivada dificilmente consegue aprender bem, porque **corpo, inteligência e emoções não se separam**. Quando o emocional não vai bem, o aprender trava.
 
 ## O emocional vem antes do conteúdo
 

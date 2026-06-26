@@ -1,4 +1,4 @@
-/** Primary navigation. Order matters — used in header and footer. */
+/** Primary navigation. Order matters, used in header and footer. */
 export const mainNav = [
   { label: 'Início', href: '/' },
   { label: 'Sobre mim', href: '/sobre' },

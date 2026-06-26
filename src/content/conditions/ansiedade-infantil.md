@@ -16,7 +16,7 @@ signs:
   - Preocupação constante e sofrimento por antecipação
 ---
 
-A **ansiedade infantil** pode travar a aprendizagem. Mesmo sabendo o conteúdo, a criança dá "branco" na prova, evita desafios, sofre por antecipação e, muitas vezes, apresenta **sintomas físicos** — como dor de barriga ou de cabeça — antes de ir à escola.
+A **ansiedade infantil** pode travar a aprendizagem. Mesmo sabendo o conteúdo, a criança dá "branco" na prova, evita desafios, sofre por antecipação e, muitas vezes, apresenta **sintomas físicos**, como dor de barriga ou de cabeça, antes de ir à escola.
 
 ## Quando a ansiedade atrapalha os estudos
 
@@ -24,7 +24,7 @@ Um certo grau de ansiedade é normal e até útil. O problema é quando ela se t
 
 ## Como a neuropsicopedagogia ajuda
 
-No acompanhamento, trabalho estratégias que reduzem o peso emocional dos estudos: **organização e previsibilidade da rotina**, técnicas de estudo que diminuem a sobrecarga, preparação para provas e formas de a criança lidar melhor com o erro e com a frustração — sempre com **acolhimento e vínculo**.
+No acompanhamento, trabalho estratégias que reduzem o peso emocional dos estudos: **organização e previsibilidade da rotina**, técnicas de estudo que diminuem a sobrecarga, preparação para provas e formas de a criança lidar melhor com o erro e com a frustração, sempre com **acolhimento e vínculo**.
 
 ## Em parceria com outros profissionais
 

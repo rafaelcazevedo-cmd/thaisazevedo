@@ -30,6 +30,6 @@ Identificar cedo uma dificuldade de aprendizagem faz toda a diferença na vida e
 
 ## O que fazer ao perceber os sinais
 
-O primeiro passo é **conversar com a escola** e observar a criança em casa. Se a dificuldade persiste, uma **avaliação neuropsicopedagógica** ajuda a entender a causa e a definir o melhor caminho — seja uma intervenção específica, orientações para a rotina ou encaminhamentos para outros profissionais.
+O primeiro passo é **conversar com a escola** e observar a criança em casa. Se a dificuldade persiste, uma **avaliação neuropsicopedagógica** ajuda a entender a causa e a definir o melhor caminho, seja uma intervenção específica, orientações para a rotina ou encaminhamentos para outros profissionais.
 
 Identificar a dificuldade não é rotular a criança: é dar a ela o apoio certo para aprender com confiança.

@@ -2,7 +2,7 @@
 title: Dificuldades de atenção e organização
 seoTitle: "Dificuldades de atenção e organização na infância"
 description: Como identificar dificuldades de atenção e organização em crianças e como a neuropsicopedagogia em São Paulo ajuda no foco, no planejamento e nas funções executivas.
-summary: As dificuldades de atenção e organização aparecem quando a criança se distrai com facilidade, se perde nas tarefas, esquece materiais e tem dificuldade para planejar e concluir o que começa — sinais ligados às funções executivas.
+summary: As dificuldades de atenção e organização aparecem quando a criança se distrai com facilidade, se perde nas tarefas, esquece materiais e tem dificuldade para planejar e concluir o que começa, sinais ligados às funções executivas.
 order: 2
 keywords:
   - dificuldade de atenção
@@ -16,7 +16,7 @@ signs:
   - Dificuldade para planejar, administrar o tempo e seguir etapas
 ---
 
-As **dificuldades de atenção e organização** aparecem quando a criança se distrai com facilidade, se perde no meio das tarefas, esquece materiais e tem dificuldade para **planejar, organizar e concluir** o que começa. Elas estão ligadas às chamadas **funções executivas** — o conjunto de habilidades que ajuda o cérebro a se organizar para aprender.
+As **dificuldades de atenção e organização** aparecem quando a criança se distrai com facilidade, se perde no meio das tarefas, esquece materiais e tem dificuldade para **planejar, organizar e concluir** o que começa. Elas estão ligadas às chamadas **funções executivas**, o conjunto de habilidades que ajuda o cérebro a se organizar para aprender.
 
 ## Não é "falta de vontade"
 
@@ -28,4 +28,4 @@ Dificuldades de atenção e organização podem aparecer **com ou sem** um diagn
 
 ## Como a neuropsicopedagogia ajuda
 
-Na intervenção, são trabalhadas as **funções executivas** de forma prática e lúdica: rotinas de estudo, organização de materiais, planejamento de tarefas, técnicas de memória e estratégias para manter o foco. Com o tempo, a criança ganha **autonomia** e passa a estudar com menos sofrimento — em parceria com a família e a escola.
+Na intervenção, são trabalhadas as **funções executivas** de forma prática e lúdica: rotinas de estudo, organização de materiais, planejamento de tarefas, técnicas de memória e estratégias para manter o foco. Com o tempo, a criança ganha **autonomia** e passa a estudar com menos sofrimento, em parceria com a família e a escola.

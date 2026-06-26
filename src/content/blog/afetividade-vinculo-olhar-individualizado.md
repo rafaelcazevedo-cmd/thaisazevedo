@@ -1,6 +1,6 @@
 ---
 title: "A importância da afetividade, do vínculo e do olhar individualizado na sala de aula"
-description: Por que o vínculo afetivo e o olhar individualizado transformam a aprendizagem — um texto de Thais Azevedo sobre afetividade, com base em sua experiência em sala de aula e na ciência socioemocional.
+description: Por que o vínculo afetivo e o olhar individualizado transformam a aprendizagem, um texto de Thais Azevedo sobre afetividade, com base em sua experiência em sala de aula e na ciência socioemocional.
 pubDate: 2026-06-20
 updatedDate: 2026-06-25
 tags:
@@ -9,7 +9,7 @@ tags:
   - educação socioemocional
 ---
 
-*Texto de Thais Azevedo da Rocha, publicado no livro "Os Desafios do Professor — entre as 4 paredes de uma sala de aula".*
+*Texto de Thais Azevedo da Rocha, publicado no livro "Os Desafios do Professor: entre as 4 paredes de uma sala de aula".*
 
 Depois de 12 anos de trabalho voluntário semanal em um abrigo infantil no Jardim Ângela, na periferia de São Paulo, fui trabalhar em um colégio particular de mensalidade altíssima. A pergunta que eu mais ouvi foi "Como é essa diferença para você, que trabalhava com crianças carentes e agora trabalha com crianças de famílias ricas?". Mais do que a diferença, o que mais impressiona é a semelhança. As crianças de escola de elite são tão ou mais carentes que as do abrigo no Jardim Ângela.
 

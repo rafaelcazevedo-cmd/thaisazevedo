@@ -20,7 +20,7 @@ A **Discalculia** é um transtorno específico de aprendizagem que afeta a **com
 
 ## Mais do que "não gostar de matemática"
 
-A Discalculia não é falta de esforço nem desinteresse. Trata-se de uma forma diferente de processar a informação numérica, que torna desafiador o que para outras crianças parece automático — como saber que 7 é maior que 4 ou resolver uma conta simples.
+A Discalculia não é falta de esforço nem desinteresse. Trata-se de uma forma diferente de processar a informação numérica, que torna desafiador o que para outras crianças parece automático, como saber que 7 é maior que 4 ou resolver uma conta simples.
 
 ## Como a neuropsicopedagogia ajuda
 

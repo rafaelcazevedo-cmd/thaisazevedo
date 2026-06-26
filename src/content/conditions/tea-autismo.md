@@ -16,11 +16,11 @@ signs:
   - Sensibilidade a estímulos que atrapalha a concentração
 ---
 
-O **Autismo (TEA — Transtorno do Espectro Autista)** é uma condição do neurodesenvolvimento que influencia a **comunicação, a interação social e o modo de aprender**. Cada pessoa autista é única — por isso fala-se em *espectro*.
+O **Autismo (TEA, Transtorno do Espectro Autista)** é uma condição do neurodesenvolvimento que influencia a **comunicação, a interação social e o modo de aprender**. Cada pessoa autista é única, por isso fala-se em *espectro*.
 
 ## A neuropsicopedagogia é uma terapia para crianças autistas
 
-A neuropsicopedagogia é uma **excelente terapia para pacientes neurodivergentes**, incluindo crianças autistas. O trabalho é individualizado e respeita o ritmo de cada criança, fortalecendo as habilidades de aprendizagem — atenção, linguagem, memória e funções executivas — sempre com **acolhimento e vínculo**.
+A neuropsicopedagogia é uma **excelente terapia para pacientes neurodivergentes**, incluindo crianças autistas. O trabalho é individualizado e respeita o ritmo de cada criança, fortalecendo as habilidades de aprendizagem, atenção, linguagem, memória e funções executivas, sempre com **acolhimento e vínculo**.
 
 Tenho experiência com o público autista por meio de vivências e imersões na **AMA (Associação Amigos do Autista)** e no **Instituto Priorit**, voltados ao atendimento multidisciplinar de crianças e jovens autistas e com TDAH.
 

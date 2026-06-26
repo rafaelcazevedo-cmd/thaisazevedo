@@ -14,14 +14,14 @@ import { faqs } from '@/data/faqs';
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
 
-// Hero carousel photos (portrait shots — fit the 4:5 frame cleanly).
+// Hero carousel photos (portrait shots, fit the 4:5 frame cleanly).
 const heroPhotos = [
   { src: '/images/atendimento-1.jpg', alt: 'Thais Azevedo em um momento de acolhimento com uma criança' },
   { src: '/images/atendimento-2.jpg', alt: 'Thais Azevedo com uma criança que usa fones de cancelamento de ruído' },
   { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
 ];
 
-// "Como começamos" — the journey starts simple, then is individualized.
+// "Como começamos", the journey starts simple, then is individualized.
 const steps = [
   { n: '1', title: 'Primeiro contato', text: 'Você me chama no WhatsApp para uma conversa inicial, sem compromisso.' },
   { n: '2', title: 'A gente se conhece', text: 'Escuto você e entendo a história e as necessidades da sua criança.' },
@@ -52,10 +52,10 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
         </h1>
         <p class="reveal reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-ink/90">
           Sou <strong>{site.professionalName}</strong>, {site.profession.toLowerCase()} em {site.city}.
-          Faço <strong>avaliação e intervenção neuropsicopedagógica</strong> para crianças e adolescentes —
+          Faço <strong>avaliação e intervenção neuropsicopedagógica</strong> para crianças e adolescentes,
           incluindo crianças neurodivergentes (como <strong>Autismo</strong>, <strong>TDAH</strong> e{' '}
           <strong>Síndrome de Down</strong>), com Dislexia, Discalculia e outras dificuldades de aprendizagem.
-          Cada criança no seu tempo — e <strong>não é preciso ter diagnóstico</strong> para começar.
+          Cada criança no seu tempo, e <strong>não é preciso ter diagnóstico</strong> para começar.
         </p>
         <div class="reveal reveal-4 mt-8 flex flex-col gap-3 sm:flex-row">
           <WhatsAppButton size="lg" label="Agendar uma conversa" />
@@ -98,7 +98,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
           </p>
           <p class="mt-4 text-lg leading-relaxed text-ink/90">
             Avalia e intervém nas dificuldades de aprendizagem, sempre levando em conta as emoções e o modo único
-            de cada criança aprender. Um trabalho individualizado, com muito acolhimento — e{' '}
+            de cada criança aprender. Um trabalho individualizado, com muito acolhimento, e{' '}
             <strong>não é preciso ter diagnóstico para começar</strong>.
           </p>
         </div>
@@ -109,7 +109,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
   <!-- Cada criança aprende de um jeito único -->
   <Section id="momentos" eyebrow="Na prática" title="Cada criança aprende de um jeito único">
     <p class="mb-8 max-w-2xl text-muted">
-      Leitura, escrita, matemática, atenção... cada criança aprende do seu jeito e no seu ritmo — e o trabalho
+      Leitura, escrita, matemática, atenção... cada criança aprende do seu jeito e no seu ritmo, e o trabalho
       respeita essa singularidade.
     </p>
     <div class="grid gap-5 sm:grid-cols-2">
@@ -135,7 +135,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
       >
         <img
           src="/images/thais-ama.jpg"
-          alt="Thais Azevedo na AMA — Associação de Amigos do Autista"
+          alt="Thais Azevedo na AMA (Associação de Amigos do Autista)"
           width="1000"
           height="750"
           loading="lazy"
@@ -221,7 +221,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     <p class="text-ink/90">
       Os atendimentos particulares acontecem em <strong>{site.city}</strong>: no <strong>consultório</strong>, em
       ambiente acolhedor e preparado para crianças, ou na <strong>residência do paciente</strong> (atendimento
-      domiciliar) — o que for melhor para a sua família.
+      domiciliar), o que for melhor para a sua família.
     </p>
     <div class="mt-6">
       <WhatsAppButton label="Tirar dúvidas e agendar" />

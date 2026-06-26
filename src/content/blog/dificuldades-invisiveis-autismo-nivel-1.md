@@ -1,6 +1,6 @@
 ---
 title: "Dificuldades invisíveis: o Autismo nível 1 em adultos"
-description: O que são as "dificuldades invisíveis" do Autismo nível 1 em adultos — rigidez cognitiva, pensamento literal e filtro social — em reflexões de Thais Azevedo a partir da AMA.
+description: O que são as "dificuldades invisíveis" do Autismo nível 1 em adultos, rigidez cognitiva, pensamento literal e filtro social, em reflexões de Thais Azevedo a partir da AMA.
 pubDate: 2026-06-05
 updatedDate: 2026-06-25
 tags:
@@ -8,23 +8,23 @@ tags:
   - neurodiversidade
 ---
 
-*Reflexões a partir das minhas vivências na AMA — Associação Amigos do Autista. As falas abaixo são reais, mas os participantes não são identificados, para preservar sua privacidade. (Nas falas iniciais, "T" sou eu.)*
+*Reflexões a partir das minhas vivências na AMA (Associação Amigos do Autista). As falas abaixo são reais, mas os participantes não são identificados, para preservar sua privacidade. (Nas falas iniciais, "T" sou eu.)*
 
-J — "Eu tenho 37 anos."
+J: "Eu tenho 37 anos."
 
-T — "Que interessante! Eu também!"
+T: "Que interessante! Eu também!"
 
-J — "Então você nasceu em 1987 que nem eu!"
+J: "Então você nasceu em 1987 que nem eu!"
 
-T — "Isso!"
+T: "Isso!"
 
-F — "Eu tenho 37 anos, mas eu nasci em 1988."
+F: "Eu tenho 37 anos, mas eu nasci em 1988."
 
-J — "Ah, então você fez aniversário esse ano. Que dia?"
+J: "Ah, então você fez aniversário esse ano. Que dia?"
 
-F — "Dia 4 de janeiro."
+F: "Dia 4 de janeiro."
 
-J — "Eu não pude te dar parabéns porque era um sábado."
+J: "Eu não pude te dar parabéns porque era um sábado."
 
 Ao comentar sobre este meu primeiro dia na "Roda de Conversa dos Adultos – Assistidos Nível 1 de Suporte" com conhecidos neurotípicos, ouvi: "Mas esse assistido é muito inteligente! Muito mais que muitas pessoas que eu conheço! Ele realmente precisa de terapia?". A princípio, achei o comentário preconceituoso; depois percebi que a pessoa simplesmente desconhece as dificuldades por trás de um autista nível 1.
 
@@ -44,7 +44,7 @@ Dificuldade em adaptar-se a mudanças, com padrões de comportamento rígidos, e
 
 ## Hiperfoco e conexões pessoais
 
-Relacionar o assunto falado com experiências pessoais, mesmo que pareça fora de contexto para os outros — mas que faz total sentido para quem fala.
+Relacionar o assunto falado com experiências pessoais, mesmo que pareça fora de contexto para os outros, mas que faz total sentido para quem fala.
 
 "Por falar em leão, eu gosto muito de lutas. Vocês sabiam que foi criado até um desenho sobre o Mike Tyson, que era um lutador? E ele tinha um leão de estimação."
 
@@ -66,7 +66,7 @@ Eles aprenderam que é educado demonstrar interesse, com perguntas ou frases exc
 
 "Eu não sei o que é sushi. É aquele arroz com coisa preta em volta que parece um papel?"
 
-"Eu não gosto de massa." — "Mas você não gosta de macarrão, pizza e pastel?" — "Gosto!" — "Então… isso são tipos de massa."
+"Eu não gosto de massa." "Mas você não gosta de macarrão, pizza e pastel?" "Gosto!" "Então… isso são tipos de massa."
 
 ## Compreender questões da vida adulta
 
@@ -92,4 +92,4 @@ Todos têm empatia, me cumprimentam com um sorriso, lembram do que eu disse em o
 
 "Eu compraria algo para poder levar na casa dos meus amigos para poder ajudar eles."
 
-Diariamente, junto aos terapeutas da AMA, eles trabalham para entender e diminuir os efeitos das suas "dificuldades invisíveis" — que, por mais invisíveis que sejam aos olhos, aparecem bastante no dia a dia. A evolução de cada um, com o passar das semanas, é extremamente visível. Para eles, para nós e para o mundo. Parabéns, jovens adultos da AMA!
+Diariamente, junto aos terapeutas da AMA, eles trabalham para entender e diminuir os efeitos das suas "dificuldades invisíveis", que, por mais invisíveis que sejam aos olhos, aparecem bastante no dia a dia. A evolução de cada um, com o passar das semanas, é extremamente visível. Para eles, para nós e para o mundo. Parabéns, jovens adultos da AMA!

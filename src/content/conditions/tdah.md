@@ -20,7 +20,7 @@ O **TDAH** (Transtorno do Déficit de Atenção e Hiperatividade) é um transtor
 
 ## Atenção: não é só "falta de foco"
 
-No TDAH, a dificuldade está nas **funções executivas** — o conjunto de habilidades que ajuda a planejar, organizar, iniciar e concluir tarefas. Por isso a criança pode ser muito capaz em uma área e, ainda assim, ter grande dificuldade para se organizar e manter o esforço.
+No TDAH, a dificuldade está nas **funções executivas**, o conjunto de habilidades que ajuda a planejar, organizar, iniciar e concluir tarefas. Por isso a criança pode ser muito capaz em uma área e, ainda assim, ter grande dificuldade para se organizar e manter o esforço.
 
 ## Como a neuropsicopedagogia ajuda
 

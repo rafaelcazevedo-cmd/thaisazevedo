@@ -9,7 +9,7 @@ tags:
   - aprendizagem
 ---
 
-"Ele é inteligente, mas não se esforça." Essa é uma das frases mais comuns — e mais injustas — ditas sobre crianças com **Dislexia**. A verdade é o oposto: a criança com Dislexia costuma **se esforçar muito mais** que os colegas e, ainda assim, ler com dificuldade.
+"Ele é inteligente, mas não se esforça." Essa é uma das frases mais comuns, e mais injustas, ditas sobre crianças com **Dislexia**. A verdade é o oposto: a criança com Dislexia costuma **se esforçar muito mais** que os colegas e, ainda assim, ler com dificuldade.
 
 ## O que é Dislexia, de forma simples
 
@@ -17,7 +17,7 @@ A Dislexia é um **transtorno específico de aprendizagem de origem neurobiológ
 
 ## Por que parece "preguiça"
 
-Como a criança entende bem quando ouve, mas erra ao ler e escrever, é fácil concluir — equivocadamente — que falta vontade. Na prática, o cérebro está trabalhando **mais** para decodificar os sons e os símbolos da escrita. O resultado é cansaço, lentidão e, muitas vezes, fuga das atividades de leitura.
+Como a criança entende bem quando ouve, mas erra ao ler e escrever, é fácil concluir, equivocadamente, que falta vontade. Na prática, o cérebro está trabalhando **mais** para decodificar os sons e os símbolos da escrita. O resultado é cansaço, lentidão e, muitas vezes, fuga das atividades de leitura.
 
 ## Sinais que ajudam a diferenciar
 

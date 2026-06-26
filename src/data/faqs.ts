@@ -1,5 +1,5 @@
 /**
- * Prompt-aligned FAQ — written to match how parents actually phrase questions to Google
+ * Prompt-aligned FAQ, written to match how parents actually phrase questions to Google
  * and to AI assistants (GEO). Each answer opens with a direct, quotable sentence.
  *
  * Used on /perguntas-frequentes (full list + FAQPage schema) and as excerpts on other pages.
@@ -39,12 +39,12 @@ export const faqs: Faq[] = [
   {
     question: 'Preciso de um diagnóstico para começar o acompanhamento?',
     answer:
-      'Não. Não é preciso ter diagnóstico para iniciar o acompanhamento neuropsicopedagógico. Qualquer criança que apresente alguma dificuldade pedagógica pode começar — o trabalho é focado no paciente como indivíduo, e não em um rótulo.',
+      'Não. Não é preciso ter diagnóstico para iniciar o acompanhamento neuropsicopedagógico. Qualquer criança que apresente alguma dificuldade pedagógica pode começar, o trabalho é focado no paciente como indivíduo, e não em um rótulo.',
   },
   {
     question: 'A neuropsicopedagogia atende crianças autistas ou com TDAH?',
     answer:
-      'Sim. A neuropsicopedagogia é uma excelente terapia para crianças neurodivergentes — incluindo autistas, crianças com TDAH e com Síndrome de Down — além de crianças com Dislexia, Discalculia e outras dificuldades de aprendizagem. O trabalho respeita o ritmo e o modo único de aprender de cada uma.',
+      'Sim. A neuropsicopedagogia é uma excelente terapia para crianças neurodivergentes, incluindo autistas, crianças com TDAH e com Síndrome de Down, além de crianças com Dislexia, Discalculia e outras dificuldades de aprendizagem. O trabalho respeita o ritmo e o modo único de aprender de cada uma.',
   },
   {
     question: 'A neuropsicopedagoga dá o diagnóstico de Dislexia ou TDAH?',

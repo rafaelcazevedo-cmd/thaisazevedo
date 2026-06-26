@@ -18,4 +18,4 @@ const info = await sharp(input)
   .jpeg({ quality: 82, mozjpeg: true })
   .toFile(output);
 
-console.log(`✓ ${output} — ${info.width}x${info.height}, ${Math.round(info.size / 1024)} KB`);
+console.log(`✓ ${output}, ${info.width}x${info.height}, ${Math.round(info.size / 1024)} KB`);
