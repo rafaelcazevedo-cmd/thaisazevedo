@@ -1,6 +1,6 @@
 ---
 title: "Avaliação neuropsicopedagógica: o que é e quando procurar"
-description: Entenda o que é a avaliação neuropsicopedagógica, como funciona o processo e em quais situações vale a pena procurar esse apoio para seu filho.
+description: Entenda o que é a avaliação neuropsicopedagógica, como funciona o processo e em quais situações vale a pena procurar esse apoio para a sua criança.
 pubDate: 2026-05-28
 updatedDate: 2026-06-25
 tags:
@@ -37,4 +37,4 @@ Vale procurar uma avaliação quando:
 
 O resultado da avaliação orienta os próximos passos: pode indicar uma **intervenção neuropsicopedagógica**, orientações para a família e a escola, ou encaminhamentos para outros profissionais. O objetivo é claro: dar à criança o apoio certo, no momento certo.
 
-Tem dúvidas sobre o caso do seu filho? Fale com a Thais pelo WhatsApp, o primeiro contato é sem compromisso.
+Tem dúvidas sobre o caso da sua criança? Fale com a Thais pelo WhatsApp, o primeiro contato é sem compromisso.

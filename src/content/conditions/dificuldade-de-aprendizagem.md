@@ -7,7 +7,7 @@ order: 1
 keywords:
   - dificuldade de aprendizagem
   - dificuldade escolar
-  - meu filho não aprende
+  - criança que não aprende
 signs:
   - Rendimento escolar abaixo do esperado de forma persistente
   - Demora muito e sofre para fazer a lição de casa

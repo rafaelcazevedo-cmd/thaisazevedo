@@ -9,7 +9,7 @@ const posts = (await getCollection('blog'))
   .filter((p) => !p.data.draft)
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
-const fmt = (d: Date) => d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+const fmt = (d: Date) => d.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 const title = 'Artigos sobre aprendizagem e neuropsicopedagogia';
 const description = 'Conteúdos para pais e educadores sobre dificuldades de aprendizagem, Dislexia, TDAH, avaliação neuropsicopedagógica e como apoiar as crianças.';

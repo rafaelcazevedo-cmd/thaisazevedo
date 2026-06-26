@@ -1,7 +1,7 @@
 ---
 title: Avaliação neuropsicopedagógica
 seoTitle: Avaliação neuropsicopedagógica em São Paulo
-description: Avaliação neuropsicopedagógica em São Paulo para crianças e adolescentes. Um processo estruturado que investiga como seu filho aprende, no ritmo de cada criança. Não é preciso ter diagnóstico.
+description: Avaliação neuropsicopedagógica em São Paulo para crianças e adolescentes. Um processo estruturado que investiga como a sua criança aprende, no ritmo de cada uma. Não é preciso ter diagnóstico.
 summary: A avaliação neuropsicopedagógica é um processo estruturado que investiga como a criança aprende, dentro de cinco grandes habilidades, e aponta os melhores caminhos de intervenção. Não é preciso ter diagnóstico para começar.
 icon: clipboard
 order: 1

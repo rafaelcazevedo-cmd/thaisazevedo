@@ -22,7 +22,7 @@ export const faqs: Faq[] = [
       'A principal diferença é o foco no funcionamento cerebral da aprendizagem. O psicopedagogo trabalha as dificuldades de aprendizagem de forma ampla; o neuropsicopedagogo acrescenta a base da neurociência, considerando atenção, memória, linguagem e funções executivas para entender e intervir nas dificuldades de cada criança.',
   },
   {
-    question: 'Quando devo procurar uma neuropsicopedagoga para meu filho?',
+    question: 'Quando devo procurar uma neuropsicopedagoga para a minha criança?',
     answer:
       'Procure uma avaliação quando a criança apresenta dificuldade persistente para ler, escrever ou fazer contas, recusa ir à escola, demora muito para fazer a lição, tem queixas frequentes dos professores, desatenção ou baixa autoestima relacionada aos estudos. Quanto mais cedo a dificuldade é identificada, melhores são os resultados.',
   },

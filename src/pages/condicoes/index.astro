@@ -10,7 +10,7 @@ import { site } from '@/config/site';
 const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
 
 const title = `Dificuldades de aprendizagem atendidas em ${site.city}`;
-const description = `Dislexia, TDAH, Discalculia e outras dificuldades de aprendizagem: conheça os sinais e como a neuropsicopedagogia em ${site.city} pode ajudar seu filho.`;
+const description = `Dislexia, TDAH, Discalculia e outras dificuldades de aprendizagem: conheça os sinais e como a neuropsicopedagogia em ${site.city} pode ajudar a sua criança.`;
 ---
 
 <BaseLayout title={title} description={description} path="/condicoes">
@@ -28,5 +28,5 @@ const description = `Dislexia, TDAH, Discalculia e outras dificuldades de aprend
     </div>
   </Section>
 
-  <CTASection heading="Reconheceu algum desses sinais?" text="Se você identificou sinais no seu filho, vamos conversar. O primeiro contato é sem compromisso." />
+  <CTASection heading="Reconheceu algum desses sinais?" text="Se você identificou esses sinais na sua criança, vamos conversar. O primeiro contato é sem compromisso." />
 </BaseLayout>

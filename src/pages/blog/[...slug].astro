@@ -16,7 +16,7 @@ const { Content } = await render(entry);
 const d = entry.data;
 const updated = d.updatedDate ?? d.pubDate;
 
-const fmt = (dt: Date) => dt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' });
+const fmt = (dt: Date) => dt.toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 // Reading time from the raw markdown body (~200 wpm).
 const words = (entry.body ?? '').split(/\s+/).filter(Boolean).length;
