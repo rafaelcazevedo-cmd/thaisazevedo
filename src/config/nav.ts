@@ -1,7 +1,7 @@
 /** Primary navigation. Order matters — used in header and footer. */
 export const mainNav = [
   { label: 'Início', href: '/' },
-  { label: 'Sobre', href: '/sobre' },
+  { label: 'Sobre mim', href: '/sobre' },
   { label: 'Serviços', href: '/servicos' },
   { label: 'Dificuldades atendidas', href: '/condicoes' },
   { label: 'Dúvidas frequentes', href: '/perguntas-frequentes' },

@@ -11,12 +11,12 @@ const values = [
   { title: 'Sem necessidade de diagnóstico', text: 'Qualquer criança que apresente alguma dificuldade pedagógica pode começar — ter um diagnóstico não é pré-requisito.' },
 ];
 
-const title = `Sobre ${site.professionalName} — ${site.profession}`;
+const title = `Sobre mim — ${site.professionalName}, ${site.profession} em ${site.city}`;
 const description = `Conheça ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}. Formação, abordagem e a forma de cuidar de crianças com dificuldade de aprendizagem.`;
 ---
 
 <BaseLayout title={title} description={description} path="/sobre">
-  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Sobre', href: '/sobre' }]} />
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Sobre mim', href: '/sobre' }]} />
 
   <Section>
     <div class="grid items-start gap-10 lg:grid-cols-[1fr_1.4fr]">
