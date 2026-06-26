@@ -12,8 +12,11 @@
   <!-- logo mark -->
   <g transform="translate(90 86)">
     <circle cx="40" cy="40" r="40" fill="#f7f2e7"/>
-    <path d="M24 52c0-12 7.2-18 16-18s16 6 16 18M40 34a8 8 0 100-16 8 8 0 000 16z" fill="none" stroke="#244734" stroke-width="4.4" stroke-linecap="round"/>
-    <path d="M54 26c5 0 8 3.2 8 7.2S59 40 54 40" fill="none" stroke="#e7bb60" stroke-width="4.4" stroke-linecap="round"/>
+    <g transform="scale(1.6667)">
+      <path d="M10 31 C16 28 21 28 24 30.5 C27 28 32 28 38 31 L38 39 C32 36 27 36 24 38.5 C21 36 16 36 10 39 Z" fill="#244734"/>
+      <path d="M24 30.5 V38.5" stroke="#82af89" stroke-width="1"/>
+      <path d="M24 14 C22 10.5 16.5 11.5 16.5 15.5 C16.5 19 21 22 24 24 C27 22 31.5 19 31.5 15.5 C31.5 11.5 26 10.5 24 14 Z" fill="#e7bb60"/>
+    </g>
   </g>
   <text x="195" y="122" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-weight="700" fill="#f7f2e7">Thais Azevedo</text>
   <text x="196" y="160" font-family="Arial, sans-serif" font-size="21" letter-spacing="3" fill="#b1cfb5">NEUROPSICOPEDAGOGA</text>
