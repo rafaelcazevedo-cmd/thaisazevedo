@@ -8,7 +8,7 @@ tags:
   - funções executivas
 ---
 
-Concentração não é só "força de vontade". É uma **habilidade que depende das funções executivas do cérebro** — e, como toda habilidade, pode ser desenvolvida com o apoio certo. Quando a criança não consegue se concentrar para estudar, o primeiro passo é entender o que está por trás.
+Concentração não é só "força de vontade". É uma **habilidade que depende das funções executivas do cérebro** e, como toda habilidade, pode ser desenvolvida com o apoio certo. Quando a criança não consegue se concentrar para estudar, o primeiro passo é entender o que está por trás.
 
 ## Por que a criança se distrai
 
@@ -23,7 +23,7 @@ A falta de concentração tem muitas causas, que costumam se somar:
 
 ## Falta de atenção nem sempre é TDAH
 
-Toda criança se distrai, ainda mais quando o assunto não a interessa. A diferença está, de novo, na **persistência** e no **impacto**: quando a desatenção é intensa, aparece em vários ambientes (não só na lição) e atrapalha o dia a dia, vale investigar a possibilidade de [TDAH](/condicoes/tdah) — sempre com avaliação cuidadosa, e nunca por um único episódio.
+Toda criança se distrai, ainda mais quando o assunto não a interessa. A diferença está, de novo, na **persistência** e no **impacto**: quando a desatenção é intensa, aparece em vários ambientes (não só na lição) e atrapalha o dia a dia, vale investigar a possibilidade de [TDAH](/condicoes/tdah), sempre com avaliação cuidadosa, e nunca por um único episódio.
 
 ## O papel das funções executivas
 
@@ -39,7 +39,7 @@ As funções executivas são o "centro de comando" do cérebro: ajudam a **plane
 
 ## Quando investigar
 
-Se, mesmo com esses ajustes, a dificuldade de concentração persiste e atrapalha o aprender, uma [avaliação neuropsicopedagógica](/servicos/avaliacao-neuropsicopedagogica) ajuda a entender se é uma questão de maturidade, de método, emocional ou de atenção — e qual o melhor caminho. Não é preciso ter diagnóstico para começar.
+Se, mesmo com esses ajustes, a dificuldade de concentração persiste e atrapalha o aprender, uma [avaliação neuropsicopedagógica](/servicos/avaliacao-neuropsicopedagogica) ajuda a entender se é uma questão de maturidade, de método, emocional ou de atenção, e qual o melhor caminho. Não é preciso ter diagnóstico para começar.
 
 ## Perguntas frequentes
 

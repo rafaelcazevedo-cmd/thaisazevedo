@@ -9,7 +9,7 @@ tags:
   - controle inibitório
 ---
 
-*Reflexões a partir das minhas vivências na AMA (Associação Amigos do Autista). Os nomes das crianças foram trocados por nomes fictícios para preservar sua privacidade.*
+*Reflexões a partir das minhas vivências na AMA (Associação de Amigos do Autista). Os nomes das crianças foram trocados por nomes fictícios para preservar sua privacidade.*
 
 "Espere 5 segundos. 1, 2, 3, 4 e 5. Parabéns! Você esperou!"
 

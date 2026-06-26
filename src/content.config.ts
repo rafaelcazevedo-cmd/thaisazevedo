@@ -12,6 +12,8 @@ const services = defineCollection({
     description: z.string(),
     /** GEO quick-answer: 1–2 clean, quotable sentences. */
     summary: z.string(),
+    /** Short one-line teaser for compact cards (e.g. homepage). */
+    tagline: z.string().optional(),
     icon: z.enum(['clipboard', 'puzzle', 'school', 'brain']).default('brain'),
     order: z.number().default(99),
     keywords: z.array(z.string()).default([]),

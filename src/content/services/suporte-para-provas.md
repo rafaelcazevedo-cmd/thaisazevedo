@@ -3,6 +3,7 @@ title: Suporte para provas específicas
 seoTitle: Preparação e suporte para provas escolares
 description: Suporte neuropsicopedagógico para preparação de provas escolares em São Paulo. Sessões pontuais que ajudam a criança a organizar os estudos e chegar mais confiante na avaliação.
 summary: O suporte para provas são sessões pontuais voltadas à preparação para uma prova escolar específica, ajudando a criança a organizar o estudo, revisar o conteúdo e reduzir a ansiedade.
+tagline: Preparação focada para uma prova, reduzindo a ansiedade.
 icon: school
 order: 4
 keywords:
