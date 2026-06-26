@@ -19,13 +19,13 @@ const heroPhotos = [
   { src: '/images/atendimento-1.jpg', alt: 'Thais Azevedo em um momento de acolhimento com uma criança' },
   { src: '/images/atendimento-2.jpg', alt: 'Thais Azevedo com uma criança que usa fones de cancelamento de ruído' },
   { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
-  { src: '/images/thais-livro.jpg', alt: 'Thais Azevedo no lançamento do livro Os Desafios do Professor' },
 ];
 
+// "Como começamos" — the journey starts simple, then is individualized.
 const steps = [
-  { n: '1', title: 'Primeiro contato', text: 'Você fala comigo pelo WhatsApp, conta o que está acontecendo e tiramos as dúvidas juntos, sem compromisso.' },
-  { n: '2', title: 'Avaliação (cerca de 10 sessões)', text: 'Investigamos como a criança aprende dentro de cinco habilidades: linguagem, matemática, atenção, memória e funções executivas.' },
-  { n: '3', title: 'Intervenção (cerca de 10 sessões)', text: 'Com um plano individualizado, trabalhamos as habilidades em que a criança apresentou dificuldade — com acolhimento e vínculo.' },
+  { n: '1', title: 'Primeiro contato', text: 'Você me chama no WhatsApp para uma conversa inicial, sem compromisso.' },
+  { n: '2', title: 'A gente se conhece', text: 'Escuto você e entendo a história e as necessidades da sua criança.' },
+  { n: '3', title: 'Um caminho individualizado', text: 'Montamos juntos o plano que faz sentido para a sua criança. Não existe receita pronta.' },
 ];
 
 const title = `Neuropsicopedagoga em ${site.city} | ${site.brand}`;
@@ -159,8 +159,8 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </Section>
 
-  <!-- How it works -->
-  <Section eyebrow="Passo a passo" title="Como funciona" class="bg-white">
+  <!-- Como começamos -->
+  <Section eyebrow="Passo a passo" title="Como começamos" class="bg-white">
     <div class="grid gap-6 md:grid-cols-3">
       {steps.map((step) => (
         <div class="rounded-2xl border border-brand-100 bg-cream p-6">
