@@ -13,6 +13,8 @@ import { faqs } from '@/data/faqs';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
+// Homepage grid shows an even 8; "Questões emocionais" still lives on /condicoes + its own page.
+const homeConditions = conditions.filter((c) => c.id !== 'questoes-emocionais');
 
 // Hero carousel photos (portrait shots, fit the 4:5 frame cleanly).
 const heroPhotos = [
@@ -21,11 +23,29 @@ const heroPhotos = [
   { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
 ];
 
+// "Reconhece algum desses momentos?", everyday signs that bring parents in.
+const moments = [
+  'As notas caíram sem explicação',
+  'A lição virou guerra todo dia',
+  'Não consegue se concentrar',
+  '“Ele diz que é burro”',
+  'Está difícil fazer amigos',
+  'Não quer ir à escola',
+];
+
 // "Como começamos", the journey starts simple, then is individualized.
 const steps = [
   { n: '1', title: 'Primeiro contato', text: 'Você me chama no WhatsApp para uma conversa inicial, sem compromisso.' },
   { n: '2', title: 'A gente se conhece', text: 'Escuto você e entendo a história e as necessidades da sua criança.' },
   { n: '3', title: 'Um caminho individualizado', text: 'Montamos juntos o plano que faz sentido para a sua criança. Não existe receita pronta.' },
+];
+
+// "Cada criança aprende de um jeito único", real moments from the atendimento.
+const learningAreas = [
+  { src: '/images/aprende-leitura.jpg', label: 'Leitura', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento' },
+  { src: '/images/aprende-escrita.jpg', label: 'Escrita', alt: 'Menina sorrindo enquanto escreve e cria uma história em seu caderno' },
+  { src: '/images/aprende-matematica.jpg', label: 'Matemática', alt: 'Criança resolvendo uma atividade de cálculo matemático durante o atendimento' },
+  { src: '/images/aprende-atencao.jpg', label: 'Atenção', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha' },
 ];
 
 const title = `Neuropsicopedagoga em ${site.city} | ${site.brand}`;
@@ -74,6 +94,26 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </section>
 
+  <!-- Reconhece algum desses momentos? (acolhimento + dificuldades atendidas) -->
+  <Section eyebrow="Você não está sozinho" title="Reconhece algum desses momentos?">
+    <div class="mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {moments.map((m) => (
+        <div class="group flex items-center gap-3.5 rounded-2xl border border-brand-100 bg-paper p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-400 hover:shadow-md">
+          <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-accent-400 ring-4 ring-accent-300/40" aria-hidden="true"></span>
+          <p class="font-display text-lg leading-snug text-brand-800">{m}</p>
+        </div>
+      ))}
+    </div>
+    <h2 class="mb-8 max-w-3xl font-display text-3xl font-semibold text-brand-800 sm:text-4xl">
+      Por trás desses momentos, costuma haver uma dificuldade que pode ser compreendida e trabalhada.
+    </h2>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {homeConditions.map((c) => (
+        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
+      ))}
+    </div>
+  </Section>
+
   <!-- O que é neuropsicopedagogia? (spotlight feature) -->
   <section class="py-12 sm:py-16">
     <div class="container-page">
@@ -106,48 +146,6 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </section>
 
-  <!-- Cada criança aprende de um jeito único -->
-  <Section id="momentos" eyebrow="Na prática" title="Cada criança aprende de um jeito único">
-    <p class="mb-8 max-w-2xl text-muted">
-      Leitura, escrita, matemática, atenção... cada criança aprende do seu jeito e no seu ritmo, e o trabalho
-      respeita essa singularidade.
-    </p>
-    <div class="grid gap-5 sm:grid-cols-2">
-      <figure
-        data-reveal
-        class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-100 shadow-sm"
-      >
-        <img
-          src="/images/voluntariado.jpg"
-          alt="Thais Azevedo com crianças em trabalho voluntário"
-          width="1100"
-          height="825"
-          loading="lazy"
-          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/75 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
-          Trabalho voluntário com crianças
-        </figcaption>
-      </figure>
-      <figure
-        data-reveal
-        class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-100 shadow-sm"
-      >
-        <img
-          src="/images/thais-ama.jpg"
-          alt="Thais Azevedo na AMA (Associação de Amigos do Autista)"
-          width="1000"
-          height="750"
-          loading="lazy"
-          class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-        />
-        <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/75 to-transparent px-4 pb-3 pt-10 text-sm font-medium text-white">
-          Vivências com o público autista na AMA
-        </figcaption>
-      </figure>
-    </div>
-  </Section>
-
   <!-- Services -->
   <Section eyebrow="Como posso ajudar" title="Serviços">
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -170,15 +168,30 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </Section>
 
-  <!-- Conditions -->
-  <Section eyebrow="Dificuldades atendidas" title="Quando procurar ajuda">
+  <!-- Cada criança aprende de um jeito único -->
+  <Section id="momentos" eyebrow="Na prática" title="Cada criança aprende de um jeito único">
     <p class="mb-8 max-w-2xl text-muted">
-      Atendo crianças e adolescentes com diferentes dificuldades de aprendizagem e perfis neurodivergentes.
-      Conheça os principais sinais:
+      Leitura, escrita, matemática, atenção... cada criança aprende do seu jeito e no seu ritmo, e o trabalho
+      respeita essa singularidade.
     </p>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {conditions.map((c) => (
-        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {learningAreas.map((area) => (
+        <figure
+          data-reveal
+          class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-100 shadow-sm"
+        >
+          <img
+            src={area.src}
+            alt={area.alt}
+            width="800"
+            height="600"
+            loading="lazy"
+            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          />
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/80 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-white">
+            {area.label}
+          </figcaption>
+        </figure>
       ))}
     </div>
   </Section>
@@ -218,13 +231,33 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
 
   <!-- Location -->
   <Section eyebrow="Onde atendo" title="Consultório ou Atendimento Domiciliar" class="bg-white" narrow>
-    <p class="text-ink/90">
-      Os atendimentos particulares acontecem em <strong>{site.city}</strong>: no <strong>consultório</strong>, em
-      ambiente acolhedor e preparado para crianças, ou na <strong>residência do paciente</strong> (atendimento
-      domiciliar), o que for melhor para a sua família.
+    <p class="mb-8 text-ink/90">
+      Os atendimentos particulares acontecem em <strong>{site.city}</strong>, do jeito que for melhor
+      para a sua família:
     </p>
-    <div class="mt-6">
-      <WhatsAppButton label="Tirar dúvidas e agendar" />
+    <div class="grid gap-5 sm:grid-cols-2">
+      <div class="flex flex-col rounded-2xl border border-brand-100 bg-cream p-6">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+          </svg>
+        </span>
+        <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">No consultório</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted">
+          Em um espaço acolhedor e preparado para crianças, pensado para deixar a sessão leve e segura.
+        </p>
+      </div>
+      <div class="flex flex-col rounded-2xl border border-brand-100 bg-cream p-6">
+        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-300 text-accent-700">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.5c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>
+        </span>
+        <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">Em casa, atendimento domiciliar</h3>
+        <p class="mt-2 text-sm leading-relaxed text-muted">
+          Na residência do paciente, no ambiente em que a criança já se sente segura e à vontade.
+        </p>
+      </div>
     </div>
   </Section>
 

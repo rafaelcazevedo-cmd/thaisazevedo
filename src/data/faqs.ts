@@ -34,7 +34,7 @@ export const faqs: Faq[] = [
   {
     question: 'Como funciona a avaliação neuropsicopedagógica?',
     answer:
-      'A avaliação é um processo de cerca de 10 sessões que investiga como a criança aprende dentro de cinco grandes habilidades: linguagem, matemática, atenção, memória e funções executivas. Inclui entrevista com os pais e atividades com a criança. Ao final, a família recebe um relatório com o perfil de aprendizagem e um plano de intervenção, que costuma ter cerca de mais 10 sessões.',
+      'A avaliação é um processo estruturado que investiga como a criança aprende dentro de cinco grandes habilidades: linguagem, matemática, atenção, memória e funções executivas. Inclui entrevista com os pais e atividades com a criança. Ao final, a família recebe um relatório com o perfil de aprendizagem e um plano de intervenção individualizado. O número de sessões, tanto da avaliação quanto da intervenção, varia conforme a necessidade de cada criança.',
   },
   {
     question: 'Preciso de um diagnóstico para começar o acompanhamento?',
