@@ -7,8 +7,8 @@ interface Props {
   message?: string;
 }
 const {
-  heading = 'Vamos conversar sobre a sua criança?',
-  text = 'Tire suas dúvidas e descubra como o acompanhamento neuropsicopedagógico pode ajudar. O primeiro contato é sem compromisso.',
+  heading = 'Vamos conversar',
+  text = 'Tire suas dúvidas e descubra como o acompanhamento pode ajudar. O primeiro contato é sem compromisso.',
   message,
 } = Astro.props;
 ---
@@ -19,7 +19,7 @@ const {
       <h2 class="mx-auto max-w-2xl font-display text-3xl font-semibold sm:text-4xl">{heading}</h2>
       <p class="mx-auto mt-4 max-w-xl text-brand-50/90">{text}</p>
       <div class="mt-8 flex justify-center">
-        <WhatsAppButton variant="light" size="lg" label="Agendar pelo WhatsApp" message={message} />
+        <WhatsAppButton variant="light" size="lg" label="Vamos conversar" message={message} />
       </div>
     </div>
   </div>

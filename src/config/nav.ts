@@ -3,7 +3,7 @@ export const mainNav = [
   { label: 'Início', href: '/' },
   { label: 'Sobre mim', href: '/sobre' },
   { label: 'Serviços', href: '/servicos' },
-  { label: 'Dificuldades atendidas', href: '/condicoes' },
+  { label: 'Especialidades', href: '/condicoes' },
   { label: 'Dúvidas frequentes', href: '/perguntas-frequentes' },
   { label: 'Artigos', href: '/blog' },
   { label: 'Contato', href: '/contato' },

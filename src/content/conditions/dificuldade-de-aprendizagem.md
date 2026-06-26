@@ -20,7 +20,7 @@ A **dificuldade de aprendizagem** é qualquer obstáculo que impede a criança d
 
 ## Nem toda dificuldade é um transtorno
 
-É importante diferenciar uma **dificuldade pontual** (que pode estar ligada a um momento, a uma lacuna no conteúdo ou a fatores emocionais) de um **transtorno de aprendizagem** (que é persistente e tem base neurobiológica). A avaliação neuropsicopedagógica ajuda exatamente a fazer essa distinção.
+É importante diferenciar uma **dificuldade pontual** (que pode estar ligada a um momento, a uma lacuna no conteúdo ou a fatores emocionais) de um **transtorno de aprendizagem** (que é persistente e tem base neurobiológica). A avaliação neuropsicopedagógica ajuda exatamente a fazer essa distinção. Entre as dificuldades de aprendizagem mais comuns estão a [Dislexia](/condicoes/dislexia) (leitura e escrita) e a [Discalculia](/condicoes/discalculia) (matemática).
 
 ## Quando procurar ajuda
 

@@ -29,12 +29,12 @@ export const faqs: Faq[] = [
   {
     question: 'Com que idade a criança pode iniciar o acompanhamento?',
     answer:
-      'O acompanhamento neuropsicopedagógico costuma ser indicado a partir da educação infantil e durante todo o ensino fundamental, abrangendo crianças e adolescentes. Mesmo antes da alfabetização é possível trabalhar habilidades que preparam para a leitura e a escrita.',
+      'O acompanhamento neuropsicopedagógico costuma ser indicado a partir da educação infantil e durante toda a vida escolar, abrangendo crianças e adolescentes. Mesmo antes da alfabetização é possível trabalhar habilidades que preparam para a leitura e a escrita.',
   },
   {
     question: 'Como funciona a avaliação neuropsicopedagógica?',
     answer:
-      'A avaliação é um processo estruturado que investiga como a criança aprende dentro de cinco grandes habilidades: linguagem, matemática, atenção, memória e funções executivas. Inclui entrevista com os pais e atividades com a criança. Ao final, a família recebe um relatório com o perfil de aprendizagem e um plano de intervenção individualizado. O número de sessões, tanto da avaliação quanto da intervenção, varia conforme a necessidade de cada criança.',
+      'A avaliação é um processo estruturado que investiga como a criança aprende dentro de cinco grandes habilidades: linguagem, matemática, atenção, memória e funções executivas. São cerca de 10 sessões, com entrevista inicial com os pais, testes padronizados, escalas de rastreio, observações clínicas e atividades lúdicas. Ao final, há uma reunião de devolutiva com a família, com o perfil de aprendizagem e um plano de intervenção individualizado.',
   },
   {
     question: 'Preciso de um diagnóstico para começar o acompanhamento?',
@@ -42,19 +42,19 @@ export const faqs: Faq[] = [
       'Não. Não é preciso ter diagnóstico para iniciar o acompanhamento neuropsicopedagógico. Qualquer criança que apresente alguma dificuldade pedagógica pode começar, o trabalho é focado no paciente como indivíduo, e não em um rótulo.',
   },
   {
-    question: 'A neuropsicopedagogia atende crianças autistas ou com TDAH?',
+    question: 'A neuropsicopedagogia atende autistas ou pessoas com TDAH?',
     answer:
-      'Sim. A neuropsicopedagogia é uma excelente terapia para crianças neurodivergentes, incluindo autistas, crianças com TDAH e com Síndrome de Down, além de crianças com Dislexia, Discalculia e outras dificuldades de aprendizagem. O trabalho respeita o ritmo e o modo único de aprender de cada uma.',
+      'Sim. A neuropsicopedagogia é uma excelente terapia para neurodivergentes, incluindo autistas, portadores de TDAH ou Síndrome de Down, além de Dislexia, Discalculia e outras dificuldades de aprendizagem. O trabalho respeita o ritmo e o modo único de aprender de cada um.',
   },
   {
-    question: 'A neuropsicopedagoga dá o diagnóstico de Dislexia ou TDAH?',
+    question: 'A neuropsicopedagoga dá diagnóstico de autismo ou TDAH?',
     answer:
-      'O diagnóstico fechado de transtornos como Dislexia e TDAH é feito por equipe multidisciplinar (que pode incluir médico, psicólogo e fonoaudiólogo). A neuropsicopedagoga identifica sinais, contribui com a avaliação da aprendizagem e, quando necessário, encaminha para os profissionais adequados, atuando em conjunto com eles.',
+      'O diagnóstico de Autismo e de TDAH é médico e multidisciplinar (pode envolver médico, psicólogo e fonoaudiólogo); a neuropsicopedagoga não emite esse laudo. Já a Dislexia e a Discalculia, por serem dificuldades de aprendizagem, podem ser identificadas na avaliação neuropsicopedagógica. Em todos os casos, a neuropsicopedagoga avalia a aprendizagem, contribui com a investigação e, quando necessário, encaminha e atua em conjunto com os demais profissionais.',
   },
   {
     question: 'Quanto tempo dura o acompanhamento?',
     answer:
-      'O tempo varia conforme a necessidade de cada criança. Algumas demandam alguns meses de intervenção; outras se beneficiam de um acompanhamento mais longo. A reavaliação periódica mostra a evolução e ajuda a decidir, junto com a família, o momento da alta.',
+      'O tempo varia conforme a necessidade de cada paciente. Alguns demandam alguns meses de intervenção; outros se beneficiam de um acompanhamento mais longo. A reavaliação periódica mostra a evolução e ajuda a decidir, junto com a família, o momento da alta.',
   },
   {
     question: 'O atendimento é em consultório ou em casa?',
@@ -64,11 +64,11 @@ export const faqs: Faq[] = [
   {
     question: 'Vocês trabalham junto com a escola?',
     answer:
-      'Sim. Com autorização da família, a neuropsicopedagoga dialoga com professores e coordenação para alinhar estratégias entre o consultório e a sala de aula. Essa parceria entre família, escola e profissional potencializa os resultados da intervenção.',
+      'Sim. Com autorização da família, a neuropsicopedagoga dialoga com professores e coordenação para alinhar estratégias entre o consultório e a sala de aula. Essa parceria entre família, escola e profissional potencializa o desenvolvimento do paciente.',
   },
   {
     question: 'Quanto custa a avaliação ou as sessões?',
     answer:
-      'Os valores variam conforme o tipo de serviço (avaliação completa ou sessões de intervenção) e são informados de forma transparente no primeiro contato. Fale pelo WhatsApp para receber os valores atualizados e tirar suas dúvidas, sem compromisso.',
+      'Os valores variam conforme o tipo de serviço e são informados de forma transparente no primeiro contato. Fale pelo WhatsApp para receber os valores atualizados e tirar suas dúvidas, sem compromisso.',
   },
 ];

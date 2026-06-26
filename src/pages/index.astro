@@ -13,8 +13,11 @@ import { faqs } from '@/data/faqs';
 
 const services = (await getCollection('services')).sort((a, b) => a.data.order - b.data.order);
 const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
-// Homepage grid shows an even 8; "Questões emocionais" still lives on /condicoes + its own page.
-const homeConditions = conditions.filter((c) => c.id !== 'questoes-emocionais');
+// Homepage "Especialidades" grid: 5 cards. The other conditions stay live on /condicoes (and their own pages) for SEO.
+const especialidadeIds = ['dificuldade-de-aprendizagem', 'tdah', 'tea-autismo', 'sindrome-de-down', 'altas-habilidades'];
+const homeEspecialidades = especialidadeIds
+  .map((id) => conditions.find((c) => c.id === id))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
 // Hero carousel photos (portrait shots, fit the 4:5 frame cleanly).
 const heroPhotos = [
@@ -23,7 +26,15 @@ const heroPhotos = [
   { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
 ];
 
-// "Reconhece algum desses momentos?", everyday signs that bring parents in.
+// "Momentos que importam": real session photos, kept small. Restored from git history.
+const momentosFotos = [
+  { src: '/images/aprende-leitura.jpg', label: 'Leitura', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento' },
+  { src: '/images/aprende-escrita.jpg', label: 'Escrita', alt: 'Criança escrevendo e criando uma história no caderno durante o atendimento' },
+  { src: '/images/aprende-matematica.jpg', label: 'Matemática', alt: 'Criança resolvendo uma atividade de matemática durante o atendimento' },
+  { src: '/images/aprende-atencao.jpg', label: 'Atenção', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha' },
+];
+
+// "Reconhece alguma dessas situações?", everyday signs that bring parents in.
 const moments = [
   'As notas caíram sem explicação',
   'A lição virou guerra todo dia',
@@ -48,8 +59,8 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
       <div class="drift absolute right-0 top-40 h-80 w-80 rounded-full bg-accent-300/40 blur-3xl" style="animation-delay:-6s"></div>
     </div>
 
-    <div class="container-page grid items-center gap-10 py-16 sm:py-24 lg:grid-cols-2">
-      <div>
+    <div class="container-page grid items-center gap-x-10 gap-y-8 py-16 sm:py-24 lg:grid-cols-2">
+      <div class="order-1 lg:col-start-1 lg:row-start-1">
         <p class="reveal reveal-1 mb-4 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-paper/70 px-4 py-1.5 text-sm font-semibold text-brand-700 backdrop-blur">
           <span class="h-2 w-2 rounded-full bg-accent-500"></span>
           Em {site.city} · consultório ou atendimento domiciliar
@@ -64,19 +75,20 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
           Discalculia e outras dificuldades de aprendizagem.
           Cada criança no seu tempo, e <strong>não é preciso ter diagnóstico</strong> para começar.
         </p>
-        <div class="reveal reveal-4 mt-8 flex flex-col gap-3 sm:flex-row">
-          <WhatsAppButton size="lg" label="Agendar uma conversa" />
-          <a
-            href="/servicos"
-            class="inline-flex items-center justify-center rounded-full border-2 border-brand-300 px-7 py-4 text-lg font-semibold text-brand-700 transition-colors hover:bg-brand-50"
-          >
-            Conhecer os serviços
-          </a>
-        </div>
       </div>
 
-      <div class="reveal reveal-3 relative">
+      <div class="reveal reveal-3 relative order-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
         <PhotoCarousel slides={heroPhotos} />
+      </div>
+
+      <div class="reveal reveal-4 order-3 flex flex-col gap-3 sm:flex-row lg:col-start-1 lg:row-start-2">
+        <WhatsAppButton size="lg" label="Agendar uma conversa" />
+        <a
+          href="/servicos"
+          class="inline-flex items-center justify-center rounded-full border-2 border-brand-300 px-7 py-4 text-lg font-semibold text-brand-700 transition-colors hover:bg-brand-50"
+        >
+          Conhecer os serviços
+        </a>
       </div>
     </div>
   </section>
@@ -105,8 +117,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
           </p>
           <p class="mt-4 text-lg leading-relaxed text-ink/90">
             Avalia e intervém nas dificuldades de aprendizagem, sempre levando em conta as emoções e o modo único
-            de cada criança aprender. Um trabalho individualizado, com muito acolhimento, e{' '}
-            <strong>não é preciso ter diagnóstico para começar</strong>.
+            de cada criança aprender. Um trabalho individualizado, com muito acolhimento.
           </p>
           <div class="mt-6">
             <WhatsAppButton
@@ -119,8 +130,24 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </section>
 
-  <!-- Reconhece algum desses momentos? (acolhimento + dificuldades atendidas) -->
-  <Section eyebrow="Você não está só" title="Reconhece algum desses momentos?">
+  <!-- Momentos que importam: fotos reais de sessão (menores), logo após "O que é" -->
+  <Section eyebrow="Na prática" title="Cada criança aprende de um jeito" narrow>
+    <ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      {momentosFotos.map((f) => (
+        <li>
+          <figure>
+            <div class="aspect-[4/5] overflow-hidden rounded-2xl border border-brand-100 shadow-sm">
+              <img src={f.src} alt={f.alt} width="640" height="800" loading="lazy" class="h-full w-full object-cover" />
+            </div>
+            <figcaption class="mt-2 text-center font-display text-sm font-semibold text-brand-700">{f.label}</figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <!-- Reconhece alguma dessas situações? (queixas do dia a dia; sem cards de diagnóstico, sem CTA) -->
+  <Section eyebrow="Você não está só" title="Reconhece alguma dessas situações?">
     <ul role="list" class="mb-10 flex flex-wrap gap-2.5">
       {moments.map((m) => (
         <li class="inline-flex items-center gap-2.5 rounded-full border border-brand-100 bg-paper px-4 py-2.5">
@@ -129,23 +156,9 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
         </li>
       ))}
     </ul>
-    <p class="mb-8 max-w-3xl font-display text-2xl leading-snug text-brand-700">
-      Por trás desses momentos, costuma haver uma dificuldade que pode ser compreendida e trabalhada.
+    <p class="max-w-3xl font-display text-2xl leading-snug text-brand-700">
+      Por trás dessas situações, costuma haver uma dificuldade que pode ser compreendida e trabalhada.
     </p>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-      {homeConditions.map((c) => (
-        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} compact />
-      ))}
-    </div>
-
-    <div class="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-brand-100 bg-paper/70 p-6 sm:flex-row sm:items-center sm:justify-between">
-      <p class="font-display text-lg leading-snug text-brand-800">Reconheceu a sua família em algum desses sinais?</p>
-      <WhatsAppButton
-        message="Olá, Thais! Reconheci alguns desses sinais na minha criança e gostaria de conversar."
-        label="Conversar no WhatsApp"
-        class="shrink-0"
-      />
-    </div>
   </Section>
 
   <!-- Services -->
@@ -153,6 +166,15 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {services.map((s) => (
         <ServiceCard title={s.data.title} summary={s.data.tagline ?? s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
+      ))}
+    </div>
+  </Section>
+
+  <!-- Especialidades (5 cards; no CTA after, per "nothing scary after the diagnoses") -->
+  <Section eyebrow="Especialidades" title="Algumas especialidades atendidas">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+      {homeEspecialidades.map((c) => (
+        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} compact />
       ))}
     </div>
   </Section>

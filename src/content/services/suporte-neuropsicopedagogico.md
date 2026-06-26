@@ -1,25 +1,27 @@
 ---
-title: Suporte neuropsicopedagógico
-seoTitle: Suporte neuropsicopedagógico e apoio escolar
-description: Suporte neuropsicopedagógico em São Paulo para crianças com dificuldade em alguma matéria, na alfabetização, na leitura, na escrita, na matemática ou na organização da rotina.
-summary: O suporte neuropsicopedagógico é um acompanhamento mais pontual para ajudar a criança em alguma matéria ou dificuldade específica, da alfabetização à organização da rotina e da lição de casa.
-tagline: Apoio pontual em uma matéria ou dificuldade específica.
+title: Suporte escolar
+seoTitle: Suporte escolar e apoio neuropsicopedagógico contínuo em São Paulo
+description: Suporte escolar contínuo em São Paulo para uma dificuldade já conhecida, da alfabetização à matemática, da leitura e escrita à interpretação de texto, à lição de casa e ao treino de atenção.
+summary: O suporte escolar é um acompanhamento contínuo e focado em uma dificuldade que a família já percebeu, da alfabetização à matemática, da interpretação de texto ao treino de atenção e ao apoio com a lição de casa.
+tagline: Acompanhamento contínuo para uma dificuldade já conhecida.
 icon: brain
-order: 3
+order: 1
 keywords:
-  - suporte neuropsicopedagógico
+  - suporte escolar
   - apoio escolar individualizado
-  - organização de rotina e lição de casa
+  - reforço de leitura, escrita e matemática
 ---
 
-O **suporte neuropsicopedagógico** é um acompanhamento mais direcionado, para quando a criança precisa de ajuda em **alguma matéria ou dificuldade específica**. É um caminho flexível, que se ajusta à necessidade do momento.
+O **suporte escolar** é um **acompanhamento contínuo e focado**, indicado quando a família já sabe qual é a dificuldade da criança e ela precisa ser trabalhada o quanto antes. Não é um apoio pontual: é um trabalho regular, voltado para uma habilidade ou matéria específica.
 
-## Onde o suporte pode ajudar
+## Onde o suporte escolar pode ajudar
 
-- **Dificuldade em alguma matéria**: apoio individualizado no conteúdo escolar;
-- **Atrasos na alfabetização**: leitura e escrita que não acompanham a turma;
-- **Dificuldades de leitura, escrita ou matemática**;
-- **Organização da rotina** e apoio com a **lição de casa**;
-- **Aprimoramento das funções executivas**: planejamento, foco e autonomia nos estudos.
+- **Alfabetização**: quando a leitura e a escrita não acompanham a turma;
+- **Leitura e escrita**: fluência, ortografia, interpretação e produção de texto;
+- **Matemática**: muitas crianças seguem com defasagem, agravada pela pandemia;
+- **Lição de casa e rotina de estudos**: organização e autonomia;
+- **Treino de atenção**: para quem precisa fortalecer o foco.
 
-Diferente da avaliação completa, o suporte costuma ser mais **pontual e prático**: o objetivo é destravar uma dificuldade específica e devolver à criança a confiança nos estudos. Quando faz sentido aprofundar, ele pode evoluir para uma [avaliação](/servicos/avaliacao-neuropsicopedagogica) e uma [intervenção](/servicos/intervencao-neuropsicopedagogica) mais completas.
+## Quando o suporte escolar é o caminho
+
+O ideal é que toda criança passe por uma [avaliação](/servicos/avaliacao-neuropsicopedagogica) e uma [intervenção](/servicos/intervencao-neuropsicopedagogica) completas. Mas, muitas vezes, a família já identificou uma dificuldade clara que precisa ser resolvida com urgência, e aí o suporte escolar é o mais indicado: um acompanhamento contínuo, focado exatamente naquilo que a criança precisa naquele momento.

@@ -8,25 +8,48 @@ import CTASection from '@/components/CTASection.astro';
 import { site } from '@/config/site';
 
 const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
+// Especialidades grid: 5 cards. The remaining conditions stay live (and linked below) for SEO.
+const especialidadeIds = ['dificuldade-de-aprendizagem', 'tdah', 'tea-autismo', 'sindrome-de-down', 'altas-habilidades'];
+const especialidades = especialidadeIds
+  .map((id) => conditions.find((c) => c.id === id))
+  .filter((c): c is NonNullable<typeof c> => Boolean(c));
+const tambemAtendo = conditions.filter((c) => !especialidadeIds.includes(c.id));
 
-const title = `Dificuldades de aprendizagem atendidas em ${site.city}`;
-const description = `Dislexia, TDAH, Discalculia e outras dificuldades de aprendizagem: conheça os sinais e como a neuropsicopedagogia em ${site.city} pode ajudar a sua criança.`;
+const title = `Especialidades, ${site.profession} em ${site.city}`;
+const description = `Dificuldades de aprendizagem, TDAH, Autismo, Síndrome de Down e Altas Habilidades: as especialidades atendidas pela neuropsicopedagogia em ${site.city}.`;
 ---
 
 <BaseLayout title={title} description={description} path="/condicoes">
-  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Dificuldades atendidas', href: '/condicoes' }]} />
+  <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Especialidades', href: '/condicoes' }]} />
 
-  <Section eyebrow="Dificuldades atendidas" title="Quando procurar uma neuropsicopedagoga" as="h1">
+  <Section title="Especialidades" as="h1">
     <p class="mb-10 max-w-2xl text-lg text-muted">
-      Muitas dificuldades de aprendizagem passam despercebidas e são confundidas com falta de esforço. Conheça as
-      principais e seus sinais, identificar cedo faz toda a diferença.
+      Algumas das especialidades atendidas. A maioria das famílias chega por uma situação do dia a dia, e não por
+      um diagnóstico, e é a partir daí que o trabalho acontece.
     </p>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {conditions.map((c) => (
+      {especialidades.map((c) => (
         <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
       ))}
     </div>
+
+    {tambemAtendo.length > 0 && (
+      <p class="mt-10 max-w-3xl text-muted">
+        Também atendo dificuldades e questões relacionadas:{' '}
+        {tambemAtendo.map((c, i) => (
+          <Fragment>
+            {i > 0 && ', '}
+            <a
+              class="font-medium text-brand-600 underline decoration-accent-400 underline-offset-2 hover:text-brand-700"
+              href={`/condicoes/${c.id}`}
+            >
+              {c.data.title}
+            </a>
+          </Fragment>
+        ))}.
+      </p>
+    )}
   </Section>
 
-  <CTASection heading="Reconheceu algum desses sinais?" text="Se você identificou esses sinais na sua criança, vamos conversar. O primeiro contato é sem compromisso." />
+  <CTASection heading="Reconheceu algum desses sinais?" text="O primeiro contato é sem compromisso." />
 </BaseLayout>

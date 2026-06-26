@@ -2,17 +2,17 @@
 title: Intervenção neuropsicopedagógica
 seoTitle: Intervenção e acompanhamento neuropsicopedagógico
 description: "Intervenção neuropsicopedagógica em São Paulo: sessões individualizadas e lúdicas que trabalham atenção, leitura, escrita, matemática, memória e funções executivas."
-summary: A intervenção neuropsicopedagógica é um conjunto de sessões individualizadas e lúdicas que trabalham as habilidades em que a criança apresentou dificuldade, com muito acolhimento e vínculo.
+summary: A intervenção neuropsicopedagógica parte da avaliação e trabalha, em pelo menos 10 sessões individualizadas e lúdicas, exatamente as habilidades em que a criança apresentou maior dificuldade, com muito acolhimento e vínculo.
 tagline: Sessões individualizadas e lúdicas para superar as dificuldades.
 icon: puzzle
-order: 2
+order: 3
 keywords:
   - intervenção neuropsicopedagógica
   - acompanhamento neuropsicopedagógico
   - reforço de aprendizagem são paulo
 ---
 
-A **intervenção neuropsicopedagógica** é o acompanhamento que, a partir do que foi visto na avaliação, trabalha de forma **individualizada e lúdica** as habilidades em que a criança apresentou dificuldade. Diferente do reforço escolar, ela não repete a matéria: fortalece a base que sustenta o aprender, sempre com **acolhimento e vínculo**.
+A **intervenção neuropsicopedagógica** parte do que foi visto na avaliação e trabalha, em **pelo menos 10 sessões individualizadas e lúdicas**, exatamente as habilidades em que a criança apresentou maior dificuldade. Por exemplo, se a dificuldade é de linguagem, trabalhamos leitura, escrita, produção e interpretação de texto. Diferente do reforço escolar, ela não repete a matéria: fortalece a base que sustenta o aprender, sempre com **acolhimento e vínculo**.
 
 ![Thais Azevedo em um momento de acolhimento durante o atendimento](/images/atendimento-1.jpg)
 

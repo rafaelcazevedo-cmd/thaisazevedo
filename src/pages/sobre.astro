@@ -8,8 +8,8 @@ import { site } from '@/config/site';
 
 const values = [
   { title: 'Acolhimento e vínculo', text: 'Cada criança é recebida sem julgamento, no seu tempo, com escuta atenta e uma relação de confiança.' },
-  { title: 'Cada um no seu ritmo', text: 'O foco é o indivíduo, e não um rótulo. O trabalho respeita as habilidades e dificuldades únicas de cada paciente.' },
-  { title: 'Sem necessidade de diagnóstico', text: 'Qualquer criança que apresente alguma dificuldade pedagógica pode começar, ter um diagnóstico não é pré-requisito.' },
+  { title: 'Cada um no seu ritmo', text: 'O foco é o indivíduo, e não um rótulo. O trabalho respeita as potencialidades e dificuldades únicas de cada paciente.' },
+  { title: 'Sem necessidade de diagnóstico', text: 'Meu trabalho com a criança não é baseado no seu diagnóstico, e sim nas suas potencialidades e dificuldades.' },
 ];
 
 const title = `Sobre mim, ${site.professionalName}, ${site.profession} em ${site.city}`;
@@ -54,11 +54,6 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
             Kardec, no Instituto Rolling Stone (ensino de música para crianças), no Lar das Crianças da CIP e no
             Instituto Restaurar.
           </p>
-          <p class="rounded-xl border border-brand-100 bg-brand-50 p-4 text-base text-ink/90">
-            <strong class="text-brand-800">Atendimento:</strong> particular, em <strong class="text-brand-800">consultório</strong> e na{' '}
-            <strong class="text-brand-800">residência dos pacientes</strong> (domiciliar), em {site.city}.<br />
-            <strong class="text-brand-800">Formação:</strong> {site.credentials}.
-          </p>
         </div>
 
         <div class="mt-6">
@@ -69,52 +64,6 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
         </div>
       </div>
     </div>
-  </Section>
-
-  <Section eyebrow="Trajetória" title="Da sala de aula ao consultório" narrow>
-    <div class="grid gap-6 sm:grid-cols-2">
-      <figure data-reveal>
-        <img
-          src="/images/thais-livro.jpg"
-          alt="Thais Azevedo no lançamento do livro Os Desafios do Professor, na Livraria da Vila"
-          width="900"
-          height="1200"
-          loading="lazy"
-          class="w-full rounded-2xl border border-brand-100 object-cover shadow-sm"
-        />
-        <figcaption class="mt-3 text-sm text-muted">
-          No lançamento do livro <em>“Os Desafios do Professor: entre as 4 paredes de uma sala de aula”</em>, do
-          qual sou coautora.
-        </figcaption>
-      </figure>
-      <figure data-reveal>
-        <img
-          src="/images/thais-ama.jpg"
-          alt="Thais Azevedo na AMA (Associação de Amigos do Autista)"
-          width="1000"
-          height="750"
-          loading="lazy"
-          class="w-full rounded-2xl border border-brand-100 object-cover shadow-sm"
-        />
-        <figcaption class="mt-3 text-sm text-muted">
-          Na <strong>AMA (Associação de Amigos do Autista)</strong>, onde tive vivências e imersões com o público
-          autista.
-        </figcaption>
-      </figure>
-    </div>
-    <figure data-reveal class="mt-6">
-      <img
-        src="/images/voluntariado.jpg"
-        alt="Thais Azevedo com crianças em trabalho voluntário"
-        width="1100"
-        height="825"
-        loading="lazy"
-        class="w-full rounded-2xl border border-brand-100 object-cover shadow-sm"
-      />
-      <figcaption class="mt-3 text-sm text-muted">
-        Há mais de 12 anos também me dedico a trabalhos voluntários com crianças.
-      </figcaption>
-    </figure>
   </Section>
 
   <Section eyebrow="No que acredito" title="Como eu trabalho" class="bg-white">
@@ -128,5 +77,5 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
     </div>
   </Section>
 
-  <CTASection heading="Quer conversar sobre a sua criança?" />
+  <CTASection />
 </BaseLayout>
