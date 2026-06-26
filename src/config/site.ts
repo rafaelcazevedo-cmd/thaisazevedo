@@ -19,7 +19,7 @@ export const site = {
   profession: 'Neuropsicopedagoga',
   /** Formação (from her vision deck). */
   credentials:
-    'Pós-graduada em Dificuldades na Aprendizagem e em Neuropsicopedagogia Clínica · Pedagoga desde 2015',
+    'Pós-graduada em Dificuldades na Aprendizagem e em Neuropsicopedagogia Clínica',
   tagline: 'Avaliação e intervenção neuropsicopedagógica para crianças e adolescentes',
 
   // ── Location (in-person practice, São Paulo) ─────────────────────────────

@@ -1,7 +1,7 @@
 # Thais Azevedo — Neuropsicopedagoga em São Paulo
 
 > Neuropsicopedagoga (neuropsychopedagogue) com atendimento particular em São Paulo, SP —
-> em consultório e domiciliar (na residência do paciente). Realiza avaliação e intervenção
+> em consultório ou domiciliar (na residência do paciente). Realiza avaliação e intervenção
 > neuropsicopedagógica para crianças e adolescentes com dificuldades de aprendizagem e para
 > crianças neurodivergentes (autismo/TEA, TDAH). Contato pelo WhatsApp.
 
@@ -39,7 +39,7 @@ Linguagem (leitura e escrita), matemática, atenção, memória e funções exec
 - Contato (WhatsApp): /contato
 
 ## Atendimento
-- Local: São Paulo, SP — consultório e atendimento domiciliar
+- Local: São Paulo, SP — consultório ou atendimento domiciliar
 - Público: crianças e adolescentes (incluindo neurodivergentes)
 - Não é necessário ter diagnóstico para iniciar
 - WhatsApp: (11) 98647-5451
