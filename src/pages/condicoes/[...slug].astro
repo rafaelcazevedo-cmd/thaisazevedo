@@ -3,7 +3,11 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import QuickAnswer from '@/components/QuickAnswer.astro';
+import ServiceCard from '@/components/ServiceCard.astro';
+import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import CTASection from '@/components/CTASection.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { site, whatsappUrl } from '@/config/site';
 
 export async function getStaticPaths() {
   const conditions = await getCollection('conditions');
@@ -13,6 +17,32 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const d = entry.data;
+
+const conditionUrl = new URL(`/condicoes/${entry.id}`, Astro.site).href;
+const conditionMessage = `Olá, Thais! Percebi alguns sinais relacionados a ${d.title.toLowerCase()} e gostaria de conversar.`;
+
+// Cross-link to the core services (assessment + intervention) so the page isn't a dead-end.
+const relatedServices = (await getCollection('services'))
+  .filter((s) => ['avaliacao-neuropsicopedagogica', 'intervencao-neuropsicopedagogica'].includes(s.id))
+  .sort((a, b) => a.data.order - b.data.order);
+
+const conditionSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  '@id': `${conditionUrl}#webpage`,
+  url: conditionUrl,
+  name: d.seoTitle ?? d.title,
+  description: d.description,
+  inLanguage: 'pt-BR',
+  about: {
+    '@type': 'MedicalCondition',
+    name: d.title,
+    ...(d.signs.length > 0 && {
+      signOrSymptom: d.signs.map((s) => ({ '@type': 'MedicalSignOrSymptom', name: s })),
+    }),
+  },
+  publisher: { '@id': `${Astro.site!.origin}/#practice` },
+};
 ---
 
 <BaseLayout title={d.seoTitle ?? d.title} description={d.description} path={`/condicoes/${entry.id}`}>
@@ -25,7 +55,7 @@ const d = entry.data;
   />
 
   <article class="container-page max-w-3xl py-10">
-    <h1 class="font-display text-4xl font-semibold text-brand-800">{d.title}</h1>
+    <h1 class="font-display text-4xl font-semibold leading-[1.1] text-brand-800 break-words hyphens-auto sm:text-5xl">{d.title}</h1>
 
     <div class="mt-6">
       <QuickAnswer><p>{d.summary}</p></QuickAnswer>
@@ -37,7 +67,7 @@ const d = entry.data;
         <ul class="mt-4 space-y-2">
           {d.signs.map((s) => (
             <li class="flex items-start gap-2.5 text-ink/90">
-              <svg class="mt-1 h-4 w-4 shrink-0 text-accent-600" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.7 13.3l-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4z"/></svg>
+              <svg class="mt-1 h-4 w-4 shrink-0 text-accent-700" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.7 13.3l-3-3 1.4-1.4 1.6 1.6 4-4 1.4 1.4-5.4 5.4z"/></svg>
               <span>{s}</span>
             </li>
           ))}
@@ -48,10 +78,24 @@ const d = entry.data;
     <div class="prose mt-8 max-w-none">
       <Content />
     </div>
+
+    <div class="mt-8 border-t border-brand-100 pt-8">
+      <h2 class="font-display text-2xl font-semibold text-brand-800">Como posso ajudar</h2>
+      <div class="mt-5 grid gap-5 sm:grid-cols-2">
+        {relatedServices.map((s) => (
+          <ServiceCard title={s.data.title} summary={s.data.tagline ?? s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
+        ))}
+      </div>
+      <div class="mt-6">
+        <WhatsAppButton message={conditionMessage} label="Conversar sobre a minha criança" />
+      </div>
+    </div>
   </article>
 
   <CTASection
-    heading={`A sua criança apresenta sinais de ${d.title.toLowerCase()}?`}
-    message={`Olá, Thais! Percebi alguns sinais relacionados a ${d.title.toLowerCase()} e gostaria de conversar.`}
+    heading="Percebeu esses sinais na sua criança?"
+    message={conditionMessage}
   />
+
+  <JsonLd schema={conditionSchema} />
 </BaseLayout>

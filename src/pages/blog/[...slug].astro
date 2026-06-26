@@ -2,6 +2,8 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import Card from '@/components/Card.astro';
+import CardLink from '@/components/CardLink.astro';
 import CTASection from '@/components/CTASection.astro';
 import JsonLd from '@/components/JsonLd.astro';
 import { site } from '@/config/site';
@@ -36,6 +38,7 @@ const articleSchema = {
   datePublished: d.pubDate.toISOString(),
   dateModified: updated.toISOString(),
   inLanguage: 'pt-BR',
+  image: new URL('/og-default.png', Astro.site).href,
   wordCount: words,
   timeRequired: `PT${readingTime}M`,
   author: { '@id': `${Astro.site!.origin}/#thais` },
@@ -123,23 +126,22 @@ const articleSchema = {
       <h2 class="font-display text-2xl font-semibold text-brand-800 sm:text-3xl">Continue lendo</h2>
       <div class="mt-6 grid gap-6 sm:grid-cols-3">
         {more.map((p) => (
-          <a
-            href={`/blog/${p.id}`}
-            class="group flex h-full flex-col rounded-2xl border border-brand-100 bg-white p-6 transition-all hover:-translate-y-1 hover:shadow-lg hover:shadow-brand-900/5"
-          >
-            <time datetime={p.data.pubDate.toISOString()} class="text-xs font-semibold uppercase tracking-wide text-accent-600">
+          <Card href={`/blog/${p.id}`} ariaLabel={p.data.title}>
+            <time datetime={p.data.pubDate.toISOString()} class="text-xs font-semibold uppercase tracking-wide text-accent-700">
               {fmt(p.data.pubDate)}
             </time>
             <h3 class="mt-2 font-display text-lg font-semibold text-brand-800 group-hover:text-brand-700">{p.data.title}</h3>
             <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{p.data.description}</p>
-            <span class="mt-4 text-sm font-semibold text-brand-600">Ler artigo →</span>
-          </a>
+            <CardLink label="Ler artigo" />
+          </Card>
         ))}
       </div>
     </section>
   )}
 
-  <CTASection />
+  <CTASection
+    message={`Olá, Thais! Li o artigo "${d.title}" e gostaria de conversar sobre a minha criança.`}
+  />
   <JsonLd schema={articleSchema} />
 
   <script is:inline>

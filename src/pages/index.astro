@@ -31,21 +31,8 @@ const moments = [
   '“Ele diz que é burro”',
   'Está difícil fazer amigos',
   'Não quer ir à escola',
-];
-
-// "Como começamos", the journey starts simple, then is individualized.
-const steps = [
-  { n: '1', title: 'Primeiro contato', text: 'Você me chama no WhatsApp para uma conversa inicial, sem compromisso.' },
-  { n: '2', title: 'A gente se conhece', text: 'Escuto você e entendo a história e as necessidades da sua criança.' },
-  { n: '3', title: 'Um caminho individualizado', text: 'Montamos juntos o plano que faz sentido para a sua criança. Não existe receita pronta.' },
-];
-
-// "Cada criança aprende de um jeito único", real moments from the atendimento.
-const learningAreas = [
-  { src: '/images/aprende-leitura.jpg', label: 'Leitura', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento' },
-  { src: '/images/aprende-escrita.jpg', label: 'Escrita', alt: 'Menina sorrindo enquanto escreve e cria uma história em seu caderno' },
-  { src: '/images/aprende-matematica.jpg', label: 'Matemática', alt: 'Criança resolvendo uma atividade de cálculo matemático durante o atendimento' },
-  { src: '/images/aprende-atencao.jpg', label: 'Atenção', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha' },
+  'Trava na hora da prova',
+  'Evita ler em voz alta',
 ];
 
 const title = `Neuropsicopedagoga em ${site.city} | ${site.brand}`;
@@ -67,14 +54,14 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
           <span class="h-2 w-2 rounded-full bg-accent-500"></span>
           Em {site.city} · consultório ou atendimento domiciliar
         </p>
-        <h1 class="reveal reveal-2 font-display text-5xl font-semibold leading-[1.05] text-brand-800 sm:text-6xl">
+        <h1 class="reveal reveal-2 font-display text-4xl font-semibold leading-[1.05] text-brand-800 break-words hyphens-auto sm:text-5xl sm:hyphens-none lg:text-6xl">
           Um trabalho individualizado, com muito <span class="ink-underline">acolhimento e vínculo</span>
         </h1>
         <p class="reveal reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-ink/90">
           Sou <strong>{site.professionalName}</strong>, {site.profession.toLowerCase()} em {site.city}.
           Faço <strong>avaliação e intervenção neuropsicopedagógica</strong> para crianças e adolescentes,
-          incluindo crianças neurodivergentes (como <strong>Autismo</strong>, <strong>TDAH</strong> e{' '}
-          <strong>Síndrome de Down</strong>), com Dislexia, Discalculia e outras dificuldades de aprendizagem.
+          incluindo crianças neurodivergentes (como Autismo, TDAH e Síndrome de Down), com Dislexia,
+          Discalculia e outras dificuldades de aprendizagem.
           Cada criança no seu tempo, e <strong>não é preciso ter diagnóstico</strong> para começar.
         </p>
         <div class="reveal reveal-4 mt-8 flex flex-col gap-3 sm:flex-row">
@@ -121,77 +108,51 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
             de cada criança aprender. Um trabalho individualizado, com muito acolhimento, e{' '}
             <strong>não é preciso ter diagnóstico para começar</strong>.
           </p>
+          <div class="mt-6">
+            <WhatsAppButton
+              message="Olá, Thais! Gostaria de entender como a neuropsicopedagogia pode ajudar a minha criança."
+              label="Tirar minhas dúvidas no WhatsApp"
+            />
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Reconhece algum desses momentos? (acolhimento + dificuldades atendidas) -->
-  <Section eyebrow="Você não está sozinho" title="Reconhece algum desses momentos?">
-    <div class="mb-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <Section eyebrow="Você não está só" title="Reconhece algum desses momentos?">
+    <ul role="list" class="mb-10 flex flex-wrap gap-2.5">
       {moments.map((m) => (
-        <div class="group flex items-center gap-3.5 rounded-2xl border border-brand-100 bg-paper p-5 shadow-sm transition hover:-translate-y-0.5 hover:border-accent-400 hover:shadow-md">
-          <span class="h-2.5 w-2.5 shrink-0 rounded-full bg-accent-400 ring-4 ring-accent-300/40" aria-hidden="true"></span>
-          <p class="font-display text-lg leading-snug text-brand-800">{m}</p>
-        </div>
+        <li class="inline-flex items-center gap-2.5 rounded-full border border-brand-100 bg-paper px-4 py-2.5">
+          <span class="h-1.5 w-1.5 shrink-0 rounded-full bg-accent-500" aria-hidden="true"></span>
+          <span class="font-display text-base leading-snug text-brand-800">{m}</span>
+        </li>
       ))}
-    </div>
-    <h2 class="mb-8 max-w-3xl font-display text-3xl font-semibold text-brand-800 sm:text-4xl">
+    </ul>
+    <p class="mb-8 max-w-3xl font-display text-2xl leading-snug text-brand-700">
       Por trás desses momentos, costuma haver uma dificuldade que pode ser compreendida e trabalhada.
-    </h2>
+    </p>
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {homeConditions.map((c) => (
-        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} />
+        <ConditionCard title={c.data.title} summary={c.data.summary} href={`/condicoes/${c.id}`} compact />
       ))}
+    </div>
+
+    <div class="mt-10 flex flex-col items-start gap-4 rounded-2xl border border-brand-100 bg-paper/70 p-6 sm:flex-row sm:items-center sm:justify-between">
+      <p class="font-display text-lg leading-snug text-brand-800">Reconheceu a sua família em algum desses sinais?</p>
+      <WhatsAppButton
+        message="Olá, Thais! Reconheci alguns desses sinais na minha criança e gostaria de conversar."
+        label="Conversar no WhatsApp"
+        class="shrink-0"
+      />
     </div>
   </Section>
 
   <!-- Services -->
-  <Section eyebrow="Como posso ajudar" title="Serviços">
+  <Section eyebrow="Como posso ajudar" title="Serviços" class="bg-brand-50">
     <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
       {services.map((s) => (
-        <ServiceCard title={s.data.title} summary={s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
-      ))}
-    </div>
-  </Section>
-
-  <!-- Como começamos -->
-  <Section eyebrow="Passo a passo" title="Como começamos" class="bg-white">
-    <div class="grid gap-6 md:grid-cols-3">
-      {steps.map((step) => (
-        <div class="rounded-2xl border border-brand-100 bg-cream p-6">
-          <span class="flex h-11 w-11 items-center justify-center rounded-full bg-brand-600 font-display text-lg font-semibold text-white">{step.n}</span>
-          <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">{step.title}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-muted">{step.text}</p>
-        </div>
-      ))}
-    </div>
-  </Section>
-
-  <!-- Cada criança aprende de um jeito único -->
-  <Section id="momentos" eyebrow="Na prática" title="Cada criança aprende de um jeito único">
-    <p class="mb-8 max-w-2xl text-muted">
-      Leitura, escrita, matemática, atenção... cada criança aprende do seu jeito e no seu ritmo, e o trabalho
-      respeita essa singularidade.
-    </p>
-    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {learningAreas.map((area) => (
-        <figure
-          data-reveal
-          class="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-brand-100 shadow-sm"
-        >
-          <img
-            src={area.src}
-            alt={area.alt}
-            width="800"
-            height="600"
-            loading="lazy"
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          />
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-900/80 to-transparent px-4 pb-3 pt-10 text-sm font-semibold text-white">
-            {area.label}
-          </figcaption>
-        </figure>
+        <ServiceCard title={s.data.title} summary={s.data.tagline ?? s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
       ))}
     </div>
   </Section>
@@ -201,7 +162,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     <div class="grid items-center gap-10 lg:grid-cols-2">
       <div class="order-2 lg:order-1">
         <div class="aspect-square max-w-sm overflow-hidden rounded-3xl border border-brand-100 bg-brand-100">
-          <img src="/images/thais.jpg" alt={`Foto de ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}`} width="900" height="883" class="h-full w-full object-cover" />
+          <img src="/images/thais.jpg" alt={`Foto de ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}`} width="900" height="883" loading="lazy" class="h-full w-full object-cover" />
         </div>
       </div>
       <div class="order-1 lg:order-2">
@@ -223,7 +184,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
 
   <!-- FAQ excerpt -->
   <Section eyebrow="Dúvidas frequentes" title="Perguntas que pais costumam fazer" narrow>
-    <FAQ items={faqs.slice(0, 5)} />
+    <FAQ items={faqs.slice(0, 5)} includeSchema={false} />
     <p class="mt-6 text-center text-muted">
       <a href="/perguntas-frequentes" class="font-semibold text-brand-600 hover:text-brand-700">Ver todas as perguntas →</a>
     </p>
