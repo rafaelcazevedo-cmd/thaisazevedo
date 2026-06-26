@@ -39,6 +39,8 @@ export const site = {
   },
   /** Consultório coordinates, fill from Google Maps (right-click → coordinates). */
   geo: { lat: -23.55052, lng: -46.633308 }, // PLACEHOLDER: São Paulo centro
+  /** Flip to true once the geo coordinates above are the real consultório location. */
+  geoConfirmed: false,
 
   // ── Contact (WhatsApp is the primary conversion channel) ─────────────────
   /** International format, digits only, no "+". */
@@ -56,6 +58,8 @@ export const site = {
     { days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
     { days: ['Saturday'], opens: '08:00', closes: '12:00' },
   ],
+  /** Flip to true once the opening hours above are confirmed (currently by appointment). */
+  hoursConfirmed: false,
   priceRange: '$$',
 
   // ── Social / external profiles (consensus signals for GEO) ───────────────

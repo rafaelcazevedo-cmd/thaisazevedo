@@ -1,0 +1,22 @@
+---
+/**
+ * Shared linked-card primitive: owns the radius, border, padding, bg and
+ * lift+shadow hover used by ServiceCard, ConditionCard and the blog cards.
+ * Callers provide the content via the default slot.
+ */
+interface Props {
+  href: string;
+  /** Concise accessible name (avoids the whole card text becoming the link label). */
+  ariaLabel?: string;
+  class?: string;
+}
+const { href, ariaLabel, class: className = '' } = Astro.props;
+---
+
+<a
+  href={href}
+  aria-label={ariaLabel}
+  class={`group flex h-full flex-col rounded-2xl border border-brand-100 bg-white p-6 transition-all hover:-translate-y-1 hover:border-brand-200 hover:shadow-lg hover:shadow-brand-900/5 ${className}`}
+>
+  <slot />
+</a>

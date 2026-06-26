@@ -1,6 +1,6 @@
 ---
 import Logo from './Logo.astro';
-import { site } from '@/config/site';
+import { site, whatsappUrl, defaultWhatsappMessage } from '@/config/site';
 import { mainNav } from '@/config/nav';
 
 const year = new Date().getFullYear();
@@ -35,7 +35,7 @@ const year = new Date().getFullYear();
       <address class="mt-4 space-y-2 text-sm not-italic text-brand-100/90">
         <p>📍 {site.city} · consultório ou atendimento domiciliar</p>
         <p>
-          💬 <a href={`https://wa.me/${site.whatsapp}`} class="hover:text-white">WhatsApp {site.whatsappDisplay}</a>
+          💬 <a href={whatsappUrl(defaultWhatsappMessage)} target="_blank" rel="noopener noreferrer" class="hover:text-white">WhatsApp {site.whatsappDisplay}</a>
         </p>
         <p>✉️ <a href={`mailto:${site.email}`} class="hover:text-white">{site.email}</a></p>
         {site.hours.map((h) => <p>🕗 {h.days}: {h.time}</p>)}

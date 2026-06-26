@@ -3,12 +3,14 @@ interface Props {
   id?: string;
   eyebrow?: string;
   title?: string;
+  /** Heading tag for the title. Use 'h1' when this Section holds the page's primary heading. */
+  as?: 'h1' | 'h2';
   /** Extra classes on the <section>. */
   class?: string;
   /** Constrain inner width. */
   narrow?: boolean;
 }
-const { id, eyebrow, title, class: className = '', narrow = false } = Astro.props;
+const { id, eyebrow, title, as: TitleTag = 'h2', class: className = '', narrow = false } = Astro.props;
 ---
 
 <section id={id} class={`py-14 sm:py-16 ${className}`}>
@@ -18,7 +20,9 @@ const { id, eyebrow, title, class: className = '', narrow = false } = Astro.prop
         <header class="mb-8 max-w-2xl" data-reveal>
           {eyebrow && <p class="eyebrow mb-1.5">{eyebrow}</p>}
           {title && (
-            <h2 class="font-display text-3xl font-semibold text-brand-800 sm:text-4xl">{title}</h2>
+            <TitleTag class="font-display text-3xl font-semibold text-brand-800 break-words sm:text-4xl">
+              {title}
+            </TitleTag>
           )}
         </header>
       )

@@ -34,8 +34,8 @@
   --color-ink: #21271e;
   --color-muted: #5c6657;
 
-  --color-whatsapp: #25d366;
-  --color-whatsapp-dark: #128c7e;
+  --color-whatsapp: #0c7a5a;
+  --color-whatsapp-dark: #0a6249;
 
   --font-sans: 'Hanken Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Fraunces Variable', ui-serif, Georgia, 'Times New Roman', serif;
@@ -114,7 +114,7 @@ body::before {
 
 /* Honey underline flourish for emphasized words. */
 .ink-underline {
-  background-image: linear-gradient(transparent 62%, color-mix(in oklab, var(--color-accent-400) 70%, transparent) 0);
+  background-image: linear-gradient(transparent 72%, color-mix(in oklab, var(--color-accent-400) 62%, transparent) 0);
   background-repeat: no-repeat;
   padding-inline: 0.05em;
 }
