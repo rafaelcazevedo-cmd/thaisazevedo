@@ -17,9 +17,9 @@ export const faqs: Faq[] = [
       'A neuropsicopedagoga é a profissional que avalia e intervém nas dificuldades de aprendizagem, unindo conhecimentos de neurociência, psicologia e pedagogia. Ela identifica como a criança aprende, o que está atrapalhando esse processo e propõe estratégias individualizadas para que ela avance na escola e ganhe confiança.',
   },
   {
-    question: 'Qual a diferença entre psicopedagogo e neuropsicopedagogo?',
+    question: 'Qual a diferença entre psicólogo e neuropsicopedagogo?',
     answer:
-      'A principal diferença é o foco no funcionamento cerebral da aprendizagem. O psicopedagogo trabalha as dificuldades de aprendizagem de forma ampla; o neuropsicopedagogo acrescenta a base da neurociência, considerando atenção, memória, linguagem e funções executivas para entender e intervir nas dificuldades de cada criança.',
+      'A diferença está no foco. O psicólogo cuida da saúde emocional, do comportamento e das relações, e pode fazer psicoterapia. O neuropsicopedagogo cuida da aprendizagem: investiga como a criança aprende e trabalha as dificuldades nesse processo, fortalecendo habilidades como atenção, memória, linguagem, raciocínio e funções executivas, com olhar pedagógico e muito acolhimento. As duas áreas se complementam e muitas vezes caminham juntas, mas uma não substitui a outra.',
   },
   {
     question: 'Quando devo procurar uma neuropsicopedagoga para a minha criança?',

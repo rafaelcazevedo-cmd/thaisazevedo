@@ -8,6 +8,7 @@ import FAQ from '@/components/FAQ.astro';
 import CTASection from '@/components/CTASection.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import PhotoCarousel from '@/components/PhotoCarousel.astro';
+import FlipCard from '@/components/FlipCard.astro';
 import { site } from '@/config/site';
 import { faqs } from '@/data/faqs';
 
@@ -28,10 +29,10 @@ const heroPhotos = [
 
 // "Momentos que importam": real session photos, kept small. Restored from git history.
 const momentosFotos = [
-  { src: '/images/aprende-leitura.jpg', label: 'Leitura', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento' },
-  { src: '/images/aprende-escrita.jpg', label: 'Escrita', alt: 'Criança escrevendo e criando uma história no caderno durante o atendimento' },
-  { src: '/images/aprende-matematica.jpg', label: 'Matemática', alt: 'Criança resolvendo uma atividade de matemática durante o atendimento' },
-  { src: '/images/aprende-atencao.jpg', label: 'Atenção', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha' },
+  { src: '/images/aprende-leitura.jpg', label: 'Leitura', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento', back: 'Consciência fonológica, fluência e compreensão — e o prazer de ler.' },
+  { src: '/images/aprende-escrita.jpg', label: 'Escrita', alt: 'Criança escrevendo e criando uma história no caderno durante o atendimento', back: 'Da alfabetização à ortografia, à produção e organização das ideias.' },
+  { src: '/images/aprende-matematica.jpg', label: 'Matemática', alt: 'Criança resolvendo uma atividade de matemática durante o atendimento', back: 'Senso numérico, cálculo e resolução de problemas.' },
+  { src: '/images/aprende-atencao.jpg', label: 'Atenção', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha', back: 'Foco, concentração e controle das distrações.' },
 ];
 
 // "Reconhece alguma dessas situações?", everyday signs that bring parents in.
@@ -65,7 +66,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
           <span class="h-2 w-2 rounded-full bg-accent-500"></span>
           Em {site.city} · consultório ou atendimento domiciliar
         </p>
-        <h1 class="reveal reveal-2 font-display text-4xl font-semibold leading-[1.05] text-brand-800 break-words hyphens-auto sm:text-5xl sm:hyphens-none lg:text-6xl">
+        <h1 class="reveal reveal-2 font-display text-3xl font-semibold leading-[1.05] text-brand-800 text-balance break-words sm:text-5xl lg:text-6xl">
           Um trabalho individualizado, com muito <span class="ink-underline">acolhimento e vínculo</span>
         </h1>
         <p class="reveal reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-ink/90">
@@ -135,12 +136,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     <ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-4">
       {momentosFotos.map((f) => (
         <li>
-          <figure>
-            <div class="aspect-[4/5] overflow-hidden rounded-2xl border border-brand-100 shadow-sm">
-              <img src={f.src} alt={f.alt} width="640" height="800" loading="lazy" class="h-full w-full object-cover" />
-            </div>
-            <figcaption class="mt-2 text-center font-display text-sm font-semibold text-brand-700">{f.label}</figcaption>
-          </figure>
+          <FlipCard src={f.src} alt={f.alt} label={f.label} back={f.back} />
         </li>
       ))}
     </ul>
@@ -163,7 +159,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
 
   <!-- Services -->
   <Section eyebrow="Como posso ajudar" title="Serviços" class="bg-brand-50">
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+    <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">
       {services.map((s) => (
         <ServiceCard title={s.data.title} summary={s.data.tagline ?? s.data.summary} href={`/servicos/${s.id}`} icon={s.data.icon} />
       ))}

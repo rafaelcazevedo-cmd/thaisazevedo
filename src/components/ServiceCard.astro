@@ -16,7 +16,7 @@ const { title, summary, href, icon } = Astro.props;
   <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
     <Icon name={icon} />
   </span>
-  <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">{title}</h3>
+  <h3 class="mt-4 font-display text-xl font-semibold text-brand-800 break-words">{title}</h3>
   <p class="mt-2 flex-1 text-sm leading-relaxed text-muted">{summary}</p>
   <CardLink label="Saiba mais" />
 </Card>
