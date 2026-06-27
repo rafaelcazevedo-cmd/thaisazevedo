@@ -8,7 +8,6 @@ import FAQ from '@/components/FAQ.astro';
 import CTASection from '@/components/CTASection.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import PhotoCarousel from '@/components/PhotoCarousel.astro';
-import FlipCard from '@/components/FlipCard.astro';
 import { site } from '@/config/site';
 import { faqs } from '@/data/faqs';
 
@@ -27,12 +26,12 @@ const heroPhotos = [
   { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
 ];
 
-// "Momentos que importam": real session photos, kept small. Restored from git history.
+// "Cada criança aprende de um jeito": static photo showcase (real session photos).
 const momentosFotos = [
-  { src: '/images/aprende-leitura.jpg', label: 'Leitura', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento', back: 'Consciência fonológica, fluência e compreensão — e o prazer de ler.' },
-  { src: '/images/aprende-escrita.jpg', label: 'Escrita', alt: 'Criança escrevendo e criando uma história no caderno durante o atendimento', back: 'Da alfabetização à ortografia, à produção e organização das ideias.' },
-  { src: '/images/aprende-matematica.jpg', label: 'Matemática', alt: 'Criança resolvendo uma atividade de matemática durante o atendimento', back: 'Senso numérico, cálculo e resolução de problemas.' },
-  { src: '/images/aprende-atencao.jpg', label: 'Atenção', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha', back: 'Foco, concentração e controle das distrações.' },
+  { src: '/images/aprende-leitura.jpg', alt: 'Criança trabalhando a leitura com cartões de palavras durante o atendimento' },
+  { src: '/images/aprende-escrita.jpg', alt: 'Criança escrevendo e criando uma história no caderno durante o atendimento' },
+  { src: '/images/aprende-matematica.jpg', alt: 'Criança resolvendo uma atividade de matemática durante o atendimento' },
+  { src: '/images/aprende-atencao.jpg', alt: 'Criança concentrada em uma atividade de atenção, marcando símbolos em uma folha' },
 ];
 
 // "Reconhece alguma dessas situações?", everyday signs that bring parents in.
@@ -131,12 +130,12 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </div>
   </section>
 
-  <!-- Momentos que importam: fotos reais de sessão (menores), logo após "O que é" -->
+  <!-- Cada criança aprende de um jeito: static photo showcase, logo após "O que é" -->
   <Section eyebrow="Na prática" title="Cada criança aprende de um jeito" narrow>
     <ul role="list" class="grid grid-cols-2 gap-4 sm:grid-cols-4">
       {momentosFotos.map((f) => (
-        <li>
-          <FlipCard src={f.src} alt={f.alt} label={f.label} back={f.back} />
+        <li class="aspect-[4/5] overflow-hidden rounded-2xl border border-brand-100 shadow-sm">
+          <img src={f.src} alt={f.alt} width="640" height="800" loading="lazy" class="h-full w-full object-cover" />
         </li>
       ))}
     </ul>
