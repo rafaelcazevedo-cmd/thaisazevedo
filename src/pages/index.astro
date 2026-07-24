@@ -23,6 +23,7 @@ const homeEspecialidades = especialidadeIds
 const heroPhotos = [
   { src: '/images/atendimento-1.jpg', alt: 'Thais Azevedo em um momento de acolhimento com uma criança' },
   { src: '/images/atendimento-2.jpg', alt: 'Thais Azevedo com uma criança que usa fones de cancelamento de ruído' },
+  { src: '/images/atendimento-3.jpg', alt: 'Criança sorrindo durante uma atividade no atendimento' },
   { src: '/images/thais-instituto.jpg', alt: 'Thais Azevedo em ação de inclusão com jovens neurodivergentes' },
 ];
 
@@ -63,12 +64,15 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
       <div class="order-1 lg:col-start-1 lg:row-start-1">
         <p class="reveal reveal-1 mb-4 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-paper/70 px-4 py-1.5 text-sm font-semibold text-brand-700 backdrop-blur">
           <span class="h-2 w-2 rounded-full bg-accent-500"></span>
-          Em {site.city} · consultório ou atendimento domiciliar
+          Você não está só!
         </p>
         <h1 class="reveal reveal-2 font-display text-3xl font-semibold leading-[1.05] text-brand-800 text-balance break-words sm:text-5xl lg:text-6xl">
-          Um trabalho individualizado, com muito <span class="ink-underline">acolhimento e vínculo</span>
+          Um trabalho individualizado, com muito acolhimento e vínculo
         </h1>
-        <p class="reveal reveal-3 mt-6 max-w-xl text-lg leading-relaxed text-ink/90">
+        <p class="reveal reveal-3 mt-5 font-display text-xl font-medium leading-snug text-brand-600 sm:text-2xl">
+          Ajudando crianças a aprender com confiança
+        </p>
+        <p class="reveal reveal-3 mt-4 max-w-xl text-lg leading-relaxed text-ink/90">
           Sou <strong>{site.professionalName}</strong>, {site.profession.toLowerCase()} em {site.city}.
           Faço <strong>avaliação e intervenção neuropsicopedagógica</strong> para crianças e adolescentes,
           incluindo crianças neurodivergentes (como Autismo, TDAH e Síndrome de Down), com Dislexia,
@@ -113,7 +117,7 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
           <h2 class="font-display text-3xl font-semibold text-brand-800 sm:text-4xl">O que é neuropsicopedagogia?</h2>
           <p class="mt-5 font-display text-2xl leading-snug text-brand-700">
             A <strong class="font-semibold">neuropsicopedagogia</strong> é como uma{' '}
-            <span class="ink-underline">mistura de professora particular com psicóloga</span>.
+            mistura de professora particular com psicóloga.
           </p>
           <p class="mt-4 text-lg leading-relaxed text-ink/90">
             Avalia e intervém nas dificuldades de aprendizagem, sempre levando em conta as emoções e o modo único
@@ -207,34 +211,39 @@ const description = `${site.profession} em ${site.city}: avaliação e interven�
     </p>
   </Section>
 
-  <!-- Location -->
-  <Section eyebrow="Onde atendo" title="Consultório ou Atendimento Domiciliar" class="bg-white" narrow>
-    <p class="mb-8 text-ink/90">
-      Os atendimentos particulares acontecem em <strong>{site.city}</strong>, do jeito que for melhor
-      para a sua família:
+  <!-- Location: domiciliar first (the differential), sala particular as the alternative -->
+  <Section eyebrow="Onde atendo" title="Na casa do paciente ou em sala particular" class="bg-white" narrow>
+    <p class="mb-6 text-ink/90">
+      Os atendimentos particulares acontecem em qualquer região de <strong>{site.city}</strong>, na casa do
+      paciente, para maior conforto da criança e da família, ou em uma sala de aula particular, localizada na
+      região do Alto de Pinheiros.
     </p>
-    <div class="grid gap-5 sm:grid-cols-2">
-      <div class="flex flex-col rounded-2xl border border-brand-100 bg-cream p-6">
-        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
-          </svg>
-        </span>
-        <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">No consultório</h3>
-        <p class="mt-2 text-sm leading-relaxed text-muted">
-          Em um espaço acolhedor e preparado para crianças, pensado para deixar a sessão leve e segura.
-        </p>
-      </div>
-      <div class="flex flex-col rounded-2xl border border-brand-100 bg-cream p-6">
-        <span class="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-accent-300 text-accent-700">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+    <div class="grid gap-4 sm:grid-cols-2">
+      <div class="flex items-start gap-4 rounded-2xl border border-brand-100 bg-cream p-5">
+        <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent-300 text-accent-700">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.5c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
           </svg>
         </span>
-        <h3 class="mt-4 font-display text-xl font-semibold text-brand-800">Em casa, atendimento domiciliar</h3>
-        <p class="mt-2 text-sm leading-relaxed text-muted">
-          Na residência do paciente, no ambiente em que a criança já se sente segura e à vontade.
-        </p>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-brand-800">Na casa do paciente</h3>
+          <p class="mt-1 text-sm leading-relaxed text-muted">
+            No ambiente em que a criança já se sente segura, sem precisar se deslocar.
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 rounded-2xl border border-brand-100 bg-cream p-5">
+        <span class="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-100 text-brand-700">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+          </svg>
+        </span>
+        <div>
+          <h3 class="font-display text-lg font-semibold text-brand-800">Em sala de aula particular</h3>
+          <p class="mt-1 text-sm leading-relaxed text-muted">
+            Na região do Alto de Pinheiros, acolhedora e preparada para crianças.
+          </p>
+        </div>
       </div>
     </div>
   </Section>

@@ -5,12 +5,7 @@ import Section from '@/components/Section.astro';
 import CTASection from '@/components/CTASection.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import { site } from '@/config/site';
-
-const values = [
-  { title: 'Acolhimento e vínculo', text: 'Cada criança é recebida sem julgamento, no seu tempo, com escuta atenta e uma relação de confiança.' },
-  { title: 'Cada um no seu ritmo', text: 'O foco é o indivíduo, e não um rótulo. O trabalho respeita as potencialidades e dificuldades únicas de cada paciente.' },
-  { title: 'Sem necessidade de diagnóstico', text: 'Meu trabalho com a criança não é baseado no seu diagnóstico, e sim nas suas potencialidades e dificuldades.' },
-];
+import { workValues } from '@/data/values';
 
 const title = `Sobre mim, ${site.professionalName}, ${site.profession} em ${site.city}`;
 const description = `Conheça ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}. Formação, abordagem e a forma de cuidar de crianças com dificuldade de aprendizagem.`;
@@ -29,15 +24,14 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
         <h1 class="font-display text-4xl font-semibold text-brand-800 break-words sm:text-5xl">{site.professionalName}</h1>
         <p class="mt-1 text-lg text-brand-600">{site.profession} em {site.city}</p>
 
-        <div class="prose mt-6 max-w-none">
+        <div class="prose mt-6 max-w-none text-justify [hyphens:auto]">
           <p>
             Meu trabalho é uma <strong>mistura de professora particular com psicóloga</strong>: olho para o jeito
             único de cada criança aprender, sempre levando em conta suas emoções, com muito <strong>acolhimento e
             vínculo</strong>. Acredito que toda criança pode aprender quando recebe o apoio certo.
           </p>
           <p>
-            Sou formada em Marketing pela <strong>ESPM</strong> e, a partir de 2015, passei a me dedicar
-            exclusivamente à Pedagogia. Atuei como professora em escolas internacionais e tradicionais, como{' '}
+            Atuei como professora em escolas internacionais e tradicionais, como{' '}
             <strong>St. Nicholas, Maple Bear, Beacon, Rio Branco e Lourenço Castanho</strong>. Na St. Nicholas,
             trabalhei junto ao departamento de ensino individualizado, planejando e aplicando intervenções
             personalizadas para crianças com dificuldades pedagógicas, emocionais e comportamentais no Ensino
@@ -50,9 +44,10 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
             ao atendimento multidisciplinar de pessoas autistas e com TDAH.
           </p>
           <p>
-            Há mais de <strong>12 anos</strong> também me dedico a trabalhos voluntários, no Lar Infantil Allan
-            Kardec, no Instituto Rolling Stone (ensino de música para crianças), no Lar das Crianças da CIP e no
-            Instituto Restaurar.
+            Trabalhei por <strong>12 anos</strong> como voluntária no Lar Infantil Allan Kardec, coordenei o
+            Instituto Rolling Stone (projeto social para ensino de música a crianças carentes) e, atualmente,
+            também sou neuropsicopedagoga voluntária no Instituto Restaurar e no Lar das Crianças da CIP,
+            promovendo atendimentos individualizados para crianças neurodivergentes.
           </p>
         </div>
 
@@ -68,7 +63,7 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
 
   <Section eyebrow="No que acredito" title="Como eu trabalho" class="bg-white">
     <div class="grid gap-6 md:grid-cols-3">
-      {values.map((v) => (
+      {workValues.map((v) => (
         <div class="rounded-2xl border border-brand-100 bg-cream p-6">
           <h3 class="font-display text-xl font-semibold text-brand-800">{v.title}</h3>
           <p class="mt-2 text-sm leading-relaxed text-muted">{v.text}</p>

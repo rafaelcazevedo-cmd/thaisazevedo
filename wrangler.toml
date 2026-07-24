@@ -1,0 +1,14 @@
+# Cloudflare Pages config (the pending Hostinger → CF migration).
+# Deploy: npm run build && npx wrangler pages deploy
+# Before first deploy: create the D1 db and paste its id below —
+#   npx wrangler d1 create thaisazevedo-depoimentos
+#   npx wrangler d1 execute thaisazevedo-depoimentos --remote --file=db/schema.sql
+# Secrets (Pages project → Settings): MOD_SECRET (random string), RESEND_API_KEY (optional, enables the moderation email).
+name = "thaisazevedo"
+pages_build_output_dir = "dist"
+compatibility_date = "2026-07-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "thaisazevedo-depoimentos"
+database_id = "REPLACE_WITH_ID_FROM_d1_create"

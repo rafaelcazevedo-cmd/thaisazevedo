@@ -37,9 +37,9 @@ export const site = {
     postalCode: '{{CEP}}',
     country: 'BR',
   },
-  /** Consultório coordinates, fill from Google Maps (right-click → coordinates). */
+  /** Sala particular (Alto de Pinheiros) coordinates, fill from Google Maps (right-click → coordinates). */
   geo: { lat: -23.55052, lng: -46.633308 }, // PLACEHOLDER: São Paulo centro
-  /** Flip to true once the geo coordinates above are the real consultório location. */
+  /** Flip to true once the geo coordinates above are the real sala location. */
   geoConfirmed: false,
 
   // ── Contact (WhatsApp is the primary conversion channel) ─────────────────

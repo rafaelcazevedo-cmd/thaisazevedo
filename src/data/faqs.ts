@@ -57,14 +57,14 @@ export const faqs: Faq[] = [
       'O tempo varia conforme a necessidade de cada paciente. Alguns demandam alguns meses de intervenção; outros se beneficiam de um acompanhamento mais longo. A reavaliação periódica mostra a evolução e ajuda a decidir, junto com a família, o momento da alta.',
   },
   {
-    question: 'O atendimento é em consultório ou em casa?',
+    question: 'Onde acontecem os atendimentos?',
     answer:
-      'Os atendimentos particulares acontecem tanto no consultório, em São Paulo, quanto na residência dos pacientes (atendimento domiciliar). Entre em contato pelo WhatsApp para combinar o formato e o horário que melhor funcionam para a sua família.',
+      'Os atendimentos particulares acontecem em qualquer região de São Paulo, na casa do paciente, para maior conforto da criança e da família, ou em uma sala de aula particular na região do Alto de Pinheiros. Entre em contato pelo WhatsApp para combinar o formato e o horário que melhor funcionam para a sua família.',
   },
   {
     question: 'Vocês trabalham junto com a escola?',
     answer:
-      'Sim. Com autorização da família, a neuropsicopedagoga dialoga com professores e coordenação para alinhar estratégias entre o consultório e a sala de aula. Essa parceria entre família, escola e profissional potencializa o desenvolvimento do paciente.',
+      'Sim. Com autorização da família, a neuropsicopedagoga dialoga com professores e coordenação para alinhar estratégias entre o atendimento e a escola. Essa parceria entre família, escola e profissional potencializa o desenvolvimento do paciente.',
   },
   {
     question: 'Quanto custa a avaliação ou as sessões?',

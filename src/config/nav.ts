@@ -2,6 +2,7 @@
 export const mainNav = [
   { label: 'Início', href: '/' },
   { label: 'Sobre mim', href: '/sobre' },
+  { label: 'Vidas Transformadas', href: '/vidas-transformadas' },
   { label: 'Serviços', href: '/servicos' },
   { label: 'Especialidades', href: '/condicoes' },
   { label: 'Dúvidas frequentes', href: '/perguntas-frequentes' },
