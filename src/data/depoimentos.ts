@@ -17,6 +17,16 @@ export interface Depoimento {
 
 export const depoimentos: Depoimento[] = [
   // Novos depoimentos entram no topo.
+  // 2026-07-27 · enviado pela Thais via WhatsApp (CR-20); consentimento
+  // confirmado por ela em 2026-07-27 ("Sim"). Texto verbatim.
+  {
+    nome: 'Josefa',
+    paciente: 'Ezequiel, 29 anos',
+    texto:
+      'Estou muito feliz com o atendimento do Ezequiel. Antes do Ezequiel começar com os ' +
+      'atendimentos, ele era muito triste. Hoje, ele melhorou bastante, no sorriso e na ' +
+      'felicidade! Sou muito grata por você existir na vida do meu filho! Muito obrigada!',
+  },
   // 2026-07-27 · enviados pela Thais via WhatsApp (CR-18); consentimento das
   // famílias confirmado por ela em 2026-07-27 ("Sim"). Texto verbatim.
   {
