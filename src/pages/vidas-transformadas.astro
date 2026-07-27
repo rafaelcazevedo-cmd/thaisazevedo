@@ -13,17 +13,19 @@ const description = `Histórias de famílias atendidas por ${site.professionalNa
 <BaseLayout title={title} description={description} path="/vidas-transformadas">
   <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Vidas Transformadas', href: '/vidas-transformadas' }]} />
 
-  <Section eyebrow="Depoimentos" title="Vidas Transformadas" as="h1" narrow>
+  <Section eyebrow="Depoimentos" title="Vidas Transformadas" as="h1">
     <p class="max-w-2xl text-lg leading-relaxed text-ink/90">
       Cada criança que aprende a confiar em si transforma a vida de uma família inteira.
       Aqui, quem já viveu essa transformação conta como foi.
     </p>
 
-    <!-- Depoimentos: mais recentes primeiro, texto completo, sem "ler mais" -->
+    <!-- Depoimentos: mais recentes primeiro, texto completo, sem "ler mais".
+         Pedido da Thais (CR-19): o máximo de depoimentos inteiros visíveis por
+         tela, em boxes — colunas no desktop, coluna única no celular. -->
     {depoimentos.length > 0 ? (
-      <div class="mt-10 space-y-6">
+      <div class="mt-10 columns-1 gap-6 md:columns-2">
         {depoimentos.map((d) => (
-          <blockquote class="rounded-2xl border border-brand-100 bg-paper p-6 sm:p-8">
+          <blockquote class="mb-6 break-inside-avoid rounded-2xl border border-brand-100 bg-paper p-6 sm:p-8">
             <p class="whitespace-pre-line font-display text-lg leading-relaxed text-ink">{d.texto}</p>
             <footer class="mt-4 font-semibold text-brand-700">
               — {d.nome}{d.paciente && <span class="font-normal text-muted"> · {d.paciente}</span>}
