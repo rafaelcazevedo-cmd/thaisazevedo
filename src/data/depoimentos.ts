@@ -69,8 +69,9 @@ export const depoimentos: Depoimento[] = [
   {
     nome: 'Aline',
     paciente: 'Pablo, 11 anos',
-    // Corte provisório escolhido por nós (CR-24); a Thais pode mudar quando quiser.
-    cortarApos: 'ela tem mudado a vida do Pablo e a nossa também.',
+    // Corte no ponto pedido pela Thais (CR-24/CR-33): "corta depois de 'e não
+    // a criança ao ensino'".
+    cortarApos: 'e não a criança ao ensino.',
     texto:
       'Há muito tempo eu vivia com uma preocupação diária: o que seria do futuro do meu ' +
       'irmão?\n\n' +
