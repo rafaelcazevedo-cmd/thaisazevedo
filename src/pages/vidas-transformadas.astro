@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs.astro';
 import Section from '@/components/Section.astro';
 import WhatsAppButton from '@/components/WhatsAppButton.astro';
 import { site } from '@/config/site';
-import { depoimentos } from '@/data/depoimentos';
+import { depoimentos, dividirDepoimento } from '@/data/depoimentos';
 
 const title = `Vidas Transformadas, depoimentos sobre ${site.professionalName}`;
 const description = `Histórias de famílias atendidas por ${site.professionalName}, ${site.profession.toLowerCase()} em ${site.city}. Leia os depoimentos e compartilhe a sua história.`;
@@ -19,19 +19,49 @@ const description = `Histórias de famílias atendidas por ${site.professionalNa
       Aqui, quem já viveu essa transformação conta como foi.
     </p>
 
-    <!-- Depoimentos: mais recentes primeiro, texto completo, sem "ler mais".
-         Pedido da Thais (CR-19): o máximo de depoimentos inteiros visíveis por
-         tela, em boxes — colunas no desktop, coluna única no celular. -->
+    <!-- Depoimentos: mais recentes primeiro, em boxes — colunas no desktop,
+         coluna única no celular (CR-19: o máximo de histórias por tela).
+         Depoimento longo pode ganhar um "Ler mais": o corte é opcional, manual
+         e escolhido pela Thais (campo `cortarApos` em src/data/depoimentos.ts —
+         o comentário do arquivo explica como aplicar). Sem corte, nada muda.
+         O controle é um <details>/<summary> nativo: funciona sem JavaScript,
+         é operável pelo teclado e já expõe o estado (aria-expanded) sozinho. -->
     {depoimentos.length > 0 ? (
       <div class="mt-10 columns-1 gap-6 md:columns-2">
-        {depoimentos.map((d) => (
-          <blockquote class="mb-6 break-inside-avoid rounded-2xl border border-brand-100 bg-paper p-6 sm:p-8">
-            <p class="whitespace-pre-line font-display text-lg leading-relaxed text-ink">{d.texto}</p>
-            <footer class="mt-4 font-semibold text-brand-700">
-              — {d.nome}{d.paciente && <span class="font-normal text-muted"> · {d.paciente}</span>}
-            </footer>
-          </blockquote>
-        ))}
+        {depoimentos.map((d) => {
+          const { visivel, resto } = dividirDepoimento(d);
+          return (
+            <blockquote class="mb-6 break-inside-avoid rounded-2xl border border-brand-100 bg-paper p-6 sm:p-8">
+              <p class="whitespace-pre-line font-display text-lg leading-relaxed text-ink">{visivel}</p>
+              {resto && (
+                <details class="group flex flex-col">
+                  {/* order-2 põe o botão embaixo do texto revelado quando aberto.
+                      py-3/-mb-3: área de toque de ~44px sem mudar o espaçamento visual. */}
+                  <summary class="order-2 mt-1 -mb-3 inline-flex w-fit cursor-pointer list-none items-center gap-1 py-3 text-sm font-semibold text-brand-600 hover:text-brand-700 [&::-webkit-details-marker]:hidden">
+                    <span class="group-open:hidden">Ler mais</span>
+                    <span class="hidden group-open:inline">Ler menos</span>
+                    <span class="sr-only"> do depoimento de {d.nome}</span>
+                    <svg
+                      class="h-4 w-4 transition-transform group-open:rotate-180"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  {/* mt-[1.625em] = uma linha em branco, igual ao espaço entre parágrafos. */}
+                  <p class="mt-[1.625em] whitespace-pre-line font-display text-lg leading-relaxed text-ink">{resto}</p>
+                </details>
+              )}
+              <footer class="mt-4 font-semibold text-brand-700">
+                — {d.nome}{d.paciente && <span class="font-normal text-muted"> · {d.paciente}</span>}
+              </footer>
+            </blockquote>
+          );
+        })}
       </div>
     ) : (
       <p class="mt-10 rounded-2xl border border-dashed border-brand-200 bg-brand-50/50 p-8 text-center font-display text-xl text-brand-700">

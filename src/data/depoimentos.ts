@@ -5,14 +5,61 @@
  * depoimento pelo WhatsApp (canal zap) → adicionamos AQUI, no TOPO da lista
  * (a página exibe na ordem do array = mais recentes primeiro) → deploy.
  * Só publicar com a confirmação da Thais de que a família autorizou.
+ *
+ * CORTE "LER MAIS" (opcional, por depoimento — pedido da Thais, CR-24/CR-31):
+ * quem decide onde cortar é ela, caso a caso. Quando ela disser "corta depois
+ * de 'X'", acrescente ao depoimento uma linha:
+ *     cortarApos: 'X',
+ * copiando o trecho EXATAMENTE como está em `texto` (mesma pontuação e
+ * acentos). Use um trecho curto, único e — de preferência — no fim de um
+ * parágrafo. A página passa a mostrar o texto só até ali, com um botão
+ * "Ler mais" que abre o restante ali mesmo (e "Ler menos" fecha).
+ * Regras: `texto` continua SEMPRE inteiro (o corte é só de exibição);
+ * depoimento sem `cortarApos` aparece inteiro, exatamente como antes; e se o
+ * trecho não for encontrado, nada quebra — o depoimento aparece inteiro e o
+ * `npm run build` mostra um aviso no log dizendo qual corte não foi aplicado.
+ * Para tirar o corte, basta apagar a linha `cortarApos`.
  */
 export interface Depoimento {
   /** Nome de quem escreveu (como deve aparecer). */
   nome: string;
   /** Nome e idade do paciente, opcional (ex.: "Miguel, 8 anos"). */
   paciente?: string;
-  /** Texto completo, sem cortes — a página não usa "ler mais". */
+  /** Texto completo, sempre inteiro — nunca encurte aqui. */
   texto: string;
+  /**
+   * Opcional. Últimas palavras que ficam visíveis antes do "Ler mais",
+   * copiadas de `texto` exatamente como estão. Sem este campo (o padrão),
+   * o depoimento aparece inteiro, sem botão.
+   */
+  cortarApos?: string;
+}
+
+/**
+ * Aplica o corte de exibição de um depoimento.
+ * Devolve `{ visivel, resto }`: `resto` vazio significa "renderiza inteiro,
+ * sem botão" — é o que acontece sem `cortarApos` ou se o trecho não existir
+ * no texto (nesse caso avisa no log do build, para o corte não sumir calado).
+ */
+export function dividirDepoimento(d: Depoimento): { visivel: string; resto: string } {
+  const inteiro = { visivel: d.texto, resto: '' };
+  if (!d.cortarApos) return inteiro;
+
+  const inicio = d.texto.indexOf(d.cortarApos);
+  if (inicio === -1) {
+    console.warn(
+      `[depoimentos] corte ignorado no depoimento de ${d.nome}: o trecho ` +
+        `${JSON.stringify(d.cortarApos)} não existe em "texto" (confira acentos e pontuação).`,
+    );
+    return inteiro;
+  }
+
+  const fim = inicio + d.cortarApos.length;
+  const resto = d.texto.slice(fim).trim();
+  // Corte no fim do texto (ou nada sobrando): não vale a pena esconder nada.
+  if (!resto) return inteiro;
+
+  return { visivel: d.texto.slice(0, fim).trimEnd(), resto };
 }
 
 export const depoimentos: Depoimento[] = [
@@ -22,6 +69,8 @@ export const depoimentos: Depoimento[] = [
   {
     nome: 'Aline',
     paciente: 'Pablo, 11 anos',
+    // Corte provisório escolhido por nós (CR-24); a Thais pode mudar quando quiser.
+    cortarApos: 'ela tem mudado a vida do Pablo e a nossa também.',
     texto:
       'Há muito tempo eu vivia com uma preocupação diária: o que seria do futuro do meu ' +
       'irmão?\n\n' +
