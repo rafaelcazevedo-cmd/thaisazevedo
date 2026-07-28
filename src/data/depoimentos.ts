@@ -17,6 +17,22 @@ export interface Depoimento {
 
 export const depoimentos: Depoimento[] = [
   // Novos depoimentos entram no topo.
+  // 2026-07-28 · enviado pela Thais via WhatsApp (CR-21); consentimento
+  // confirmado por ela em 2026-07-28. Texto verbatim.
+  {
+    nome: 'Priscila',
+    paciente: 'As crianças que moraram no Lar Infantil Allan Kardec',
+    texto:
+      'Admiro profundamente a Thais pela profissional excepcional e pelo ser humano generoso ' +
+      'que ela é. Sua atuação na Neuropsicopedagogia já transforma realidades e seu trabalho ' +
+      'voluntário mostra a nobreza do seu coração.  Este novo site é reflexo de sua ' +
+      'competência e amor pelo que faz com as crianças. Ela une o trabalho com afeto de uma ' +
+      'forma única e sua dedicação ao voluntariado são provas do su compromisso, conhecimento ' +
+      'e cuidado. Falo isso porque a conheço desde nova, quando ela era voluntária no Lar ' +
+      'Infantil Allan Kardec, onde cresci e morei por anos. Fui uma das crianças ajudadas por ' +
+      'ela e sempre observei o carinho, a atenção e sua dedicação comigo e com as outras ' +
+      'crianças. Sucesso nessa nova etapa! Você merece voar alto!',
+  },
   // 2026-07-27 · enviado pela Thais via WhatsApp (CR-20); consentimento
   // confirmado por ela em 2026-07-27 ("Sim"). Texto verbatim.
   {
