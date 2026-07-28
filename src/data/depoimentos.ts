@@ -73,6 +73,29 @@ export const depoimentos: Depoimento[] = [
       'ela e sempre observei o carinho, a atenção e sua dedicação comigo e com as outras ' +
       'crianças. Sucesso nessa nova etapa! Você merece voar alto!',
   },
+  // 2026-07-28 · enviado pela Thais via WhatsApp (CR-27); consentimento
+  // confirmado por ela em 2026-07-28 (CR-28, "Sim"). Texto verbatim.
+  // Ordem: inserido abaixo de Priscila por instrução explícita da Thais (CR-26).
+  {
+    nome: 'Patrícia',
+    paciente: 'Erick, 9 anos',
+    texto:
+      'Venho compartilhar com vocês minha experiência incrível e gratificante do atendimento ' +
+      'dessa profissional. Conheço ela há  cerca de 20 anos. Meu filho Erick tinha alguns ' +
+      'comportamentos que eu desconhecia. Precisávamos de ajuda. O Erick para se entender e se ' +
+      'auto regular e eu para saber como ajudá-lo da melhor forma. Thais entrou na vida do ' +
+      'Erick como uma luz, para esclarecer o que meu pequeno precisava. Ela nos ajudou em um ' +
+      'momento que nem eu acreditava que era possível! Erick não conseguia se expressar direito ' +
+      'e entender seus sentimentos. Com as terapias da Thais, com muito carinho e dedicação, ' +
+      'hoje ele se expressa super bem!\n\n' +
+      'Meu pequeno Erick, para muitos, era uma criança perdida com diagnóstico de TEA e TDAH. ' +
+      'Para a Thais, ele era uma criança que precisava de ajuda e merecia ser acolhido nas suas ' +
+      'individualidades, respeitando seu jeitinho.\n\n' +
+      'Hoje, Erick é uma criança feliz, alfabetizada e com muito mais consciência de si e de ' +
+      'seus sentimentos, graças a essa profissional maravilhosa que sempre acreditou no ' +
+      'potencial dele!\n\n' +
+      'Obrigada Thais!',
+  },
   // 2026-07-27 · enviado pela Thais via WhatsApp (CR-20); consentimento
   // confirmado por ela em 2026-07-27 ("Sim"). Texto verbatim.
   {
