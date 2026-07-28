@@ -17,6 +17,46 @@ export interface Depoimento {
 
 export const depoimentos: Depoimento[] = [
   // Novos depoimentos entram no topo.
+  // 2026-07-28 · enviado pela Thais via WhatsApp (CR-23); consentimento
+  // confirmado por ela em 2026-07-28. Texto verbatim.
+  {
+    nome: 'Aline',
+    paciente: 'Pablo, 11 anos',
+    texto:
+      'Há muito tempo eu vivia com uma preocupação diária: o que seria do futuro do meu ' +
+      'irmão?\n\n' +
+      'Meu irmão, Pablo, tem 11 anos e, por uma sequência de fatores, acabou ficando muito ' +
+      'atrasado na alfabetização. Ele tem TDAH, não sabia ler, escrever ou se concentrar, e ' +
+      'isso impactava não só a vida escolar, mas também sua autoestima, comportamento e a ' +
+      'forma como ele se enxergava.\n\n' +
+      'Infelizmente, durante muito tempo, as dificuldades e o comportamento dele foram ' +
+      'interpretados como falta de interesse ou indisciplina.\n\n' +
+      'Faz apenas um mês que iniciamos as aulas com a Thais, mas esse tempo já foi ' +
+      'suficiente para dizer que ela tem mudado a vida do Pablo e a nossa também.\n\n' +
+      'Desde o primeiro contato, percebi que não tinha encontrado "somente" uma professora. ' +
+      'Pela preocupação em conhecer toda a história dele antes mesmo da primeira aula, eu ' +
+      'entendi que ela faria a diferença.\n\n' +
+      'Pela primeira vez vimos alguém adaptar o ensino à criança, e não a criança ao ' +
+      'ensino.\n\n' +
+      'Desde a primeira aula, o Pablo percebeu que sabia coisas que acreditava não saber. Na ' +
+      'verdade, ele só nunca tinha aprendido da forma que fazia sentido para ele. Isso mudou ' +
+      'completamente sua confiança. Hoje ele acredita que consegue.\n\n' +
+      'A forma como a Thais ensina é diferente. Ela enxerga o aluno antes da dificuldade, ' +
+      'entende as necessidades de cada criança e adapta o ensino para que ela aprenda de ' +
+      'verdade. Com carinho, paciência, criatividade e muita inteligência, ela transforma o ' +
+      'aprendizado em algo leve e divertido (dá vontade de virar aluno dela tbm..)\n\n' +
+      'Hoje o Pablo fica ansioso pelos dias de aula, já está lendo palavras que antes não ' +
+      'conseguia, escrevendo, evoluindo... (cada criança tem seu tempo).\n\n' +
+      'Antes, vivíamos com uma insegurança constante. Não sabíamos se deveríamos pedir ' +
+      'ajuda, se faria diferença ou se simplesmente deveríamos deixar a vida seguir na ' +
+      'escola. Hoje esse sentimento não existe mais, graças a Thais.\n\n' +
+      'Faço questão de contar para todas as pessoas que conheço sobre o trabalho dela, ' +
+      'porque sei que existem muitas famílias vivendo a mesma angústia que nós vivíamos. ' +
+      'Mais do que ensinar uma criança a ler e escrever, ela devolve a autoestima, a ' +
+      'confiança e a esperança para toda a família.\n\n' +
+      'Muito obrigada, Thais. Você está mudando a vida do Pablo, e tenho certeza de que ' +
+      'também vai mudar a de muitas outras crianças.',
+  },
   // 2026-07-28 · enviado pela Thais via WhatsApp (CR-21); consentimento
   // confirmado por ela em 2026-07-28. Texto verbatim.
   {
