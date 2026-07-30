@@ -181,4 +181,30 @@ export const depoimentos: Depoimento[] = [
       'amor e carinho que ele tem por ela. Obrigada por ser tão humana e respeitosa com meu ' +
       'filho. Eterna gratidão!',
   },
+  // 2026-07-30 · enviado pela Thais via WhatsApp (CR-34); consentimento
+  // confirmado por ela em 2026-07-30 ("E sim, a família autorizou tudo").
+  // Texto verbatim. Ordem: inserido no final, depois de Ana Carla, por
+  // instrução explícita da Thais (CR-34). Corte "ler mais" no ponto pedido
+  // por ela (CR-34): "corta depois de 'por causa do seu apoio e da sua
+  // ajuda'".
+  {
+    nome: 'Wesley e Núbia',
+    paciente: 'Bernardo, 9 anos',
+    cortarApos: 'por causa do seu apoio e da sua ajuda!',
+    texto:
+      'Gostaria de agradecer todo trabalho que foi feito com o Bernardo.\n\n' +
+      'Sem a sua ajuda, as questões que estávamos passando com ele iriam demorar muito mais ' +
+      'para melhorarem.\n\n' +
+      'O seu trabalho ajudou muito na alfabetização do Bernardo. Posso falar, com toda ' +
+      'certeza, que o Bernardo se alfabetizou com você!\n\n' +
+      'Estávamos desconfiando da possibilidade  do Bernardo ser autista e, graças as suas ' +
+      'observações e o seu encaminhamento dele para fono, descobrimos que o atraso da fala ' +
+      'dele não era isso, mas sim uma questão auditiva!\n\n' +
+      'Estamos tratando e tudo isso só foi possível por causa do seu apoio e da sua ajuda!\n\n' +
+      'Eu e toda minha família somos muito gratos a você por tudo isso.\n\n' +
+      'Te desejo toda sabedoria do mundo pra você continuar fazendo esse trabalho ' +
+      'maravilhoso e que você possa ajudar muitos e muitos mais Bernardos por esse mundo a ' +
+      'fora!\n\n' +
+      'Obrigado por todo apoio e ajuda que você nos deu!',
+  },
 ];
