@@ -123,6 +123,21 @@ export const depoimentos: Depoimento[] = [
       'ela e sempre observei o carinho, a atenção e sua dedicação comigo e com as outras ' +
       'crianças. Sucesso nessa nova etapa! Você merece voar alto!',
   },
+  // 2026-07-31 · enviado pela Thais via WhatsApp (CR-35); consentimento
+  // confirmado por ela em 2026-07-31 ("Sim"). Texto verbatim. Ordem:
+  // inserido logo após Priscila, por instrução explícita da Thais (CR-35).
+  {
+    nome: 'Edjane',
+    paciente: 'Isabella, 11 anos',
+    texto:
+      'Posso garantir que minha filha era uma criança antes de ser atendida pela Thais e ' +
+      'outra, absolutamente diferente e melhor, depois dos atendimentos.\n\n' +
+      'Acredito que  o vínculo desenvolvido foi fundamental para o progresso alcançado. \n\n' +
+      'Como profissional, a Thais é muito dedicada e essa dedicação influencia diretamente ' +
+      'os ganhos de seus pacientes. \n\n' +
+      'Eu e a Isabella somos muito gratas porque cada atendimento fez e faz muita diferença ' +
+      'em nossas vidas.',
+  },
   // 2026-07-28 · enviado pela Thais via WhatsApp (CR-27); consentimento
   // confirmado por ela em 2026-07-28 (CR-28, "Sim"). Texto verbatim.
   // Ordem: inserido abaixo de Priscila por instrução explícita da Thais (CR-26).
