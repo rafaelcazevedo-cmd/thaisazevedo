@@ -169,7 +169,6 @@ body::before {
   line-height: 1.78;
   font-size: 1.075rem;
   text-align: justify;
-  hyphens: auto;
 }
 .prose > * + * { margin-top: 1.15em; }
 .prose h2 {

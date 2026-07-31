@@ -14,6 +14,6 @@ const { title, summary, href, compact = false } = Astro.props;
 
 <Card href={href} ariaLabel={title}>
   <h3 class="font-display text-lg font-semibold text-brand-800 group-hover:text-brand-700 break-words">{title}</h3>
-  {!compact && <p class="mt-2 flex-1 text-sm leading-relaxed text-muted text-justify [hyphens:auto]">{summary}</p>}
+  {!compact && <p class="mt-2 flex-1 text-sm leading-relaxed text-muted text-justify">{summary}</p>}
   <CardLink label="Entenda os sinais" marginClass={compact ? 'mt-auto pt-4' : 'mt-4'} />
 </Card>
