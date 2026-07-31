@@ -14,7 +14,7 @@ const description = `Histórias de famílias atendidas por ${site.professionalNa
   <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Vidas Transformadas', href: '/vidas-transformadas' }]} />
 
   <Section eyebrow="Depoimentos" title="Vidas Transformadas" as="h1">
-    <p class="max-w-2xl text-lg leading-relaxed text-ink/90">
+    <p class="max-w-2xl text-lg leading-relaxed text-ink/90 text-justify [hyphens:auto]">
       Cada criança que aprende a confiar em si transforma a vida de uma família inteira.
       Aqui, quem já viveu essa transformação conta como foi.
     </p>
@@ -32,7 +32,7 @@ const description = `Histórias de famílias atendidas por ${site.professionalNa
           const { visivel, resto } = dividirDepoimento(d);
           return (
             <blockquote class="mb-6 break-inside-avoid rounded-2xl border border-brand-100 bg-paper p-6 sm:p-8">
-              <p class="whitespace-pre-line font-display text-lg leading-relaxed text-ink">{visivel}</p>
+              <p class="whitespace-pre-line font-display text-lg leading-relaxed text-ink text-justify [hyphens:auto]">{visivel}</p>
               {resto && (
                 <details class="group flex flex-col">
                   {/* order-2 põe o botão embaixo do texto revelado quando aberto.
@@ -53,7 +53,7 @@ const description = `Histórias de famílias atendidas por ${site.professionalNa
                     </svg>
                   </summary>
                   {/* mt-[1.625em] = uma linha em branco, igual ao espaço entre parágrafos. */}
-                  <p class="mt-[1.625em] whitespace-pre-line font-display text-lg leading-relaxed text-ink">{resto}</p>
+                  <p class="mt-[1.625em] whitespace-pre-line font-display text-lg leading-relaxed text-ink text-justify [hyphens:auto]">{resto}</p>
                 </details>
               )}
               <footer class="mt-4 font-semibold text-brand-700">
@@ -75,7 +75,7 @@ const description = `Histórias de famílias atendidas por ${site.professionalNa
       <h2 class="font-display text-2xl font-semibold text-brand-800 sm:text-3xl">
         Como esse atendimento mudou sua vida? Conta pra gente!
       </h2>
-      <p class="mx-auto mt-4 max-w-xl text-ink/90">
+      <p class="mx-auto mt-4 max-w-xl text-ink/90 text-justify [hyphens:auto]">
         Me mande seu depoimento pelo WhatsApp, escrito do seu jeito e no seu tempo.
         Ele ganha um lugar de carinho nesta página.
       </p>

@@ -23,7 +23,7 @@ const description = `Dificuldades de aprendizagem, TDAH, Autismo, Síndrome de D
   <Breadcrumbs items={[{ label: 'Início', href: '/' }, { label: 'Especialidades', href: '/condicoes' }]} />
 
   <Section title="Especialidades" as="h1">
-    <p class="mb-10 max-w-2xl text-lg text-muted">
+    <p class="mb-10 max-w-2xl text-lg text-muted text-justify [hyphens:auto]">
       Algumas das especialidades atendidas. A maioria das famílias chega por uma situação do dia a dia, e não por
       um diagnóstico, e é a partir daí que o trabalho acontece.
     </p>
@@ -34,7 +34,7 @@ const description = `Dificuldades de aprendizagem, TDAH, Autismo, Síndrome de D
     </div>
 
     {tambemAtendo.length > 0 && (
-      <p class="mt-10 max-w-3xl text-muted">
+      <p class="mt-10 max-w-3xl text-muted text-justify [hyphens:auto]">
         Também atendo dificuldades e questões relacionadas:{' '}
         {tambemAtendo.map((c, i) => (
           <Fragment>

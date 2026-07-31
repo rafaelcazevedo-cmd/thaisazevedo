@@ -16,7 +16,7 @@ const description = `Fale com ${site.professionalName}, ${site.profession.toLowe
   <Section title="Contato" as="h1">
     <div class="grid gap-10 lg:grid-cols-2">
       <div>
-        <p class="text-lg text-ink/90">
+        <p class="text-lg text-ink/90 text-justify [hyphens:auto]">
           A forma mais rápida de falar comigo é pelo <strong>WhatsApp</strong>. Conte o que está acontecendo
           e tire suas dúvidas, o primeiro contato é sem compromisso.
         </p>
@@ -29,7 +29,7 @@ const description = `Fale com ${site.professionalName}, ${site.profession.toLowe
             <span aria-hidden="true" class="text-xl">📍</span>
             <div>
               <dt class="font-semibold text-brand-800">Atendimento</dt>
-              <dd class="text-muted">
+              <dd class="text-muted text-justify [hyphens:auto]">
                 Na casa do paciente, em qualquer região de {site.city}, ou em uma sala de aula particular na
                 região do Alto de Pinheiros. O endereço exato é combinado no agendamento.
               </dd>
@@ -68,7 +68,7 @@ const description = `Fale com ${site.professionalName}, ${site.profession.toLowe
           {workValues.map((v) => (
             <li>
               <p class="font-semibold text-brand-800">{v.title}</p>
-              <p class="mt-1 text-sm leading-relaxed text-muted">{v.text}</p>
+              <p class="mt-1 text-sm leading-relaxed text-muted text-justify [hyphens:auto]">{v.text}</p>
             </li>
           ))}
         </ul>

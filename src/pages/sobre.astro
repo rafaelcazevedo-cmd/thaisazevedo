@@ -24,7 +24,7 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
         <h1 class="font-display text-4xl font-semibold text-brand-800 break-words sm:text-5xl">{site.professionalName}</h1>
         <p class="mt-1 text-lg text-brand-600">{site.profession} em {site.city}</p>
 
-        <div class="prose mt-6 max-w-none text-justify [hyphens:auto]">
+        <div class="prose mt-6 max-w-none">
           <p>
             Meu trabalho é uma <strong>mistura de professora particular com psicóloga</strong>: olho para o jeito
             único de cada criança aprender, sempre levando em conta suas emoções, com muito <strong>acolhimento e
@@ -66,7 +66,7 @@ const description = `Conheça ${site.professionalName}, ${site.profession.toLowe
       {workValues.map((v) => (
         <div class="rounded-2xl border border-brand-100 bg-cream p-6">
           <h3 class="font-display text-xl font-semibold text-brand-800">{v.title}</h3>
-          <p class="mt-2 text-sm leading-relaxed text-muted">{v.text}</p>
+          <p class="mt-2 text-sm leading-relaxed text-muted text-justify [hyphens:auto]">{v.text}</p>
         </div>
       ))}
     </div>
