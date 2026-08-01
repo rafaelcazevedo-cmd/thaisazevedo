@@ -107,6 +107,23 @@ export const depoimentos: Depoimento[] = [
       'Muito obrigada, Thais. Você está mudando a vida do Pablo, e tenho certeza de que ' +
       'também vai mudar a de muitas outras crianças.',
   },
+  // 2026-08-01 · enviado pela Thais via WhatsApp (CR-39); consentimento
+  // confirmado por ela em 2026-08-01 ("Sim. Autorizou"). Texto verbatim.
+  // Ordem: inserido logo após Aline, antes de Priscila, por instrução
+  // explícita da Thais (CR-39 addendum).
+  {
+    nome: 'Anna e Carlos',
+    paciente: 'Victor, 11 anos',
+    texto:
+      'A Thais tem sido fundamental pra que nosso filho possa acompanhar e superar desafios ' +
+      'de aprendizagem. Sem o trabalho dela, ele não teria avançado e nem alcançado os ' +
+      'resultados positivos que tem obtido ao longo desse processo.\n\n' +
+      'A Thais trabalha de forma tão atenta, dinâmica e precisa que faz com que a criança se ' +
+      'envolva e descubra o conteúdo com alegria.\n\n' +
+      'Victor:\n' +
+      '"A Thais é muito legal! Ela ajuda a melhorar na escola. Tem uns jogos de memória e de ' +
+      'atenção que ela faz que são muito divertidos."',
+  },
   // 2026-07-28 · enviado pela Thais via WhatsApp (CR-21); consentimento
   // confirmado por ela em 2026-07-28. Texto verbatim.
   {
