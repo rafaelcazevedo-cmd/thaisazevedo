@@ -31,7 +31,21 @@ const {
 } = Astro.props;
 
 const canonical = new URL(path, Astro.site).href;
-const ogImage = new URL(image, Astro.site).href;
+
+// Cache-bust the OG/Twitter image per deploy: WhatsApp/Meta cache a link
+// preview per URL, so if a chat's first scrape ever landed during a bad
+// deploy window (e.g. a stalled FTP transfer), that chat is stuck showing
+// the bad snapshot indefinitely even after the live file is fixed. Tagging
+// the image URL with the deploy's commit SHA means every new deploy is a
+// brand-new URL, so a bad window can only ever affect chats that scraped
+// during that exact deploy — the next deploy self-heals for anyone sharing
+// a fresh link. PUBLIC_BUILD_ID is set in .github/workflows/deploy.yml;
+// falls back to no query string for local dev builds.
+const ogImageUrl = new URL(image, Astro.site);
+const buildId = import.meta.env.PUBLIC_BUILD_ID;
+if (buildId) ogImageUrl.searchParams.set('v', buildId.slice(0, 7));
+const ogImage = ogImageUrl.href;
+
 const fullTitle = title.includes(site.brand) ? title : `${title} | ${site.brand}`;
 ---
 

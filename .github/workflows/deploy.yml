@@ -29,6 +29,11 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Cache-busts og:image/twitter:image URLs per deploy (see BaseHead.astro)
+          # so a WhatsApp/Meta scrape can never get stuck on stale image bytes from
+          # a bad-serving deploy window — the next deploy always mints a fresh URL.
+          PUBLIC_BUILD_ID: ${{ github.sha }}
 
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
